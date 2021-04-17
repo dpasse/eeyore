@@ -1,11 +1,12 @@
 import random
+from typing import Set
 
 
 class Alias():
     def __init__(self, starter_phrase: str = '', size: int = 100):
         self.__min = 0
         self.__max = 25
-        self.__cache = set()
+        self.__cache: Set[str] = set()
 
         self.__size = size
         self.__starter_phrase = starter_phrase

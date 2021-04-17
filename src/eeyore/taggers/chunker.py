@@ -11,7 +11,7 @@ class Chunker():
         self.__tags = sorted(tags, key=lambda tag: tag.order, reverse=True)
         self.__alias = Alias()
 
-    def tag(self, sentence: str) -> List[Tuple[str, str]]:
+    def tag(self, sentence: str) -> Tuple[List[str], List[str]]:
         alias_cache = {}
 
         for tag in self.__tags:
@@ -21,8 +21,8 @@ class Chunker():
 
                 sentence = re.sub(r'(' + match + r')', key, sentence)
 
-        tokens = []
-        phrases = []
+        tokens: List[str] = []
+        phrases: List[str] = []
 
         for token in word_tokenize(sentence):
             if token in alias_cache:
