@@ -5,10 +5,10 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from eeyore.models import Tag, RegexPhrase, Scope, ScopeDirection
 from eeyore.taggers import Chunker, Scoper
-from eeyore.pipelines import ChunkerPipe, ScoperPipe, AttributePipe, Extractor
+from eeyore.pipelines import ChunkerPipe, ScoperPipe, AttributePipe, Pipeline
 
 def test_extracting_multiple_pipes():
-    extractor = Extractor(
+    pipeline = Pipeline(
         pipes=[
             ChunkerPipe(
                 'regex_ner',
@@ -42,7 +42,7 @@ def test_extracting_multiple_pipes():
         ]
     )
 
-    context = extractor.execute('We are not going to New York.')
+    context = pipeline.execute('We are not going to New York.')
 
     assert len(context.keys) == 5
     assert context.get('tokens') == [

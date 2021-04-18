@@ -5,7 +5,7 @@ from .pipes import Pipe
 from ..models import Context
 
 
-class Extractor():
+class Pipeline():
     def __init__(self, pipes: List[Pipe]):
         self.__pipes = sorted(
             pipes,
