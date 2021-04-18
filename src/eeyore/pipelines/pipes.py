@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from nltk.tag import pos_tag
 
 from ..taggers import Chunker, Scoper
 from ..models import Context
@@ -44,6 +45,16 @@ class ScoperPipe(Pipe):
         context.add(
             self.__key,
             self.__scoper.tag(context.get(self.__focus))
+        )
+
+        return context
+
+class AttributePipe(Pipe):
+    def execute(self, context: Context) -> Context:
+        tokens = context.get('tokens')
+        context.add(
+            'pos',
+            [ tag for _, tag in pos_tag(tokens) ],
         )
 
         return context

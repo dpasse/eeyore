@@ -5,24 +5,25 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from eeyore.models import Tag, RegexPhrase, Scope, ScopeDirection
 from eeyore.taggers import Chunker, Scoper
-from eeyore.pipelines import ChunkerPipe, ScoperPipe, Extractor
+from eeyore.pipelines import ChunkerPipe, ScoperPipe, AttributePipe, Extractor
 
 def test_extracting_multiple_pipes():
     extractor = Extractor(
         pipes=[
             ChunkerPipe(
-                'entities',
+                'regex_ner',
                 Chunker(tags=[
                     Tag('LOC', phrase=RegexPhrase(r'\b(New York)\b')),
                 ]),
                 order=1
             ),
+            AttributePipe(order=2),
             ChunkerPipe(
                 'neg',
                 Chunker(tags=[
                     Tag('FRW-NEG', phrase=RegexPhrase(r'\b(not)\b')),
                 ]),
-                order=2
+                order=3
             ),
             ScoperPipe(
                 'neg_scope',
@@ -36,14 +37,14 @@ def test_extracting_multiple_pipes():
                         )
                     ],
                 ),
-                order=3,
+                order=4,
             )
         ]
     )
 
     context = extractor.execute('We are not going to New York.')
 
-    assert len(context.keys) == 4
+    assert len(context.keys) == 5
     assert context.get('tokens') == [
         'We',
         'are',
@@ -54,7 +55,11 @@ def test_extracting_multiple_pipes():
         'York',
         '.'
     ]
-    assert context.get('entities') == ['', '', '', '', '', 'LOC', 'LOC', '']
+    print(context.get('pos'))
+    assert context.get('pos') == [
+      'PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.'
+    ]
+    assert context.get('regex_ner') == ['', '', '', '', '', 'LOC', 'LOC', '']
     assert context.get('neg') == ['', '', 'FRW-NEG', '', '', '', '', '']
     assert context.get('neg_scope') == [
         '',
