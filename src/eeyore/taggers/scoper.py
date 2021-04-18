@@ -1,11 +1,13 @@
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from ..models import Scope, ScopeDirection
 from ..utils import Merger
 
 
 class Scoper():
-    def __init__(self, scopes: List[Scope]):
+    def __init__(self,
+                 scopes: List[Scope],
+                 dominate_scope_direction: ScopeDirection = ScopeDirection.FORWARD):
         self.__rules = {
             ScopeDirection.FORWARD: sorted([
                 scope
@@ -18,10 +20,14 @@ class Scoper():
                 if scope.moves_backward
             ], key=lambda scope: scope.order),
         }
+        self.__dominate_scope_direction = dominate_scope_direction
+
+    @property
+    def rules(self) -> Dict[ScopeDirection, List[Scope]]:
+        return self.__rules
 
     def tag(self,
-            tags: List[str],
-            dominate_scope_direction: ScopeDirection = ScopeDirection.FORWARD) -> List[str]:
+            tags: List[str]) -> List[str]:
         forward_scope_tags = self._run_scopes(
             tags,
             scope_direction=ScopeDirection.FORWARD
@@ -32,7 +38,7 @@ class Scoper():
             scope_direction=ScopeDirection.BACKWARD
         )))
 
-        if dominate_scope_direction == ScopeDirection.FORWARD:
+        if self.__dominate_scope_direction == ScopeDirection.FORWARD:
             return Merger.take_first(
                 forward_scope_tags,
                 backward_scope_tags

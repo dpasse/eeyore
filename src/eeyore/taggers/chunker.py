@@ -8,8 +8,12 @@ from ..generators import Alias
 
 class Chunker():
     def __init__(self, tags: List[Tag]):
-        self.__tags = sorted(tags, key=lambda tag: tag.order, reverse=True)
+        self.__tags = list(sorted(tags, key=lambda tag: tag.order, reverse=True))
         self.__alias = Alias()
+
+    @property
+    def tags(self) -> List[Tag]:
+        return self.__tags
 
     def tag(self, sentence: str) -> Tuple[List[str], List[str]]:
         alias_cache = {}
