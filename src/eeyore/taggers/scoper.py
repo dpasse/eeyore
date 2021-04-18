@@ -28,7 +28,7 @@ class Scoper():
         )
 
         backward_scope_tags = list(reversed(self._run_scopes(
-            reversed(tags),
+            list(reversed(tags)),
             scope_direction=ScopeDirection.BACKWARD
         )))
 
