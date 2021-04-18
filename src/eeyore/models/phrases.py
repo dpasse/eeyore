@@ -19,5 +19,5 @@ class RegexPhrase():
     def sub(self, text: str, replacement: str) -> str:
         return self.__expression.sub(replacement, text)
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.__phrase)
