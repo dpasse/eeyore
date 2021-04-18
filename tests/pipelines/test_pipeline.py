@@ -55,7 +55,6 @@ def test_extracting_multiple_pipes():
         'York',
         '.'
     ]
-    print(context.get('pos'))
     assert context.get('pos') == [
       'PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.'
     ]
