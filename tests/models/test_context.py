@@ -10,9 +10,9 @@ def test_chuker_single_term_phrase():
         'We are not going to New York.',
         ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.'],
         **{
-            'negatives': ['', '', 'NEG', '', '', '', '', '']
+            'entities': ['', '', '', '', '', 'LOC', 'LOC', '']
         }
     )
 
     assert len(context.get('tokens')) == 8
-    assert len(context.get('negatives')) == 8
+    assert len(context.get('entities')) == 8
