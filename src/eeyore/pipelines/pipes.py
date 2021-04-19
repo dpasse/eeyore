@@ -3,7 +3,7 @@ from nltk.tag import pos_tag
 
 from ..taggers import Chunker, Scoper
 from ..models import Context
-from ..ml import ContextModel
+from ..ml import ContextBaseModel
 
 
 class Pipe(ABC):
@@ -60,15 +60,15 @@ class AttributePipe(Pipe):
 
         return context
 
-class MachineLearningPipe(Pipe):
-    def __init__(self, key: str, model: ContextModel, order: int):
+class MachineLearningContextPipe(Pipe):
+    def __init__(self, key: str, model: ContextBaseModel, order: int):
         self.__key = key
         self.__model = model
 
         super().__init__(order)
 
     @property
-    def model(self) -> ContextModel:
+    def model(self) -> ContextBaseModel:
         return self.__model
 
     def execute(self, context: Context) -> Context:

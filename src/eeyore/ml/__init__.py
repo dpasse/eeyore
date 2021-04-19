@@ -1,1 +1,1 @@
-from .text_models import ContextModel
+from .context_models import ContextBaseModel
