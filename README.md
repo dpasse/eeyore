@@ -18,7 +18,6 @@
 
 ## <a name="text-generation"></a>Text Generation
 
-<hr />
 <br />
 
 ### <a name="markov-chain"></a>Markov Chain:
@@ -56,7 +55,6 @@ sentence = [
 
 ## <a name="text-extraction"></a>Text Extraction
 
-<hr />
 <br />
 
 ### <a name="regex-chunker"></a>Regex Chunker:
@@ -144,7 +142,7 @@ pos = context.get('pos')
 
 ## <a name="references"></a>References:
 
-<hr />
+<br />
 
 1. Chapman, Wendy & Bridewell, Will & Hanbury, Paul & Cooper, Gregory & Buchanan, Bruce. (2001). A Simple Algorithm for Identifying Negated Findings and Diseases in Discharge Summaries. Journal of Biomedical Informatics. 34. 301-310. 10.1006/jbin.2001.1029.
 
