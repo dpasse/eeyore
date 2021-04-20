@@ -22,6 +22,9 @@ class Alias():
 
         return f'{self.__starter_phrase}{random_string}'
 
+    def reset_cache(self):
+        self.__cache.clear()
+
     def generate_random_string(self) -> str:
         random_int_array = (
             random.randint(self.__min, self.__max)

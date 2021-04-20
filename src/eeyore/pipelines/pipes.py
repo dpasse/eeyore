@@ -18,6 +18,7 @@ class Pipe(ABC):
     def execute(self, context: Context) -> Context:
         raise NotImplementedError()
 
+
 class ChunkerPipe(Pipe):
     def __init__(self, key: str, chunker: Chunker, order: int):
         self.__key = key
@@ -33,6 +34,7 @@ class ChunkerPipe(Pipe):
         )
 
         return context
+
 
 class ScoperPipe(Pipe):
     def __init__(self, key: str, focus: str, scoper: Scoper, order: int):
@@ -50,15 +52,17 @@ class ScoperPipe(Pipe):
 
         return context
 
+
 class AttributePipe(Pipe):
     def execute(self, context: Context) -> Context:
         tokens = context.get('tokens')
         context.add(
             'pos',
-            [ tag for _, tag in pos_tag(tokens) ],
+            [tag for _, tag in pos_tag(tokens)],
         )
 
         return context
+
 
 class MachineLearningContextPipe(Pipe):
     def __init__(self, key: str, model: ContextBaseModel, order: int):

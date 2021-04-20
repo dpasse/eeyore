@@ -7,6 +7,7 @@ class ScopeDirection(Enum):
     BACKWARD = 2
     TWOWAY = 3
 
+
 class Scope():
     def __init__(self,
                  applied_tag: str,

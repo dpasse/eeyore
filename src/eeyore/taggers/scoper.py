@@ -7,7 +7,7 @@ from ..utils import Merger
 class Scoper():
     def __init__(self,
                  scopes: List[Scope],
-                 dominate_scope_direction: ScopeDirection = ScopeDirection.FORWARD):
+                 top_direction: ScopeDirection = ScopeDirection.FORWARD):
         self.__rules = {
             ScopeDirection.FORWARD: sorted([
                 scope
@@ -20,7 +20,7 @@ class Scoper():
                 if scope.moves_backward
             ], key=lambda scope: scope.order),
         }
-        self.__dominate_scope_direction = dominate_scope_direction
+        self.__top_direction = top_direction
 
     @property
     def rules(self) -> Dict[ScopeDirection, List[Scope]]:
@@ -38,7 +38,7 @@ class Scoper():
             scope_direction=ScopeDirection.BACKWARD
         )))
 
-        if self.__dominate_scope_direction == ScopeDirection.FORWARD:
+        if self.__top_direction == ScopeDirection.FORWARD:
             return Merger.take_first(
                 forward_scope_tags,
                 backward_scope_tags
@@ -49,7 +49,9 @@ class Scoper():
             forward_scope_tags
         )
 
-    def _run_scopes(self, tags: List[str], scope_direction: ScopeDirection) -> List[str]:
+    def _run_scopes(self,
+                    tags: List[str],
+                    scope_direction: ScopeDirection) -> List[str]:
         scope_tags = []
 
         current_scope = None

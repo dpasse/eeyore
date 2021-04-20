@@ -21,7 +21,7 @@ class Context():
         return list(self.__container.keys())
 
     def get(self, key: str) -> List[str]:
-        if not key in self.__container:
+        if key not in self.__container:
             raise KeyError(
                 f'{key} not found.'
             )

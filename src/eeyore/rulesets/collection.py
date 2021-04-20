@@ -10,6 +10,7 @@ def _map_regex_phrases(identifier: str,
         in regex_phrases
     ]
 
+
 negative_tags = _map_regex_phrases('FRW-NEG', [
     RegexPhrase(r'\b(without)\b'),
     RegexPhrase(r'\b(not)\b'),
