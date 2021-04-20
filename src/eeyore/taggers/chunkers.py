@@ -1,4 +1,5 @@
 import re
+from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Tuple
 import numpy as np
 from nltk.tokenize import word_tokenize
@@ -6,7 +7,13 @@ from ..models import Tag
 from ..generators import Alias
 
 
-class Chunker():
+class Chunker(ABC):
+    @abstractmethod
+    def tag(self, sentence: str) -> Tuple[List[str], List[str]]:
+        raise NotImplementedError()
+
+
+class PhraseChunker(Chunker):
     def __init__(self, tags: List[Tag]):
         self.__tags = list(
             sorted(

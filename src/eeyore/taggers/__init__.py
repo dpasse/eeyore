@@ -1,2 +1,2 @@
-from .chunker import Chunker
+from .chunkers import Chunker, PhraseChunker
 from .scoper import Scoper
