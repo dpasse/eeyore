@@ -63,9 +63,9 @@ sentence = [
 
 ```python
 from eeyore.models import Tag, RegexPhrase
-from eeyore.taggers import Chunker
+from eeyore.taggers import PhraseChunker
 
-chunker = Chunker(tags=[
+chunker = PhraseChunker(tags=[
     Tag('R', phrase=RegexPhrase(r'\b(New York)\b')),
 ])
 
@@ -106,15 +106,15 @@ scope_tags = Scoper(scopes).tag(tokens)
 
 ```python
 from eeyore.models import Tag, RegexPhrase
-from eeyore.taggers import Chunker
-from eeyore.pipelines import ChunkerPipe, AttributePipe, Pipeline
+from eeyore.taggers import PhraseChunker
+from eeyore.pipelines import TextChunkerPipe, AttributePipe, Pipeline
 
 
 pipeline = Pipeline(
     pipes=[
-        ChunkerPipe(
+        TextChunkerPipe(
             'regex_ner',
-            Chunker(tags=[
+            PhraseChunker(tags=[
                 Tag(
                     'LOC',
                     phrase=RegexPhrase(r'\b(New York)\b')
