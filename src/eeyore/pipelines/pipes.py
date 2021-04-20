@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from nltk.tag import pos_tag
 
-from ..taggers import Chunker, Scoper
+from ..taggers import SentenceChunker, Scoper
 from ..models import Context
 from ..ml import ContextBaseModel
 
@@ -19,8 +19,8 @@ class Pipe(ABC):
         raise NotImplementedError()
 
 
-class ChunkerPipe(Pipe):
-    def __init__(self, key: str, chunker: Chunker, order: int):
+class SentenceChunkerPipe(Pipe):
+    def __init__(self, key: str, chunker: SentenceChunker, order: int):
         self.__key = key
         self.__chunker = chunker
 

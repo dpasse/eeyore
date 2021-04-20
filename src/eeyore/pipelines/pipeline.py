@@ -1,6 +1,5 @@
 
 from typing import List
-from nltk.tokenize import word_tokenize
 from .pipes import Pipe
 from ..models import Context
 
@@ -17,11 +16,7 @@ class Pipeline():
         return self.__pipes
 
     def execute(self, text: str) -> Context:
-        context = Context(
-            text,
-            word_tokenize(text),
-        )
-
+        context = Context(text)
         for pipe in self.__pipes:
             context = pipe.execute(context)
 

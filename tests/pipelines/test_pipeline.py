@@ -5,20 +5,20 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from eeyore.models import Tag, RegexPhrase, Scope, ScopeDirection
 from eeyore.taggers import PhraseChunker, Scoper
-from eeyore.pipelines import ChunkerPipe, ScoperPipe, AttributePipe, Pipeline
+from eeyore.pipelines import SentenceChunkerPipe, ScoperPipe, AttributePipe, Pipeline
 
 def test_extracting_multiple_pipes():
     pipeline = Pipeline(
         pipes=[
-            ChunkerPipe(
+            AttributePipe(order=1),
+            SentenceChunkerPipe(
                 'regex_ner',
                 PhraseChunker(tags=[
                     Tag('LOC', phrase=RegexPhrase(r'\b(New York)\b')),
                 ]),
-                order=1
+                order=2
             ),
-            AttributePipe(order=2),
-            ChunkerPipe(
+            SentenceChunkerPipe(
                 'neg',
                 PhraseChunker(tags=[
                     Tag('FRW-NEG', phrase=RegexPhrase(r'\b(not)\b')),

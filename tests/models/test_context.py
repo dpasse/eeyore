@@ -8,7 +8,6 @@ from eeyore.models import Context
 def test_chuker_single_term_phrase():
     context = Context(
         'We are not going to New York.',
-        ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.'],
         entities=['', '', '', '', '', 'LOC', 'LOC', ''],
         negatives=['', '', 'NEG', '', '', '', '', ''],
         negative_scope=['', '', 'NEG', 'NEG', 'NEG', 'NEG', 'NEG', 'NEG']

@@ -1,9 +1,13 @@
 from typing import Dict, List
 
+from nltk.tokenize import word_tokenize
+
 
 class Context():
-    def __init__(self, text: str, tokens: List[str], **kwargs):
+    def __init__(self, text: str, **kwargs):
         self.__text = text
+
+        tokens = word_tokenize(self.__text)
         self.__expected_length = len(tokens)
         self.__container: Dict[str, List[str]] = {
             'tokens': tokens

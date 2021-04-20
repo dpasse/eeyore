@@ -7,13 +7,13 @@ from ..models import Tag
 from ..generators import Alias
 
 
-class Chunker(ABC):
+class SentenceChunker(ABC):
     @abstractmethod
     def tag(self, sentence: str) -> Tuple[List[str], List[str]]:
         raise NotImplementedError()
 
 
-class PhraseChunker(Chunker):
+class PhraseChunker(SentenceChunker):
     def __init__(self, tags: List[Tag]):
         self.__tags = list(
             sorted(
