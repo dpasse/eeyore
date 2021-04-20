@@ -1,5 +1,5 @@
 from .pipes import Pipe, \
-                   TextChunkerPipe, \
+                   ChunkerPipe, \
                    ScoperPipe, \
                    AttributePipe, \
                    MachineLearningContextPipe

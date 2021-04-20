@@ -105,12 +105,12 @@ scope_tags = Scoper(scopes).tag(tokens)
 ```python
 from eeyore.models import Tag, RegexPhrase
 from eeyore.taggers import PhraseChunker
-from eeyore.pipelines import TextChunkerPipe, AttributePipe, Pipeline
+from eeyore.pipelines import ChunkerPipe, AttributePipe, Pipeline
 
 
 pipeline = Pipeline(
     pipes=[
-        TextChunkerPipe(
+        ChunkerPipe(
             'regex_ner',
             PhraseChunker(tags=[
                 Tag(

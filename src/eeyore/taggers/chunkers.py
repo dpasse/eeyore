@@ -3,17 +3,23 @@ from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Tuple
 import numpy as np
 from nltk.tokenize import word_tokenize
-from ..models import Tag
+from ..models import Tag, Context
 from ..generators import Alias
 
 
 class TextChunker(ABC):
     @abstractmethod
-    def tag(self, sentence: str) -> Tuple[List[str], List[str]]:
+    def tag_text(self, text: str) -> List[str]:
         raise NotImplementedError()
 
 
-class PhraseChunker(TextChunker):
+class ContextChunker(ABC):
+    @abstractmethod
+    def tag(self, context: Context) -> List[str]:
+        raise NotImplementedError()
+
+
+class PhraseChunker(TextChunker, ContextChunker):
     def __init__(self, tags: List[Tag]):
         self.__tags = list(
             sorted(
@@ -28,20 +34,22 @@ class PhraseChunker(TextChunker):
     def tags(self) -> List[Tag]:
         return self.__tags
 
-    def tag(self, sentence: str) -> Tuple[List[str], List[str]]:
+    def tag(self, context: Context) -> List[str]:
+        return self.tag_text(context.sentence)
+
+    def tag_text(self, text: str) -> List[str]:
         alias_cache: Dict[str, Tuple[str, str]] = {}
 
         for tag in self.__tags:
-            for match in np.unique(tag.phrase.find_all(sentence)):
+            for match in np.unique(tag.phrase.find_all(text)):
                 key = self.__alias.get_alias()
                 alias_cache[key] = (tag.identifer, match)
-                sentence = re.sub(r'(' + match + r')', key, sentence)
+                text = re.sub(r'(' + match + r')', key, text)
 
-        tokens: List[str] = []
         phrases: List[str] = []
 
         keys = list(alias_cache.keys())
-        for token in word_tokenize(sentence):
+        for token in word_tokenize(text):
             term = self._find_term_in_text(token, keys)
             if term is not None:
                 identifier, subset = alias_cache[term]
@@ -49,13 +57,11 @@ class PhraseChunker(TextChunker):
                     token.replace(term, subset)
                 )
 
-                tokens.extend(new_tokens)
                 phrases.extend([identifier for _ in new_tokens])
             else:
-                tokens.append(token)
                 phrases.append('')
 
-        return tokens, phrases
+        return phrases
 
     @staticmethod
     def _find_term_in_text(text: str, terms: List[str]) -> Optional[str]:
