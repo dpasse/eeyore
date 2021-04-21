@@ -155,5 +155,7 @@ pos = context.get('pos')
 
 2. Chapman, Wendy & Chu, David & Dowling, John. (2007). ConText: An Algorithm for Identifying Contextual Features from Clinical Text. BioNLP 2007: Biological, translational, and clinical language processing. Prague, CZ. 81-88.
 
-<a style='float: right;' href='#table-of-contents'>&#8593;</a>
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 <br />
