@@ -12,6 +12,7 @@
   * [Pos Chunker](#pos-chunker)
   * [Define Scope](#scoper)
   * [Pipeline](#pipeline)
+  * [Tag Extract](#tag-extract)
 * [References](#references)
 
 <br />
@@ -158,6 +159,31 @@ regex_ner = context.get('regex_ner')
 
 pos = context.get('pos')
 ## pos = ['PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.']
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+<br />
+
+### <a name="tag-extract"></a>Tag Extract:
+
+```python
+from eeyore.extractions import TagExtract
+from eeyore.models import Context
+
+context = Context('We are not going to New York.')
+context.add('entities', ['', '', '', '', '', 'LOC', 'LOC', ''])
+
+location_extracts = TagExtract('entities', ['LOC']).evaluate(context)
+## location_extracts == {
+##     'LOC': [
+##         [
+##             (5, 'New'),
+##             (6, 'York')
+##         ]
+##     ]
+## }
 ```
 
 <p align="right">
