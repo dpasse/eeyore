@@ -164,7 +164,6 @@ pos = context.get('pos')
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>
 </p>
-<br />
 
 ### <a name="tag-extract"></a>Tag Extract:
 
