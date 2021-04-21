@@ -8,7 +8,8 @@
 * [Text Generation](#text-generation)
   * [Markov Chain](#markov-chain)
 * [Text Extraction](#text-extraction)
-  * [Regex Chunker](#regex-chunker)
+  * [Phrase Chunker](#phrase-chunker)
+  * [Pos Chunker](#pos-chunker)
   * [Define Scope](#scoper)
   * [Pipeline](#pipeline)
 * [References](#references)
@@ -59,7 +60,7 @@ sentence = [
 
 <br />
 
-### <a name="regex-chunker"></a>Regex Chunker:
+### <a name="phrase-chunker"></a>Phrase Chunker:
 
 ```python
 from eeyore.models import Tag, RegexPhrase
@@ -73,6 +74,25 @@ tokens, phrases = chunker.tag('We went to New York.')
 
 ## tokens == ['We', 'went', 'to', 'New', 'York', '.']
 ## phrases == ['', '', '', 'R', 'R', '']
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+
+### <a name="pos-chunker"></a>Pos Chunker:
+
+```python
+from eeyore.models import Context
+from eeyore.taggers import PosChunker
+
+context = Context('Learn php from sam')
+context.add('pos', ['JJ', 'NN', 'IN', 'NN'])
+
+chunker = PosChunker("NP: {<DT>?<JJ>*<NN>}")
+chunks = chunker.tag(context)
+
+## chunks == ['NP', 'NP', 'S', 'NP']
 ```
 
 <p align="right">
