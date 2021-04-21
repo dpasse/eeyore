@@ -41,3 +41,6 @@ class Context():
             )
 
         self.__container[key] = tags
+
+    def __len__(self) -> int:
+        return len(self.get('tokens'))
