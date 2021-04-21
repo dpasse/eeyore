@@ -48,9 +48,11 @@ sentence = [
 
 ## sentence == ['<start>', 'I', 'am', 'tired', '<end>']
 ```
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 
-<a style='float: right;' href='#table-of-contents'>&#8593;</a>
-<br />
+
 <br />
 
 ## <a name="text-extraction"></a>Text Extraction
@@ -73,8 +75,9 @@ tokens, phrases = chunker.tag('We went to New York.')
 ## phrases == ['', '', '', 'R', 'R', '']
 ```
 
-<a style='float: right;' href='#table-of-contents'>&#8593;</a>
-<br />
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 
 ### <a name="scoper"></a>Define Scope:
 
@@ -97,15 +100,16 @@ scope_tags = Scoper(scopes).tag(tokens)
 ## scope_tags == ['', '', 'NEG', 'NEG', 'NEG', '', '', '']
 ```
 
-<a style='float: right;' href='#table-of-contents'>&#8593;</a>
-<br />
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 
 ### <a name="pipeline"></a>Pipeline:
 
 ```python
 from eeyore.models import Tag, RegexPhrase
 from eeyore.taggers import PhraseChunker
-from eeyore.pipelines import ChunkerPipe, AttributePipe, Pipeline
+from eeyore.pipelines import ChunkerPipe, TokenAttributesPipe, Pipeline
 
 
 pipeline = Pipeline(
@@ -120,7 +124,7 @@ pipeline = Pipeline(
             ]),
             order=1
         ),
-        AttributePipe(order=2),
+        TokenAttributesPipe(order=2),
     ]
 )
 
@@ -136,8 +140,9 @@ pos = context.get('pos')
 ## pos = ['PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.']
 ```
 
-<a style='float: right;' href='#table-of-contents'>&#8593;</a>
-<br />
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 <br />
 
 ## <a name="references"></a>References:

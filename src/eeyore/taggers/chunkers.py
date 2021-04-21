@@ -2,6 +2,8 @@ import re
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Tuple
 import numpy as np
+import nltk
+from nltk.chunk import RegexpParser
 from nltk.tokenize import word_tokenize
 from ..models import Tag, Context
 from ..generators import Alias
@@ -70,3 +72,38 @@ class PhraseChunker(TextChunker, ContextChunker):
                 return term
 
         return None
+
+
+class PosChunker(ContextChunker):
+    def __init__(self,
+                 patterns: str,
+                 loop: int = 1,
+                 trace: int = 0) -> None:
+        self.__regex_parser = RegexpParser(patterns,
+                                           root_label='S',
+                                           loop=loop,
+                                           trace=trace)
+
+    def tag(self, context: Context) -> List[str]:
+        chunk_struct = list(
+            zip(
+                context.get('tokens'),
+                context.get('pos')
+            )
+        )
+
+        return self._traverse_tree(
+            self.__regex_parser.parse(chunk_struct)
+        )
+
+    def _traverse_tree(self, tree):
+        tags = []
+        for subtree in tree:
+            if isinstance(subtree, nltk.tree.Tree):
+                tags.extend(
+                    self._traverse_tree(subtree)
+                )
+            else:
+                tags.append(tree.label())
+
+        return tags

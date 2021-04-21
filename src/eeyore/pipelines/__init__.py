@@ -1,6 +1,6 @@
 from .pipes import Pipe, \
                    ChunkerPipe, \
                    ScoperPipe, \
-                   AttributePipe, \
+                   TokenAttributesPipe, \
                    MachineLearningContextPipe
 from .pipeline import Pipeline

@@ -53,7 +53,7 @@ class ScoperPipe(Pipe):
         return context
 
 
-class AttributePipe(Pipe):
+class TokenAttributesPipe(Pipe):
     def execute(self, context: Context) -> Context:
         tokens = context.get('tokens')
         context.add(
