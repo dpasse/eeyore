@@ -82,3 +82,20 @@ def test_backward_scope_should_stop():
 
     scope_tags = scoper.tag(tokens)
     assert scope_tags == ['', 'NEG', 'NEG', '', '', '', '', '']
+
+def test_should_exit_after_max_travel_distance_hit():
+    scopes = [
+        Scope(
+            'NEG',
+            scope_direction=ScopeDirection.BACKWARD,
+            order=1,
+            stop_when=['TRANS'],
+            max_travel_distance=2
+        )
+    ]
+    scoper = Scoper(scopes)
+
+    tokens = ['TRANS', 'PHRASE', '', '', '', '', 'NEG', '']
+
+    scope_tags = scoper.tag(tokens)
+    assert scope_tags == ['', '', '', '', 'NEG', 'NEG', 'NEG', '']

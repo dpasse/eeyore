@@ -13,11 +13,13 @@ class Scope():
                  applied_tag: str,
                  scope_direction: ScopeDirection,
                  order: int,
-                 stop_when: Optional[List[str]] = None):
+                 stop_when: Optional[List[str]] = None,
+                 max_travel_distance: Optional[int] = None):
         self.__applied_tag = applied_tag
         self.__scope_direction = scope_direction
         self.__order = order
         self.__stop_when = stop_when
+        self.__max_travel_distance = max_travel_distance
 
     @property
     def applied_tag(self) -> str:
@@ -48,5 +50,11 @@ class Scope():
         return self.__scope_direction == ScopeDirection.BACKWARD \
             or self.__scope_direction == ScopeDirection.TWOWAY
 
-    def should_stop(self, tag: str = '') -> bool:
-        return self.__stop_when is not None and tag in self.__stop_when
+    def should_stop(self, travel_distance: int, tag: str = '') -> bool:
+        early_exit = travel_distance > self.__max_travel_distance \
+            if self.__max_travel_distance is not None \
+            else False
+
+        return early_exit or \
+            self.__stop_when is not None \
+            and tag in self.__stop_when

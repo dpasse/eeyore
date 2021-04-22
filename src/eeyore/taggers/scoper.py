@@ -53,16 +53,20 @@ class Scoper():
                     tags: List[str],
                     scope_direction: ScopeDirection) -> List[str]:
         scope_tags = []
-
         current_scope = None
+        travel_distance = 0
+
         scopes = self.__rules[scope_direction]
         for tag in tags:
             scope = self._find_first_scope(tag, scopes)
             if scope is not None:
                 current_scope = scope
+                travel_distance = 0
+            elif current_scope is not None:
+                travel_distance += 1
 
             need_to_cancel_scope = current_scope is not None \
-                and current_scope.should_stop(tag)
+                and current_scope.should_stop(travel_distance, tag)
 
             if need_to_cancel_scope:
                 current_scope = None
