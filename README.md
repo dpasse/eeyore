@@ -9,8 +9,9 @@
   * [Markov Chain](#markov-chain)
 * [Text Extraction](#text-extraction)
   * [Phrase Chunker](#phrase-chunker)
-  * [Pos Chunker](#pos-chunker)
+  * [POS Chunker](#pos-chunker)
   * [Define Scope](#scoper)
+  * [Tag Mapper](#tag-mapper)
   * [Pipeline](#pipeline)
   * [Tag Extract](#tag-extract)
 * [References](#references)
@@ -68,20 +69,20 @@ from eeyore.models import Tag, RegexPhrase
 from eeyore.taggers import PhraseChunker
 
 chunker = PhraseChunker(tags=[
-    Tag('R', phrase=RegexPhrase(r'\b(New York)\b')),
+    Tag('LOC', phrase=RegexPhrase(r'\b(New York)\b')),
 ])
 
 tokens, phrases = chunker.tag('We went to New York.')
 
 ## tokens == ['We', 'went', 'to', 'New', 'York', '.']
-## phrases == ['', '', '', 'R', 'R', '']
+## phrases == ['', '', '', 'B-LOC', 'I-LOC', '']
 ```
 
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>
 </p>
 
-### <a name="pos-chunker"></a>Pos Chunker:
+### <a name="pos-chunker"></a>POS Chunker:
 
 ```python
 from eeyore.models import Context
@@ -93,7 +94,7 @@ context.add('pos', ['JJ', 'NN', 'IN', 'NN'])
 chunker = PosChunker("NP: {<DT>?<JJ>*<NN>}")
 chunks = chunker.tag(context)
 
-## chunks == ['NP', 'NP', 'S', 'NP']
+## chunks == ['B-NP', 'I-NP', '', 'B-NP']
 ```
 
 <p align="right">
@@ -119,6 +120,37 @@ tokens = ['', '', 'NEG', '', '', 'TRANS', '', '']
 scope_tags = Scoper(scopes).tag(tokens)
 
 ## scope_tags == ['', '', 'NEG', 'NEG', 'NEG', '', '', '']
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+
+### <a name="tag-mapper"></a>Tag Mapper:
+
+```python
+from eeyore.taggers import TagMapper
+
+tag_mapper = TagMapper({
+  'negtaive': 'negative',
+  'fales': 'false'
+})
+
+mapped_tags = tag_mapper.tag(['negtaive', 'fales', 'nxet'])
+## mapped_tags == ['negative', 'false', 'nxet']
+
+tag_mapper = TagMapper({
+    'VBD': 'past',
+    'VBG': 'present',
+    'VBN': 'past',
+    'VBP': 'present',
+    'VBZ': 'present'
+}, clear_if_missing=True)
+
+pos = ['DT', 'JJ', 'NN', 'VBD', 'RB', 'RB', 'VBN']
+mapped_tags = tag_mapper.tag(pos)
+## mapped_tags == ['negative', 'false', 'nxet']
+
 ```
 
 <p align="right">
@@ -155,7 +187,7 @@ tokens = context.get('tokens')
 ## tokens = ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
 
 regex_ner = context.get('regex_ner')
-## regex_ner = ['', '', '', '', '', 'LOC', 'LOC', '']
+## regex_ner = ['', '', '', '', '', 'B-LOC', 'I-LOC', '']
 
 pos = context.get('pos')
 ## pos = ['PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.']
@@ -172,9 +204,12 @@ from eeyore.extractions import TagExtract
 from eeyore.models import Context
 
 context = Context('We are not going to New York.')
-context.add('entities', ['', '', '', '', '', 'LOC', 'LOC', ''])
+context.add('entities', ['', '', '', '', '', 'B-LOC', 'I-LOC', ''])
 
-location_extracts = TagExtract('entities', ['LOC']).evaluate(context)
+location_extracts = TagExtract(
+    'entities',
+    ['LOC']
+).evaluate(context)
 ## location_extracts == {
 ##     'LOC': [
 ##         [

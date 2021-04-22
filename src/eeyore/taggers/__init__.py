@@ -3,3 +3,4 @@ from .chunkers import TextChunker, \
                       PhraseChunker, \
                       PosChunker
 from .scoper import Scoper
+from .mapper import TagMapper

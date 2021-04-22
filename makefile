@@ -1,3 +1,5 @@
+all: style mypy lint test
+
 lint:
 	pylint src/eeyore
 

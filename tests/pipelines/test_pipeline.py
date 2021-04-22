@@ -20,9 +20,12 @@ def test_extracting_multiple_pipes():
             ),
             ChunkerPipe(
                 'neg',
-                PhraseChunker(tags=[
-                    Tag('FRW-NEG', phrase=RegexPhrase(r'\b(not)\b')),
-                ]),
+                PhraseChunker(
+                    tags=[
+                        Tag('FRW-NEG', phrase=RegexPhrase(r'\b(not)\b')),
+                    ],
+                    apply_iob2 = False,
+                ),
                 order=3
             ),
             ScoperPipe(
@@ -58,7 +61,7 @@ def test_extracting_multiple_pipes():
     assert context.get('pos') == [
       'PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.'
     ]
-    assert context.get('regex_ner') == ['', '', '', '', '', 'LOC', 'LOC', '']
+    assert context.get('regex_ner') == ['', '', '', '', '', 'B-LOC', 'I-LOC', '']
     assert context.get('neg') == ['', '', 'FRW-NEG', '', '', '', '', '']
     assert context.get('neg_scope') == [
         '',

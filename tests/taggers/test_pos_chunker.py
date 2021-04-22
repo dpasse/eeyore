@@ -13,4 +13,4 @@ def test_chuker_single_term_phrase():
     context.add('pos', ['JJ', 'NN', 'IN', 'NN'])
 
     chunks = chunker.tag(context)
-    assert chunks == ['NP', 'NP', 'S', 'NP']
+    assert chunks == ['B-NP', 'I-NP', '', 'B-NP']

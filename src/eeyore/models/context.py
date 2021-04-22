@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Any, Dict, List
 
 from nltk.tokenize import word_tokenize
 
@@ -13,12 +13,15 @@ class Context():
             'tokens': tokens
         }
 
-        for key, value in kwargs.items():
-            self.add(key, value)
+        self.__meta: Dict[str, Any] = kwargs
 
     @property
     def sentence(self) -> str:
         return self.__text
+
+    @property
+    def meta(self) -> Dict[str, Any]:
+        return self.__meta
 
     @property
     def keys(self) -> List[str]:

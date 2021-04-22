@@ -10,14 +10,17 @@ def test_extractor():
     context = Context('We are not going to New York.')
     context.add('negative', ['', '', 'NEG', 'NEG', '', '', '', ''])
     context.add('negative_scope', ['', '', 'NEG', 'NEG', 'NEG', 'NEG', 'NEG', 'NEG'])
-    context.add('entities', ['', '', '', '', '', 'LOC', 'LOC', ''])
+    context.add('entities', ['', '', '', '', '', 'B-LOC', 'I-LOC', ''])
 
     negative_extracts = TagExtract('negative', ['NEG']).evaluate(context)
     negative_scope_extracts = TagExtract(
         'negative_scope',
         ['NEG']
     ).evaluate(context)
-    location_extracts = TagExtract('entities', ['LOC']).evaluate(context)
+    location_extracts = TagExtract(
+        'entities',
+        ['LOC']
+    ).evaluate(context)
 
     assert negative_extracts == {
         'NEG': [
