@@ -149,8 +149,7 @@ tag_mapper = TagMapper({
 
 pos = ['DT', 'JJ', 'NN', 'VBD', 'RB', 'RB', 'VBN']
 mapped_tags = tag_mapper.tag(pos)
-## mapped_tags == ['negative', 'false', 'nxet']
-
+## mapped_tags == ['', '', '', 'past', '', '', 'past']
 ```
 
 <p align="right">
