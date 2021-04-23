@@ -12,7 +12,7 @@
   * [POS Chunker](#pos-chunker)
   * [Define Scope](#scoper)
   * [Tag Mapper](#tag-mapper)
-  * [Pipeline](#pipeline)
+  * [Context Pipeline](#context-pipeline)
 * [Text Extraction](#text-extraction)
   * [Tag Extract](#tag-extract)
   * [Scope Overlap Extract](#tag-scope-overlap-extract)
@@ -155,15 +155,15 @@ mapped_tags = tag_mapper.tag(pos)
   <a href='#table-of-contents'>&#8593;</a>
 </p>
 
-### <a name="pipeline"></a>Pipeline:
+### <a name="context-pipeline"></a>Context Pipeline:
 
 ```python
 from eeyore.models import Tag, RegexPhrase
 from eeyore.taggers import PhraseChunker
-from eeyore.pipelines import ChunkerPipe, TokenAttributesPipe, Pipeline
+from eeyore.pipelines import ChunkerPipe, TokenAttributesPipe, ContextPipeline
 
 
-pipeline = Pipeline(
+pipeline = ContextPipeline(
     pipes=[
         ChunkerPipe(
             'regex_ner',

@@ -1,6 +1,6 @@
-from .pipes import Pipe, \
-                   ChunkerPipe, \
-                   ScoperPipe, \
-                   TokenAttributesPipe, \
-                   MachineLearningContextPipe
-from .pipeline import Pipeline
+from .context_pipes import ContextPipe, \
+                           ChunkerPipe, \
+                           ScoperPipe, \
+                           TokenAttributesPipe, \
+                           MachineLearningContextPipe
+from .context_pipeline import ContextPipeline

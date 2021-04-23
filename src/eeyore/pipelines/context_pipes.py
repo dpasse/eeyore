@@ -6,7 +6,7 @@ from ..models import Context
 from ..ml import ContextBaseModel
 
 
-class Pipe(ABC):
+class ContextPipe(ABC):
     def __init__(self, order: int):
         self.__order = order
 
@@ -19,7 +19,7 @@ class Pipe(ABC):
         raise NotImplementedError()
 
 
-class ChunkerPipe(Pipe):
+class ChunkerPipe(ContextPipe):
     def __init__(self, key: str, chunker: ContextChunker, order: int):
         self.__key = key
         self.__chunker = chunker
@@ -36,7 +36,7 @@ class ChunkerPipe(Pipe):
         return context
 
 
-class ScoperPipe(Pipe):
+class ScoperPipe(ContextPipe):
     def __init__(self, key: str, focus: str, scoper: Scoper, order: int):
         self.__key = key
         self.__focus = focus
@@ -53,7 +53,7 @@ class ScoperPipe(Pipe):
         return context
 
 
-class TokenAttributesPipe(Pipe):
+class TokenAttributesPipe(ContextPipe):
     def execute(self, context: Context) -> Context:
         tokens = context.get('tokens')
         context.add(
@@ -64,7 +64,7 @@ class TokenAttributesPipe(Pipe):
         return context
 
 
-class MachineLearningContextPipe(Pipe):
+class MachineLearningContextPipe(ContextPipe):
     def __init__(self, key: str, model: ContextBaseModel, order: int):
         self.__key = key
         self.__model = model

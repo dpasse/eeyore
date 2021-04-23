@@ -1,22 +1,23 @@
 
 from typing import List
-from .pipes import Pipe
+from .context_pipes import ContextPipe
 from ..models import Context
 
 
-class Pipeline():
-    def __init__(self, pipes: List[Pipe]):
+class ContextPipeline():
+    def __init__(self, pipes: List[ContextPipe]):
         self.__pipes = sorted(
             pipes,
             key=lambda pipe: pipe.order,
         )
 
     @property
-    def pipes(self) -> List[Pipe]:
+    def pipes(self) -> List[ContextPipe]:
         return self.__pipes
 
     def execute(self, text: str) -> Context:
         context = Context(text)
+
         for pipe in self.__pipes:
             context = pipe.execute(context)
 
