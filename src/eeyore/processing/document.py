@@ -1,6 +1,6 @@
 from typing import Generator
 from nltk.tokenize import sent_tokenize
-from .context import Context
+from ..models.context import Context
 
 
 class Document():
