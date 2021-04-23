@@ -10,7 +10,7 @@ def test_forward_scope_should_move_right():
     scopes = [
         Scope(
             'NEG',
-            scope_direction=ScopeDirection.FORWARD,
+            scope_direction=ScopeDirection.RIGHT,
             order=1
         )
     ]
@@ -25,7 +25,7 @@ def test_backward_scope_should_move_left():
     scopes = [
         Scope(
             'NEG',
-            scope_direction=ScopeDirection.BACKWARD,
+            scope_direction=ScopeDirection.LEFT,
             order=1
         )
     ]
@@ -55,7 +55,7 @@ def test_forward_scope_should_stop():
     scopes = [
         Scope(
             'NEG',
-            scope_direction=ScopeDirection.FORWARD,
+            scope_direction=ScopeDirection.RIGHT,
             order=1,
             stop_when=['TRANS']
         )
@@ -71,7 +71,7 @@ def test_backward_scope_should_stop():
     scopes = [
         Scope(
             'NEG',
-            scope_direction=ScopeDirection.BACKWARD,
+            scope_direction=ScopeDirection.LEFT,
             order=1,
             stop_when=['TRANS']
         )
@@ -87,7 +87,7 @@ def test_should_exit_after_max_travel_distance_hit():
     scopes = [
         Scope(
             'NEG',
-            scope_direction=ScopeDirection.BACKWARD,
+            scope_direction=ScopeDirection.LEFT,
             order=1,
             stop_when=['TRANS'],
             max_travel_distance=2

@@ -7,14 +7,14 @@ from ..utils import Merger
 class Scoper():
     def __init__(self,
                  scopes: List[Scope],
-                 top_direction: ScopeDirection = ScopeDirection.FORWARD):
+                 top_direction: ScopeDirection = ScopeDirection.RIGHT):
         self.__rules = {
-            ScopeDirection.FORWARD: sorted([
+            ScopeDirection.RIGHT: sorted([
                 scope
                 for scope in scopes
                 if scope.moves_forward
             ], key=lambda scope: scope.order),
-            ScopeDirection.BACKWARD: sorted([
+            ScopeDirection.LEFT: sorted([
                 scope
                 for scope in scopes
                 if scope.moves_backward
@@ -30,15 +30,15 @@ class Scoper():
             tags: List[str]) -> List[str]:
         forward_scope_tags = self._run_scopes(
             tags,
-            scope_direction=ScopeDirection.FORWARD
+            scope_direction=ScopeDirection.RIGHT
         )
 
         backward_scope_tags = list(reversed(self._run_scopes(
             list(reversed(tags)),
-            scope_direction=ScopeDirection.BACKWARD
+            scope_direction=ScopeDirection.LEFT
         )))
 
-        if self.__top_direction == ScopeDirection.FORWARD:
+        if self.__top_direction == ScopeDirection.RIGHT:
             return Merger.take_first(
                 forward_scope_tags,
                 backward_scope_tags

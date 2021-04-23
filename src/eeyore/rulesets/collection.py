@@ -32,7 +32,7 @@ available_tag_keys = set(tags_mapper.keys())
 negative_scopes = [
     Scope(
         applied_tag='FRW-NEG',
-        scope_direction=ScopeDirection.FORWARD,
+        scope_direction=ScopeDirection.RIGHT,
         order=1,
         stop_when=['TRANS']
     )

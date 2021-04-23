@@ -35,7 +35,7 @@ def test_extracting_multiple_pipes():
                     scopes=[
                         Scope(
                             applied_tag='FRW-NEG',
-                            scope_direction=ScopeDirection.FORWARD,
+                            scope_direction=ScopeDirection.RIGHT,
                             order=1,
                         )
                     ],

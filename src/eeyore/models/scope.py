@@ -3,8 +3,8 @@ from enum import Enum
 
 
 class ScopeDirection(Enum):
-    FORWARD = 1
-    BACKWARD = 2
+    RIGHT = 1
+    LEFT = 2
     TWOWAY = 3
 
 
@@ -42,12 +42,12 @@ class Scope():
 
     @property
     def moves_forward(self) -> bool:
-        return self.__scope_direction == ScopeDirection.FORWARD \
+        return self.__scope_direction == ScopeDirection.RIGHT \
             or self.__scope_direction == ScopeDirection.TWOWAY
 
     @property
     def moves_backward(self) -> bool:
-        return self.__scope_direction == ScopeDirection.BACKWARD \
+        return self.__scope_direction == ScopeDirection.LEFT \
             or self.__scope_direction == ScopeDirection.TWOWAY
 
     def should_stop(self, travel_distance: int, tag: str = '') -> bool:

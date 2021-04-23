@@ -7,20 +7,21 @@
 ## <a name="table-of-contents"></a>Table of Contents
 * [Text Generation](#text-generation)
   * [Markov Chain](#markov-chain)
-* [Text Extraction](#text-extraction)
+* [Token Tagging](#text-tagging)
   * [Phrase Chunker](#phrase-chunker)
   * [POS Chunker](#pos-chunker)
   * [Define Scope](#scoper)
   * [Tag Mapper](#tag-mapper)
   * [Pipeline](#pipeline)
+* [Text Extraction](#text-extraction)
   * [Tag Extract](#tag-extract)
+  * [Scope Overlap Extract](#tag-scope-overlap-extract)
 * [References](#references)
 
 <br />
 <br />
 
 ## <a name="text-generation"></a>Text Generation
-
 <br />
 
 ### <a name="markov-chain"></a>Markov Chain:
@@ -51,15 +52,13 @@ sentence = [
 
 ## sentence == ['<start>', 'I', 'am', 'tired', '<end>']
 ```
+
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>
 </p>
-
-
 <br />
 
-## <a name="text-extraction"></a>Text Extraction
-
+## <a name="text-tagging"></a>Text Tagging
 <br />
 
 ### <a name="phrase-chunker"></a>Phrase Chunker:
@@ -110,7 +109,7 @@ from eeyore.taggers import Scoper
 scopes = [
     Scope(
         'NEG',
-        scope_direction=ScopeDirection.FORWARD,
+        scope_direction=ScopeDirection.RIGHT,
         order=1,
         stop_when=['TRANS']
     )
@@ -195,6 +194,10 @@ pos = context.get('pos')
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>
 </p>
+<br />
+
+## <a name="text-extraction"></a>Text Extraction
+<br />
 
 ### <a name="tag-extract"></a>Tag Extract:
 
@@ -222,10 +225,34 @@ location_extracts = TagExtract(
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>
 </p>
+
+### <a name="tag-scope-overlap-extract"></a>Scope Overlap Extract:
+
+```python
+from eeyore.extractions import ScopeOverlapExtract
+from eeyore.models import Context
+
+context = Context('Tom declined cancer treatment.')
+context.add('scope1', ['', 'S1', 'S1', 'S1', 'S1'])
+context.add('scope2', ['', '', 'S2', 'S2', ''])
+
+relationships = ScopeOverlapExtract('scope1', 'scope2').evaluate(context)
+## relationships == ['', 'REL', 'REL', 'REL', 'REL']
+
+context = Context('Tom declined cancer treatment.')
+context.add('scope1', ['S1', 'S1', '', '', ''])
+context.add('scope2', ['', '', '', 'S2', ''])
+
+relationships = ScopeOverlapExtract('scope1', 'scope2').evaluate(context)
+## relationships == ['', '', '', '', '']
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 <br />
 
 ## <a name="references"></a>References:
-
 <br />
 
 1. Chapman, Wendy & Bridewell, Will & Hanbury, Paul & Cooper, Gregory & Buchanan, Bruce. (2001). A Simple Algorithm for Identifying Negated Findings and Diseases in Discharge Summaries. Journal of Biomedical Informatics. 34. 301-310. 10.1006/jbin.2001.1029.

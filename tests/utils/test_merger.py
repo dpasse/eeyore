@@ -3,12 +3,26 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
+from eeyore.models import Context
 from eeyore.utils import Merger
 
-def test_combine_tag_lists():
-    tokens = ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
-    phrases = ['', '', 'NEG', '', '', 'LOC', 'LOC', '']
+def test_combine():
+    context = Context('We are not going to New York.')
+    context.add('entities', ['', '', '', '', '', 'LOC', 'LOC', ''])
+    context.add('negatives', ['', '', 'NEG', '', '', '', '', ''])
 
-    combination = Merger.combine_tag_lists(tokens, phrases, separator='@')
+    data = Merger.combine(
+        context,
+        ['tokens', 'entities', 'negatives']
+    )
 
-    assert combination == [ 'We', 'are', 'not@NEG', 'going', 'to', 'New@LOC', 'York@LOC', '.']
+    assert data == [
+        { 'tokens': 'We' },
+        { 'tokens': 'are' },
+        { 'tokens': 'not', 'negatives': 'NEG' },
+        { 'tokens': 'going' },
+        { 'tokens': 'to' },
+        { 'tokens': 'New', 'entities': 'LOC' },
+        { 'tokens': 'York', 'entities': 'LOC' },
+        { 'tokens': '.' },
+    ]
