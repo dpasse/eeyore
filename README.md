@@ -176,7 +176,6 @@ pipeline = TextPipeline(
 
 text = 'We are not going to New York.'
 text = pipeline.execute(text)
-
 ## text = 'We are not going to New York.'
 ```
 
@@ -234,7 +233,6 @@ text = 'Jack lives in New York. Bob lives in San Francisco.'
 
 tokenizer = ContextTokenizer()
 contexts = [ context.get('tokens') for context in tokenizer.execute(text) ]
-
 ## contexts = [
 ##    ['Jack', 'lives', 'in', 'New', 'York', '.'],
 ##    ['Bob', 'lives', 'in', 'San', 'Francisco', '.'],
