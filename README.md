@@ -52,7 +52,6 @@ sentence = [
     for relationship
     in generated_relationship_chain
 ]
-
 ## sentence == ['<start>', 'I', 'am', 'tired', '<end>']
 ```
 
@@ -75,7 +74,6 @@ chunker = PhraseChunker(tags=[
 ])
 
 tokens, phrases = chunker.tag('We went to New York.')
-
 ## tokens == ['We', 'went', 'to', 'New', 'York', '.']
 ## phrases == ['', '', '', 'B-LOC', 'I-LOC', '']
 ```
@@ -95,7 +93,6 @@ context.add('pos', ['JJ', 'NN', 'IN', 'NN'])
 
 chunker = PosChunker("NP: {<DT>?<JJ>*<NN>}")
 chunks = chunker.tag(context)
-
 ## chunks == ['B-NP', 'I-NP', '', 'B-NP']
 ```
 
@@ -120,7 +117,6 @@ scopes = [
 
 tokens = ['', '', 'NEG', '', '', 'TRANS', '', '']
 scope_tags = Scoper(scopes).tag(tokens)
-
 ## scope_tags == ['', '', 'NEG', 'NEG', 'NEG', '', '', '']
 ```
 
