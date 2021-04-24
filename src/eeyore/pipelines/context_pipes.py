@@ -55,11 +55,23 @@ class TokenAttributesPipe(ContextPipe):
             'pos',
             self._get_pos(tokens),
         )
+        spacings = self._get_spacing(
+            context.sentence,
+            tokens
+        )
+        context.add('spacings', spacings)
         context.add(
-            'spacing',
-            self._get_spacing(
-                context.sentence,
-                tokens
+            'start_positions',
+            self._get_start_positions(
+                tokens,
+                spacings
+            )
+        )
+        context.add(
+            'end_positions',
+            self._get_end_positions(
+                tokens,
+                spacings
             )
         )
 
@@ -68,7 +80,7 @@ class TokenAttributesPipe(ContextPipe):
     def _get_pos(self, tokens: List[str]) -> List[str]:
         return [tag for _, tag in pos_tag(tokens)]
 
-    def _get_spacing(self, text, tokens: List[str]) -> List[str]:
+    def _get_spacing(self, text: str, tokens: List[str]) -> List[str]:
         spacing = []
         for token in tokens:
             text = re.sub(f'^{re.escape(token)}', '', text)
@@ -78,6 +90,31 @@ class TokenAttributesPipe(ContextPipe):
             text = text.strip()
 
         return spacing
+
+    def _get_start_positions(self, tokens: List[str], spacings: List[str]) -> List[str]:
+        start_position = []
+        start = 0
+        for i, token in enumerate(tokens):
+            start_position.append(str(start))
+
+            start += len(token)
+            if spacings[i] == 'yes':
+                start += 1
+
+        return start_position
+
+    def _get_end_positions(self, tokens: List[str], spacings: List[str]) -> List[str]:
+        end = len(tokens[0]) - 1
+        end_position = [str(end)]
+        for i in range(1, len(tokens)):
+            if spacings[i-1] == 'yes':
+                # move forward
+                end += 1
+
+            end += len(tokens[i])
+            end_position.append(str(end))
+
+        return end_position
 
 
 class MachineLearningContextPipe(ContextPipe):
