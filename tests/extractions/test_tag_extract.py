@@ -7,7 +7,10 @@ from eeyore.extractions import TagExtract
 from eeyore.models import Context
 
 def test_extractor():
-    context = Context('We are not going to New York.')
+    context = Context(
+        'We are not going to New York.',
+        ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
+    )
     context.add('negative', ['', '', 'NEG', 'NEG', '', '', '', ''])
     context.add('negative_scope', ['', '', 'NEG', 'NEG', 'NEG', 'NEG', 'NEG', 'NEG'])
     context.add('entities', ['', '', '', '', '', 'B-LOC', 'I-LOC', ''])

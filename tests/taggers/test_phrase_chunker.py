@@ -22,7 +22,11 @@ def test_chunker_when_multiple_terms_in_phrase():
         Tag('LOC', phrase=RegexPhrase(r'\b(New York)\b')),
     ])
 
-    phrases = chunker.tag(Context('We went to New York.'))
+    context = Context(
+        'We went to New York.',
+        ['We', 'went', 'to', 'New', 'York', '.']
+    )
+    phrases = chunker.tag(context)
     assert phrases == ['', '', '', 'B-LOC', 'I-LOC', '']
 
 def test_chunker_with_two_different_phrases():

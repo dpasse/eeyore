@@ -7,7 +7,10 @@ from eeyore.models import Context
 from eeyore.utils import Merger
 
 def test_combine():
-    context = Context('We are not going to New York.')
+    context = Context(
+        'We are not going to New York.',
+        ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
+    )
     context.add('entities', ['', '', '', '', '', 'LOC', 'LOC', ''])
     context.add('negatives', ['', '', 'NEG', '', '', '', '', ''])
 

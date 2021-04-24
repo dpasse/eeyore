@@ -88,7 +88,10 @@ tokens, phrases = chunker.tag('We went to New York.')
 from eeyore.models import Context
 from eeyore.taggers import PosChunker
 
-context = Context('Learn php from sam')
+context =
+    'Learn php from sam',
+    ['Learn', 'php', 'from', 'sam']
+)
 context.add('pos', ['JJ', 'NN', 'IN', 'NN'])
 
 chunker = PosChunker("NP: {<DT>?<JJ>*<NN>}")
@@ -203,7 +206,10 @@ pipeline = ContextPipeline(
     ]
 )
 
-context = Context('We are not going to New York.')
+context = Context(
+    'We are not going to New York.',
+    ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
+)
 context = pipeline.execute(context)
 
 tokens = context.get('tokens')
@@ -249,7 +255,10 @@ contexts = [ context.get('tokens') for context in tokenizer.execute(text) ]
 from eeyore.extractions import TagExtract
 from eeyore.models import Context
 
-context = Context('We are not going to New York.')
+context = Context(
+  'We are not going to New York.',
+  ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
+)
 context.add('entities', ['', '', '', '', '', 'B-LOC', 'I-LOC', ''])
 
 location_extracts = TagExtract(
@@ -276,14 +285,20 @@ location_extracts = TagExtract(
 from eeyore.extractions import ScopeOverlapExtract
 from eeyore.models import Context
 
-context = Context('Tom declined cancer treatment.')
+context = Context(
+    'Tom declined cancer treatment.',
+    ['Tom', 'declined', 'cancer', 'treatment', '.']
+)
 context.add('scope1', ['', 'S1', 'S1', 'S1', 'S1'])
 context.add('scope2', ['', '', 'S2', 'S2', ''])
 
 relationships = ScopeOverlapExtract('scope1', 'scope2').evaluate(context)
 ## relationships == ['', 'REL', 'REL', 'REL', 'REL']
 
-context = Context('Tom declined cancer treatment.')
+context = Context(
+    'Tom declined cancer treatment.',
+    ['Tom', 'declined', 'cancer', 'treatment', '.']
+)
 context.add('scope1', ['S1', 'S1', '', '', ''])
 context.add('scope2', ['', '', '', 'S2', ''])
 

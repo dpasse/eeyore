@@ -35,12 +35,6 @@ class ContextTokenizer(Tokenizer):
 
         return self.__text_preprocessor.execute(text)
 
-    def _execute_context_pipeline(self, context: Context) -> Context:
-        if self.__context_pipeline is None:
-            return context
-
-        return self.__context_pipeline.execute(context)
-
     def _create_context(self, text: str, cache: Dict[str, Any]) -> Context:
         context = self.__context_factory.execute(
             text,
@@ -48,6 +42,12 @@ class ContextTokenizer(Tokenizer):
         )
 
         return self._execute_context_pipeline(context)
+
+    def _execute_context_pipeline(self, context: Context) -> Context:
+        if self.__context_pipeline is None:
+            return context
+
+        return self.__context_pipeline.execute(context)
 
     def _split_text(self, text) -> Generator[Tuple[str, dict], None, None]:
         return (

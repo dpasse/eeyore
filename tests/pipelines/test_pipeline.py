@@ -45,7 +45,10 @@ def test_extracting_multiple_pipes():
         ]
     )
 
-    context = Context('We are not going to New York.')
+    context = Context(
+        'We are not going to New York.',
+        ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
+    )
     context = pipeline.execute(context)
 
     assert len(context.keys) == 5
