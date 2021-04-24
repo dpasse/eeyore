@@ -192,6 +192,7 @@ from eeyore.pipelines import ChunkerPipe, TokenAttributesPipe, ContextPipeline
 
 pipeline = ContextPipeline(
     pipes=[
+        TokenAttributesPipe(),
         ChunkerPipe(
             'regex_ner',
             PhraseChunker(tags=[
@@ -202,7 +203,6 @@ pipeline = ContextPipeline(
             ]),
             order=1
         ),
-        TokenAttributesPipe(order=2),
     ]
 )
 

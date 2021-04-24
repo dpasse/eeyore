@@ -10,7 +10,7 @@ from eeyore.pipelines import ChunkerPipe, ScoperPipe, TokenAttributesPipe, Conte
 def test_extracting_multiple_pipes():
     pipeline = ContextPipeline(
         pipes=[
-            TokenAttributesPipe(order=1),
+            TokenAttributesPipe(),
             ChunkerPipe(
                 'regex_ner',
                 PhraseChunker(tags=[

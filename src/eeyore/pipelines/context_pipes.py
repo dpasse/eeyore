@@ -49,15 +49,19 @@ class ScoperPipe(ContextPipe):
 
 
 class TokenAttributesPipe(ContextPipe):
+    def __init__(self):
+        super().__init__(0)
+
     def execute(self, context: Context) -> Context:
         tokens = context.get('tokens')
-        context.add(
-            'pos',
-            self._get_pos(tokens),
-        )
         spacings = self._get_spacing(
             context.sentence,
             tokens
+        )
+
+        context.add(
+            'pos',
+            self._get_pos(tokens),
         )
         context.add('spacings', spacings)
         context.add(
