@@ -1,5 +1,4 @@
 from typing import Any, Dict, List
-
 from nltk.tokenize import word_tokenize
 
 
@@ -29,19 +28,22 @@ class Context():
 
     def get(self, key: str) -> List[str]:
         if key not in self.__container:
-            raise KeyError(
-                f'{key} not found.'
-            )
+            return ['' for _ in range(self.__len__())]
 
         return self.__container[key]
 
-    def add(self, key: str, tags: List[str]):
+    def add(self,
+            key: str,
+            tags: List[str]):
         if self.__expected_length != len(tags):
             raise ValueError(
                 f'for key == {key}, ' +
                 f'tags must have a length of {self.__expected_length}, ' +
                 f'but was {len(tags)}.'
             )
+
+        if all(len(tag) == 0 for tag in tags):
+            return
 
         self.__container[key] = tags
 
