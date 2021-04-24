@@ -6,6 +6,7 @@ from ..taggers import ContextChunker, Scoper
 from ..models import Context
 from ..ml import ContextBaseModel
 from .abs_pipe import AbsPipe
+from ..utils import SpellChecker, Merger
 
 
 class ContextPipe(AbsPipe):
@@ -49,8 +50,10 @@ class ScoperPipe(ContextPipe):
 
 
 class TokenAttributesPipe(ContextPipe):
-    def __init__(self):
-        super().__init__(0)
+    def __init__(self,
+                 spell_checker: SpellChecker = SpellChecker()):
+        self.__spell_checker = spell_checker
+        super().__init__(-1000)
 
     def execute(self, context: Context) -> Context:
         tokens = context.get('tokens')
@@ -58,6 +61,19 @@ class TokenAttributesPipe(ContextPipe):
             context.sentence,
             tokens
         )
+
+        was_updated, tokens = self.__spell_checker.evaluate(tokens)
+        if was_updated:
+            return self.execute(
+                Context(
+                    Merger.generate_sentence(
+                        tokens,
+                        spacings
+                    ),
+                    tokens,
+                    **context.cache
+                )
+            )
 
         context.add(
             'pos',
@@ -95,7 +111,9 @@ class TokenAttributesPipe(ContextPipe):
 
         return spacing
 
-    def _get_start_positions(self, tokens: List[str], spacings: List[str]) -> List[str]:
+    def _get_start_positions(self,
+                             tokens: List[str],
+                             spacings: List[str]) -> List[str]:
         start_position = []
         start = 0
         for i, token in enumerate(tokens):
@@ -107,7 +125,9 @@ class TokenAttributesPipe(ContextPipe):
 
         return start_position
 
-    def _get_end_positions(self, tokens: List[str], spacings: List[str]) -> List[str]:
+    def _get_end_positions(self,
+                           tokens: List[str],
+                           spacings: List[str]) -> List[str]:
         end = len(tokens[0]) - 1
         end_position = [str(end)]
         for i in range(1, len(tokens)):

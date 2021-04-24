@@ -35,3 +35,12 @@ class Merger():
                 combination.append(x2_list[i])
 
         return combination
+
+    @staticmethod
+    def generate_sentence(tokens: List[str], spacings: List[str]) -> str:
+        text = ''
+        for i, token in enumerate(tokens):
+            space = ' ' if spacings[i] == 'yes' else ''
+            text += f'{token}{space}'
+
+        return text
