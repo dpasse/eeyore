@@ -1,19 +1,12 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 from nltk.tag import pos_tag
-
 from ..taggers import ContextChunker, Scoper
 from ..models import Context
 from ..ml import ContextBaseModel
+from .abs_pipe import AbsPipe
 
 
-class ContextPipe(ABC):
-    def __init__(self, order: int):
-        self.__order = order
-
-    @property
-    def order(self) -> int:
-        return self.__order
-
+class ContextPipe(AbsPipe):
     @abstractmethod
     def execute(self, context: Context) -> Context:
         raise NotImplementedError()
@@ -81,4 +74,12 @@ class MachineLearningContextPipe(ContextPipe):
             self.__model.tag(context),
         )
 
+        return context
+
+
+class EmptyContextPipe(ContextPipe):
+    def __init__(self):
+        super().__init__(1)
+
+    def execute(self, context: Context) -> Context:
         return context

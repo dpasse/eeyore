@@ -17,8 +17,8 @@ def test_context_add_and_get():
     assert len(context.get('negatives')) == 8
     assert len(context.get('negative_scope')) == 8
 
-def test_context_meta_cache():
+def test_context_cache():
     context = Context('We are not going to New York.', actor='Tom', line=4, sent_number=3)
-    assert context.meta['actor'] == 'Tom'
-    assert context.meta['line'] == 4
-    assert context.meta['sent_number'] == 3
+    assert context.cache['actor'] == 'Tom'
+    assert context.cache['line'] == 4
+    assert context.cache['sent_number'] == 3

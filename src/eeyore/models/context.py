@@ -4,7 +4,7 @@ from nltk.tokenize import word_tokenize
 
 
 class Context():
-    def __init__(self, text: str, **kwargs):
+    def __init__(self, text: str, **kwargs: Dict[str, Any]):
         self.__text = text
 
         tokens = word_tokenize(self.__text)
@@ -13,15 +13,15 @@ class Context():
             'tokens': tokens
         }
 
-        self.__meta: Dict[str, Any] = kwargs
+        self.__cache: Dict[str, Any] = kwargs
 
     @property
     def sentence(self) -> str:
         return self.__text
 
     @property
-    def meta(self) -> Dict[str, Any]:
-        return self.__meta
+    def cache(self) -> Dict[str, Any]:
+        return self.__cache
 
     @property
     def keys(self) -> List[str]:

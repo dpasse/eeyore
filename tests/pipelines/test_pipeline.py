@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.models import Tag, RegexPhrase, Scope, ScopeDirection
+from eeyore.models import Tag, RegexPhrase, Scope, ScopeDirection, Context
 from eeyore.taggers import PhraseChunker, Scoper
 from eeyore.pipelines import ChunkerPipe, ScoperPipe, TokenAttributesPipe, ContextPipeline
 
@@ -45,7 +45,8 @@ def test_extracting_multiple_pipes():
         ]
     )
 
-    context = pipeline.execute('We are not going to New York.')
+    context = Context('We are not going to New York.')
+    context = pipeline.execute(context)
 
     assert len(context.keys) == 5
     assert context.get('tokens') == [

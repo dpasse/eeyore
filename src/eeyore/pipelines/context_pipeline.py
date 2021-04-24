@@ -1,4 +1,3 @@
-
 from typing import List
 from .context_pipes import ContextPipe
 from ..models import Context
@@ -15,9 +14,7 @@ class ContextPipeline():
     def pipes(self) -> List[ContextPipe]:
         return self.__pipes
 
-    def execute(self, text: str) -> Context:
-        context = Context(text)
-
+    def execute(self, context: Context) -> Context:
         for pipe in self.__pipes:
             context = pipe.execute(context)
 

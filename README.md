@@ -158,7 +158,7 @@ mapped_tags = tag_mapper.tag(pos)
 ### <a name="context-pipeline"></a>Context Pipeline:
 
 ```python
-from eeyore.models import Tag, RegexPhrase
+from eeyore.models import Tag, RegexPhrase, Context
 from eeyore.taggers import PhraseChunker
 from eeyore.pipelines import ChunkerPipe, TokenAttributesPipe, ContextPipeline
 
@@ -179,7 +179,8 @@ pipeline = ContextPipeline(
     ]
 )
 
-context = pipeline.execute('We are not going to New York.')
+context = Context('We are not going to New York.')
+context = pipeline.execute(context)
 
 tokens = context.get('tokens')
 ## tokens = ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']

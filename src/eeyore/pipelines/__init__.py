@@ -2,5 +2,11 @@ from .context_pipes import ContextPipe, \
                            ChunkerPipe, \
                            ScoperPipe, \
                            TokenAttributesPipe, \
-                           MachineLearningContextPipe
+                           MachineLearningContextPipe, \
+                           EmptyContextPipe
+from .text_pipes import TextPipe, \
+                        EmptyTextPipe
 from .context_pipeline import ContextPipeline
+from .text_pipeline import TextPipeline
+from .context_factory import ContextFactory
+from .tokenizers import ContextTokenizer
