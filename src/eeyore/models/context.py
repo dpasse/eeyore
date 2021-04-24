@@ -46,3 +46,6 @@ class Context():
 
     def __len__(self) -> int:
         return len(self.get('tokens'))
+
+    def __hash__(self) -> int:
+        return hash(self.__text)
