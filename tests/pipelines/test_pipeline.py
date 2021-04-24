@@ -51,7 +51,7 @@ def test_extracting_multiple_pipes():
     )
     context = pipeline.execute(context)
 
-    assert len(context.keys) == 5
+    assert len(context.keys) == 6
     assert context.get('tokens') == [
         'We',
         'are',
@@ -64,6 +64,9 @@ def test_extracting_multiple_pipes():
     ]
     assert context.get('pos') == [
       'PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.'
+    ]
+    assert context.get('spacing') == [
+      'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'no', 'no'
     ]
     assert context.get('regex_ner') == ['', '', '', '', '', 'B-LOC', 'I-LOC', '']
     assert context.get('neg') == ['', '', 'FRW-NEG', '', '', '', '', '']

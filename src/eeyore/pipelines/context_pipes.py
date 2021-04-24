@@ -1,4 +1,6 @@
+import re
 from abc import abstractmethod
+from typing import List
 from nltk.tag import pos_tag
 from ..taggers import ContextChunker, Scoper
 from ..models import Context
@@ -51,10 +53,31 @@ class TokenAttributesPipe(ContextPipe):
         tokens = context.get('tokens')
         context.add(
             'pos',
-            [tag for _, tag in pos_tag(tokens)],
+            self._get_pos(tokens),
+        )
+        context.add(
+            'spacing',
+            self._get_spacing(
+                context.sentence,
+                tokens
+            )
         )
 
         return context
+
+    def _get_pos(self, tokens: List[str]) -> List[str]:
+        return [tag for _, tag in pos_tag(tokens)]
+
+    def _get_spacing(self, text, tokens: List[str]) -> List[str]:
+        spacing = []
+        for token in tokens:
+            text = re.sub(f'^{re.escape(token)}', '', text)
+            spacing.append(
+                'yes' if text.startswith(' ') else 'no'
+            )
+            text = text.strip()
+
+        return spacing
 
 
 class MachineLearningContextPipe(ContextPipe):
