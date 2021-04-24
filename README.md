@@ -12,7 +12,10 @@
   * [POS Chunker](#pos-chunker)
   * [Define Scope](#scoper)
   * [Tag Mapper](#tag-mapper)
+* [Pipelines](#pipelines)
+  * [Text Pipeline](#text-pipeline)
   * [Context Pipeline](#context-pipeline)
+  * [Context Tokenizer](#context-tokenizer)
 * [Text Extraction](#text-extraction)
   * [Tag Extract](#tag-extract)
   * [Scope Overlap Extract](#tag-scope-overlap-extract)
@@ -154,6 +157,32 @@ mapped_tags = tag_mapper.tag(pos)
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>
 </p>
+<br />
+
+## <a name="pipelines"></a>Pipelines
+<br />
+
+### <a name="text-pipeline"></a>Text Pipeline:
+
+```python
+from eeyore.pipelines import TextPipeline, EmptyTextPipe
+
+
+pipeline = TextPipeline(
+    pipes=[
+        EmptyTextPipe()  # text cleaning pipes
+    ]
+)
+
+text = 'We are not going to New York.'
+text = pipeline.execute(text)
+
+## text = 'We are not going to New York.'
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
 
 ### <a name="context-pipeline"></a>Context Pipeline:
 
@@ -190,6 +219,26 @@ regex_ner = context.get('regex_ner')
 
 pos = context.get('pos')
 ## pos = ['PRP', 'VBP', 'RB', 'VBG', 'TO', 'NNP', 'NNP', '.']
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+
+### <a name="context-tokenizer"></a>Context Tokenizer:
+
+```python
+from eeyore.pipelines import ContextTokenizer
+
+text = 'Jack lives in New York. Bob lives in San Francisco.'
+
+tokenizer = ContextTokenizer()
+contexts = [ context.get('tokens') for context in tokenizer.execute(text) ]
+
+## contexts = [
+##    ['Jack', 'lives', 'in', 'New', 'York', '.'],
+##    ['Bob', 'lives', 'in', 'San', 'Francisco', '.'],
+## ]
 ```
 
 <p align="right">

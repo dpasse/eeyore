@@ -51,6 +51,6 @@ class ContextTokenizer(Tokenizer):
 
     def _split_text(self, text) -> Generator[Tuple[str, dict], None, None]:
         return (
-            (sentence, {})
-            for sentence in sent_tokenize(text)
+            (sentence, {'i': i})
+            for i, sentence in enumerate(sent_tokenize(text))
         )
