@@ -23,6 +23,13 @@ class Relationship():
     def attributes(self) -> Optional[Dict[str, Any]]:
         return self.__attributes
 
+    def __add__(self, obj):
+        if self.primary != obj.primary:
+            raise ValueError('obj has a different "primary", both are not compatible.')
+
+        self.children.extend(obj.children)
+        return self
+
 
 class RelationshipContainer(dict):
     def __init__(self, relationships: Optional[List[Relationship]] = None):
