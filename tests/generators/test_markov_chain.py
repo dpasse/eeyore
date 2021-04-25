@@ -13,25 +13,32 @@ def test_markov_chain_generation():
     ## I am very tired
     ## I am not very tired
 
-    relationship_container = RelationshipContainer([
+    relationship_container = RelationshipContainer()
+    relationship_container.add_many([
         Relationship('<start>', ['I']),
         Relationship('I', ['am']),
-        Relationship('am', ['not', 'very', 'tired']),
-        Relationship('not', ['very', 'tired']),
+        Relationship('am', ['not']),  # compress to ['not', 'very', 'tired']
+        Relationship('am', ['very']),
+        Relationship('am', ['tired']),
+        Relationship('not', ['very']),
+        Relationship('not', ['tired']),
         Relationship('very', ['tired']),
         Relationship('tired', ['<end>']),
         Relationship('<end>', []),
     ])
 
-    generated_sentence_chain = MarkovChain(seed=42).generate(relationship_container)
+    generated_sentence_chain = MarkovChain(seed=56).generate(relationship_container)
     sentence = [
         relationship.primary
         for relationship in generated_sentence_chain
     ]
+    assert relationship_container['am'].children == ['not', 'very', 'tired']
+    assert relationship_container['not'].children == ['very', 'tired']
     assert sentence == [
         '<start>',
         'I',
         'am',
+        'very',
         'tired',
         '<end>'
     ]

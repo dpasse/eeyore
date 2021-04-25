@@ -39,7 +39,11 @@ class RelationshipContainer(dict):
             self.add_many(relationships)
 
     def add(self, relationship: Relationship):
-        self[relationship.primary] = relationship
+        key = relationship.primary
+        if key not in self:
+            self[relationship.primary] = relationship
+        else:
+            self[key] += relationship
 
     def add_many(self, relationships: List[Relationship]):
         for relationship in relationships:
