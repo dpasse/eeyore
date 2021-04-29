@@ -25,7 +25,9 @@ class Relationship():
 
     def __add__(self, obj):
         if self.primary != obj.primary:
-            raise ValueError('obj has a different "primary", both are not compatible.')
+            raise ValueError(
+                'obj has a different "primary", both are not compatible.'
+            )
 
         self.children.extend(obj.children)
         return self
