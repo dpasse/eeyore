@@ -15,7 +15,7 @@ class Context():
         if instance is None:
             return self
 
-        return self.__container[instance]
+        return self.get(instance)
 
     @property
     def sentence(self) -> str:
