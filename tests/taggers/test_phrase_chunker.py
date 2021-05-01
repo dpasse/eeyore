@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.taggers import PhraseChunker
-from eeyore.models import Tag, RegexPhrase, Context
+from eeyore_nlp.taggers import PhraseChunker
+from eeyore_nlp.models import Tag, RegexPhrase, Context
 
 def test_chunker_single_term_phrase():
     chunker = PhraseChunker(

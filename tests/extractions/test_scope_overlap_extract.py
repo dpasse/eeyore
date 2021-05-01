@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.extractions import ScopeOverlapExtract
-from eeyore.models import Context
+from eeyore_nlp.extractions import ScopeOverlapExtract
+from eeyore_nlp.models import Context
 
 def test_extractor_1():
     context = Context(

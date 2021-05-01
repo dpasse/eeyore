@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.utils import iob2
+from eeyore_nlp.utils import iob2
 
 def test_is_iob_tag_should_flag_iob_format_as_true():
     assert iob2.is_iob_tag('B-LOC')

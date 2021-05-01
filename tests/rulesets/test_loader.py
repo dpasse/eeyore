@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.rulesets import load_tags, load_scopes
-from eeyore.rulesets.collection import available_tag_keys, available_scope_keys
+from eeyore_nlp.rulesets import load_tags, load_scopes
+from eeyore_nlp.rulesets.collection import available_tag_keys, available_scope_keys
 
 def test_load_tags():
     tags = list(load_tags(available_tag_keys))

@@ -3,9 +3,9 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.models import Tag, RegexPhrase, Scope, ScopeDirection, Context
-from eeyore.taggers import PhraseChunker, Scoper
-from eeyore.pipelines import ChunkerPipe, ScoperPipe, TokenAttributesPipe, ContextPipeline
+from eeyore_nlp.models import Tag, RegexPhrase, Scope, ScopeDirection, Context
+from eeyore_nlp.taggers import PhraseChunker, Scoper
+from eeyore_nlp.pipelines import ChunkerPipe, ScoperPipe, TokenAttributesPipe, ContextPipeline
 
 def test_extracting_multiple_pipes():
     pipeline = ContextPipeline(

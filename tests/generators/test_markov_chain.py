@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.generators import MarkovChain
-from eeyore.models import Relationship, RelationshipContainer
+from eeyore_nlp.generators import MarkovChain
+from eeyore_nlp.models import Relationship, RelationshipContainer
 
 def test_markov_chain_generation():
     ## Possible outcomes:

@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.models import Context
+from eeyore_nlp.models import Context
 
 def test_context_add_and_get():
     context = Context(

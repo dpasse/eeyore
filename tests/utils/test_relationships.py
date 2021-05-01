@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.utils import RelationshipBuilder
+from eeyore_nlp.utils import RelationshipBuilder
 
 def test_relationship_builder():
     tokens = [

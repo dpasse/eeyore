@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.taggers import PosChunker
-from eeyore.models import Context
+from eeyore_nlp.taggers import PosChunker
+from eeyore_nlp.models import Context
 
 def test_chuker_single_term_phrase():
     chunker = PosChunker("NP: {<DT>?<JJ>*<NN>}")

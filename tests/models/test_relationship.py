@@ -4,7 +4,7 @@ import pytest
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.models import Relationship
+from eeyore_nlp.models import Relationship
 
 def test_relationship_addition():
     rel1 = Relationship('P1', ['C1'])

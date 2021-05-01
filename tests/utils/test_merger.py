@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.models import Context
-from eeyore.utils import Merger
+from eeyore_nlp.models import Context
+from eeyore_nlp.utils import Merger
 
 def test_combine():
     context = Context(

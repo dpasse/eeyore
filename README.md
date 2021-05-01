@@ -1,5 +1,5 @@
-# Eeyore
-> a text extraction / generation library
+# Eeyore - NLP
+> aimed to be a gloomy, depressive, no frills/straight to the point text generation / extraction library.
 
 <hr>
 <br />
@@ -14,6 +14,7 @@
   * [Tag Mapper](#tag-mapper)
 * [Pipelines](#pipelines)
   * [Text Pipeline](#text-pipeline)
+  * [Context Factory](#context-factory)
   * [Context Pipeline](#context-pipeline)
   * [Context Tokenizer](#context-tokenizer)
 * [Text Extraction](#text-extraction)
@@ -30,8 +31,8 @@
 ### <a name="markov-chain"></a>Markov Chain:
 
 ```python
-from eeyore.models import Relationship, RelationshipContainer
-from eeyore.generators import MarkovChain
+from eeyore_nlp.models import Relationship, RelationshipContainer
+from eeyore_nlp.generators import MarkovChain
 
 relationship_container = RelationshipContainer([
     Relationship('<start>', ['I']),
@@ -66,8 +67,8 @@ sentence = [
 ### <a name="phrase-chunker"></a>Phrase Chunker:
 
 ```python
-from eeyore.models import Tag, RegexPhrase
-from eeyore.taggers import PhraseChunker
+from eeyore_nlp.models import Tag, RegexPhrase
+from eeyore_nlp.taggers import PhraseChunker
 
 chunker = PhraseChunker(tags=[
     Tag('LOC', phrase=RegexPhrase(r'\b(New York)\b')),
@@ -85,8 +86,8 @@ tokens, phrases = chunker.tag('We went to New York.')
 ### <a name="pos-chunker"></a>POS Chunker:
 
 ```python
-from eeyore.models import Context
-from eeyore.taggers import PosChunker
+from eeyore_nlp.models import Context
+from eeyore_nlp.taggers import PosChunker
 
 context =
     'Learn php from sam',
@@ -106,8 +107,8 @@ chunks = chunker.tag(context)
 ### <a name="scoper"></a>Define Scope:
 
 ```python
-from eeyore.models import Scope, ScopeDirection
-from eeyore.taggers import Scoper
+from eeyore_nlp.models import Scope, ScopeDirection
+from eeyore_nlp.taggers import Scoper
 
 scopes = [
     Scope(
@@ -130,7 +131,7 @@ scope_tags = Scoper(scopes).tag(tokens)
 ### <a name="tag-mapper"></a>Tag Mapper:
 
 ```python
-from eeyore.taggers import TagMapper
+from eeyore_nlp.taggers import TagMapper
 
 tag_mapper = TagMapper({
   'negtaive': 'negative',
@@ -164,7 +165,7 @@ mapped_tags = tag_mapper.tag(pos)
 ### <a name="text-pipeline"></a>Text Pipeline:
 
 ```python
-from eeyore.pipelines import TextPipeline, EmptyTextPipe
+from eeyore_nlp.pipelines import TextPipeline, EmptyTextPipe
 
 
 pipeline = TextPipeline(
@@ -182,12 +183,33 @@ text = pipeline.execute(text)
   <a href='#table-of-contents'>&#8593;</a>
 </p>
 
+### <a name="context-factory"></a>Context Factory:
+
+```python
+from eeyore_nlp.pipelines import TextPipeline, ContextFactory, ContractionsTextPipe
+
+
+pipeline = TextPipeline(
+    pipes=[
+        ContractionsTextPipe()
+    ]
+)
+factory = ContextFactory(pipeline)
+context = factory.execute('We aren\'t going to New York.')
+tokens = context.tokens
+## tokens = ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
+```
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+
 ### <a name="context-pipeline"></a>Context Pipeline:
 
 ```python
-from eeyore.models import Tag, RegexPhrase, Context
-from eeyore.taggers import PhraseChunker
-from eeyore.pipelines import ChunkerPipe, TokenAttributesPipe, ContextPipeline
+from eeyore_nlp.models import Tag, RegexPhrase, Context
+from eeyore_nlp.taggers import PhraseChunker
+from eeyore_nlp.pipelines import ChunkerPipe, TokenAttributesPipe, ContextPipeline
 
 
 pipeline = ContextPipeline(
@@ -229,7 +251,7 @@ pos = context.get('pos')
 ### <a name="context-tokenizer"></a>Context Tokenizer:
 
 ```python
-from eeyore.pipelines import ContextTokenizer
+from eeyore_nlp.pipelines import ContextTokenizer
 
 text = 'Jack lives in New York. Bob lives in San Francisco.'
 
@@ -252,8 +274,8 @@ contexts = [ context.get('tokens') for context in tokenizer.execute(text) ]
 ### <a name="tag-extract"></a>Tag Extract:
 
 ```python
-from eeyore.extractions import TagExtract
-from eeyore.models import Context
+from eeyore_nlp.extractions import TagExtract
+from eeyore_nlp.models import Context
 
 context = Context(
   'We are not going to New York.',
@@ -282,8 +304,8 @@ location_extracts = TagExtract(
 ### <a name="tag-scope-overlap-extract"></a>Scope Overlap Extract:
 
 ```python
-from eeyore.extractions import ScopeOverlapExtract
-from eeyore.models import Context
+from eeyore_nlp.extractions import ScopeOverlapExtract
+from eeyore_nlp.models import Context
 
 context = Context(
     'Tom declined cancer treatment.',

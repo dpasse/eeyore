@@ -4,7 +4,7 @@ import random
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.generators import Alias
+from eeyore_nlp.generators import Alias
 
 def test_alias_generation():
     random.seed(100)

@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.taggers import Scoper
-from eeyore.models import Scope, ScopeDirection
+from eeyore_nlp.taggers import Scoper
+from eeyore_nlp.models import Scope, ScopeDirection
 
 def test_forward_scope_should_move_right():
     scopes = [

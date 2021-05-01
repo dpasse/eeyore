@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.pipelines import ContextTokenizer
+from eeyore_nlp.pipelines import ContextTokenizer
 
 def test_context_tokenizer():
     text = 'Jack lives in New York. Bob lives in San Francisco.'

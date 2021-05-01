@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.extractions import TagExtract
-from eeyore.models import Context
+from eeyore_nlp.extractions import TagExtract
+from eeyore_nlp.models import Context
 
 def test_extractor():
     context = Context(

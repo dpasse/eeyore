@@ -5,7 +5,8 @@ from .context_pipes import ContextPipe, \
                            MachineLearningContextPipe, \
                            EmptyContextPipe
 from .text_pipes import TextPipe, \
-                        EmptyTextPipe
+                        EmptyTextPipe, \
+                        ContractionsTextPipe
 from .context_pipeline import ContextPipeline
 from .text_pipeline import TextPipeline
 from .context_factory import ContextFactory

@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore.taggers import TagMapper
+from eeyore_nlp.taggers import TagMapper
 
 def test_mapping_and_clear_if_no_map_found():
     pos = [

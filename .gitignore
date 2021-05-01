@@ -128,5 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# local notes
-/notes
+# local stuff
+notes/local
+venv
+.vscode
