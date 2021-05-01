@@ -196,7 +196,7 @@ pipeline = TextPipeline(
 )
 factory = ContextFactory(pipeline)
 context = factory.execute('We aren\'t going to New York.')
-tokens = context.tokens
+tokens = context.get('tokens')
 ## tokens = ['We', 'are', 'not', 'going', 'to', 'New', 'York', '.']
 ```
 

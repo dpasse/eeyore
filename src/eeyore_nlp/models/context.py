@@ -11,6 +11,12 @@ class Context():
 
         self.__cache: Dict[str, Any] = kwargs
 
+    def __get__(self, instance, owner):
+        if instance is None:
+            return self
+
+        return self.__container[instance]
+
     @property
     def sentence(self) -> str:
         return self.__text
