@@ -1,26 +1,18 @@
 import re
-from abc import abstractmethod
 from typing import List
 from nltk.tag import pos_tag
-from ..taggers import ContextChunker, Scoper
+from ..taggers import ContextChunker, TokenTagger
 from ..models import Context
-from ..ml import ContextBaseModel
-from .abs_pipe import AbsPipe
 from ..utils import SpellChecker, Merger
-
-
-class ContextPipe(AbsPipe):
-    @abstractmethod
-    def execute(self, context: Context) -> Context:
-        raise NotImplementedError()
+from .abs import ContextPipe
 
 
 class ChunkerPipe(ContextPipe):
     def __init__(self, key: str, chunker: ContextChunker, order: int):
+        super().__init__(order)
+
         self.__key = key
         self.__chunker = chunker
-
-        super().__init__(order)
 
     def execute(self, context: Context) -> Context:
         tags = self.__chunker.tag(context)
@@ -32,18 +24,18 @@ class ChunkerPipe(ContextPipe):
         return context
 
 
-class ScoperPipe(ContextPipe):
-    def __init__(self, key: str, focus: str, scoper: Scoper, order: int):
+class TokenTaggerPipe(ContextPipe):
+    def __init__(self, key: str, focus: str, tagger: TokenTagger, order: int):
         self.__key = key
         self.__focus = focus
-        self.__scoper = scoper
+        self.__tagger = tagger
 
         super().__init__(order)
 
     def execute(self, context: Context) -> Context:
         context.add(
             self.__key,
-            self.__scoper.tag(context.get(self.__focus))
+            self.__tagger.tag(context.get(self.__focus))
         )
 
         return context
@@ -52,8 +44,9 @@ class ScoperPipe(ContextPipe):
 class TokenAttributesPipe(ContextPipe):
     def __init__(self,
                  spell_checker: SpellChecker = SpellChecker()):
-        self.__spell_checker = spell_checker
         super().__init__(-1000)
+
+        self.__spell_checker = spell_checker
 
     def execute(self, context: Context) -> Context:
         tokens = context.get('tokens')
@@ -139,26 +132,6 @@ class TokenAttributesPipe(ContextPipe):
             end_position.append(str(end))
 
         return end_position
-
-
-class MachineLearningContextPipe(ContextPipe):
-    def __init__(self, key: str, model: ContextBaseModel, order: int):
-        self.__key = key
-        self.__model = model
-
-        super().__init__(order)
-
-    @property
-    def model(self) -> ContextBaseModel:
-        return self.__model
-
-    def execute(self, context: Context) -> Context:
-        context.add(
-            self.__key,
-            self.__model.tag(context),
-        )
-
-        return context
 
 
 class EmptyContextPipe(ContextPipe):

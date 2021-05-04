@@ -16,10 +16,11 @@ build:
 
 install:
 	( \
-		python3 -m venv venv; \
-		source venv/bin/activate; \
+		python3 -m venv envs/venv; \
+		source envs/venv/bin/activate; \
 		python3 -m pip install --upgrade pip; \
 		pip install -r requirements.txt; \
+		pip install wheel; \
 	)
 
 clean-build:
@@ -31,8 +32,8 @@ clean-build:
 	rmdir ./build/ || true
 
 clean-venv:
-	rm -R ./venv || true
-	rmdir ./venv/ || true
+	rm -R ./envs/venv/* || true
+	rmdir ./envs/venv || true
 
 clean-cache:
 	rm -R ./.mypy_cache || true

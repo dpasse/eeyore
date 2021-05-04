@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from eeyore_nlp.models import Tag, RegexPhrase, Scope, ScopeDirection, Context
 from eeyore_nlp.taggers import PhraseChunker, Scoper
-from eeyore_nlp.pipelines import ChunkerPipe, ScoperPipe, TokenAttributesPipe, ContextPipeline
+from eeyore_nlp.pipelines import ChunkerPipe, TokenTaggerPipe, TokenAttributesPipe, ContextPipeline
 
 def test_extracting_multiple_pipes():
     pipeline = ContextPipeline(
@@ -28,10 +28,10 @@ def test_extracting_multiple_pipes():
                 ),
                 order=3
             ),
-            ScoperPipe(
+            TokenTaggerPipe(
                 'neg_scope',
                 focus='neg',
-                scoper=Scoper(
+                tagger=Scoper(
                     scopes=[
                         Scope(
                             applied_tag='FRW-NEG',

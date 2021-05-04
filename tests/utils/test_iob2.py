@@ -21,3 +21,15 @@ def test_is_tag_connected_should_return_true_for_connected():
 def test_is_tag_connected_should_return_false_for_not_connected():
     assert not iob2.is_tag_connected('B-LOC', 'B-LOC')
     assert not iob2.is_tag_connected('B-LOC', 'I-LOC')
+
+def test_to_iob_tags_to_iob():
+    tokens = ['NEG', 'NEG', 'NEG', '', 'NEG', 'NEG']
+    converted_tokens = iob2.to_iob(tokens)
+    assert converted_tokens == [
+        'B-NEG',
+        'I-NEG',
+        'I-NEG',
+        '',
+        'B-NEG',
+        'I-NEG'
+    ]

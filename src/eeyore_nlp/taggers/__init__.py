@@ -1,6 +1,8 @@
-from .chunkers import TextChunker, \
-                      ContextChunker, \
-                      PhraseChunker, \
+from .abs import TokenTagger, \
+                 TextChunker, \
+                 ContextChunker
+from .mappers import TagMapper, \
+                     IobMapper
+from .chunkers import PhraseChunker, \
                       PosChunker
-from .scoper import Scoper
-from .mapper import TagMapper
+from .scopers import Scoper

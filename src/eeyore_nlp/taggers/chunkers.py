@@ -1,5 +1,4 @@
 import re
-from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Tuple
 import numpy as np
 import nltk
@@ -7,18 +6,7 @@ from nltk.chunk import RegexpParser
 from nltk.tokenize import word_tokenize
 from ..models import Tag, Context
 from ..generators import Alias
-
-
-class TextChunker(ABC):
-    @abstractmethod
-    def tag_text(self, text: str) -> List[str]:
-        raise NotImplementedError()
-
-
-class ContextChunker(ABC):
-    @abstractmethod
-    def tag(self, context: Context) -> List[str]:
-        raise NotImplementedError()
+from .abs import ContextChunker, TextChunker
 
 
 class PhraseChunker(TextChunker, ContextChunker):

@@ -1,10 +1,10 @@
 from typing import Dict, List, Optional
-
 from ..models import Scope, ScopeDirection
 from ..utils import Merger
+from .abs import TokenTagger
 
 
-class Scoper():
+class Scoper(TokenTagger):
     def __init__(self,
                  scopes: List[Scope],
                  top_direction: ScopeDirection = ScopeDirection.RIGHT):

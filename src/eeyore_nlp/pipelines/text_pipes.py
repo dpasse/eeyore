@@ -1,12 +1,5 @@
 import re
-from abc import abstractmethod
-from .abs_pipe import AbsPipe
-
-
-class TextPipe(AbsPipe):
-    @abstractmethod
-    def execute(self, text: str) -> str:
-        raise NotImplementedError()
+from .abs import TextPipe
 
 
 class EmptyTextPipe(TextPipe):

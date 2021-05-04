@@ -1,3 +1,4 @@
+import re
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Generator, Optional, Tuple
 from nltk.tokenize import sent_tokenize
@@ -50,6 +51,7 @@ class ContextTokenizer(Tokenizer):
         return self.__context_pipeline.execute(context)
 
     def _split_text(self, text) -> Generator[Tuple[str, dict], None, None]:
+        text = re.sub(r'\s+', ' ', text)
         return (
             (sentence, {'i': i})
             for i, sentence in enumerate(sent_tokenize(text))
