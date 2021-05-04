@@ -62,7 +62,11 @@ class PhraseChunker(TextChunker, ContextChunker):
             for match in np.unique(tag.phrase.find_all(text)):
                 key = self.__alias.get_alias()
                 alias_cache[key] = (tag.identifer, match)
-                text = re.sub(r'(' + match + r')', key, text)
+                text = re.sub(
+                    r'(\s|\b|^)(' + match + r')(\s|\b|$)',
+                    r'\g<1>' + key + r'\g<3>',
+                    text
+                )
 
         return text
 
