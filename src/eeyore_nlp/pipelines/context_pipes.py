@@ -96,10 +96,13 @@ class TokenAttributesPipe(ContextPipe):
     def _get_spacing(self, text: str, tokens: List[str]) -> List[str]:
         spacing = []
         for token in tokens:
+            if token in ['``', "''"] and text.startswith('"'):
+                # nltk: starting " -> ``, ending " -> ''
+                token = '"'
+
             text = re.sub(f'^{re.escape(token)}', '', text)
-            spacing.append(
-                'yes' if text.startswith(' ') else 'no'
-            )
+            answer = 'yes' if text.startswith(' ') else 'no'
+            spacing.append(answer)
             text = text.strip()
 
         return spacing

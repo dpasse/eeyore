@@ -26,15 +26,11 @@ class Merger():
         if x1_n != x2_n:
             raise ValueError(f'length mismatch - x1 is {x1_n}, x2 is {x2_n}')
 
-        combination = []
-        for i in range(x1_n):
-            x1_item = x1_list[i]
-            if len(x1_item):
-                combination.append(x1_item)
-            else:
-                combination.append(x2_list[i])
-
-        return combination
+        return [
+            x1_item if len(x1_item) else x2_item
+            for x1_item, x2_item
+            in zip(x1_list, x2_list)
+        ]
 
     @staticmethod
     def generate_sentence(tokens: List[str], spacings: List[str]) -> str:
