@@ -1,5 +1,6 @@
 from .abs import AbsPipe, \
-                 TextPipe
+                 TextPipe, \
+                 ContextPipe
 from .context_pipes import ChunkerPipe, \
                            TokenAttributesPipe, \
                            TokenTaggerPipe, \

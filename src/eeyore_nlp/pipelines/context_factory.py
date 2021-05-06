@@ -12,7 +12,9 @@ class ContextFactory():
                  pipeline: Optional[TextPipeline] = None):
         self.__pipeline = pipeline
 
-    def execute(self, text: str, **kwargs: Dict[str, Any]) -> Context:
+    def execute(self,
+                text: str,
+                **kwargs: Dict[str, Any]) -> Context:
         text = self._preprocess_text(text)
         return Context(
             text,
@@ -35,7 +37,9 @@ class PreTaggedContextFactory(ContextFactory):
 
         self.__key = key
 
-    def execute(self, text: str, **kwargs: Dict[str, Any]) -> Context:
+    def execute(self,
+                text: str,
+                **kwargs: Dict[str, Any]) -> Context:
         chunker = self._get_chunker(text)
 
         context = super().execute(

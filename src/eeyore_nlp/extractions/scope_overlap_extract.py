@@ -46,7 +46,9 @@ class ScopeOverlapExtract():
 
         return relationship_scope
 
-    def _get_attribute(self, has_e1: bool, has_e2: bool) -> str:
+    def _get_attribute(self,
+                       has_e1: bool,
+                       has_e2: bool) -> str:
         if has_e1 and has_e2:
             return self.__relationship_attribute
 
@@ -58,14 +60,23 @@ class ScopeOverlapExtract():
 
         return ''
 
-    def _handle_partial_scope(self, scope: List[str]) -> List[str]:
+    def _handle_partial_scope(self,
+                              scope: List[str]) -> List[str]:
         if len(scope) == 0:
             # no partial scope exists, return empty list
             return []
 
         if self.__relationship_attribute in scope:
             # relationship applies
-            return [self.__relationship_attribute for _ in scope]
+            return [
+                self.__relationship_attribute
+                for _
+                in scope
+            ]
 
         # relationship does not apply, cancel out scope
-        return ['' for _ in scope]
+        return [
+            ''
+            for _
+            in scope
+        ]

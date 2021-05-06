@@ -26,16 +26,40 @@ class ChunkerPipe(ContextPipe):
 
 class TokenTaggerPipe(ContextPipe):
     def __init__(self, key: str, focus: str, tagger: TokenTagger, order: int):
+        super().__init__(order)
+
         self.__key = key
         self.__focus = focus
         self.__tagger = tagger
-
-        super().__init__(order)
 
     def execute(self, context: Context) -> Context:
         context.add(
             self.__key,
             self.__tagger.tag(context.get(self.__focus))
+        )
+
+        return context
+
+
+class MergerPipe(ContextPipe):
+    def __init__(self,
+                 key: str,
+                 primary: str,
+                 secondary: str,
+                 order: int):
+        super().__init__(order)
+
+        self.__key = key
+        self.__primary = primary
+        self.__secondary = secondary
+
+    def execute(self, context: Context) -> Context:
+        context.add(
+            self.__key,
+            Merger.take_first(
+                context.get(self.__primary),
+                context.get(self.__secondary),
+            ),
         )
 
         return context

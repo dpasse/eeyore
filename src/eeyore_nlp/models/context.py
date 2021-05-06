@@ -50,6 +50,12 @@ class Context():
 
         self.__container[key] = tags
 
+    def remove(self, key: str):
+        if key not in self.__container:
+            return
+
+        self.__container.__delitem__(key)
+
     def __len__(self) -> int:
         return len(self.get('tokens'))
 
