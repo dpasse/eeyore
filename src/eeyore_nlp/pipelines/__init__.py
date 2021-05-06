@@ -12,3 +12,4 @@ from .text_pipeline import TextPipeline
 from .context_factory import ContextFactory, \
                              PreTaggedContextFactory
 from .tokenizers import ContextTokenizer
+from .pipe_wrappers import ContextPipeWrapper
