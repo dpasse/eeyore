@@ -4,3 +4,4 @@ pycodestyle==2.7.0
 networkx==2.5
 nltk==3.5
 numpy==1.19.5
+spacy==3.0.6

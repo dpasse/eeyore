@@ -21,7 +21,11 @@ install:
 		python3 -m pip install --upgrade pip; \
 		pip install -r requirements.txt; \
 		pip install wheel; \
+		python3 -m spacy download en_core_web_sm; \
 	)
+
+setup-spacy-models:
+	python3 -m spacy download en_core_web_sm; \
 
 clean-build:
 	rm -R ./src/eeyore_nlp.egg-info/* || true
