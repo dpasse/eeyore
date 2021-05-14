@@ -9,11 +9,11 @@ def create(relationship_container: RelationshipContainer,
     edges: Set[Tuple[str, str]] = set()
 
     for parent, relationship in relationship_container.items():
-        nodes.add(parent)
+        nodes.add(parent.term)
 
         for child in relationship.children:
-            nodes.add(child)
-            edges.add((parent, child))
+            nodes.add(child.term)
+            edges.add((parent.term, child.term))
 
     G = nx.Graph() if not make_undirected else nx.DiGraph()
     G.add_nodes_from(nodes)

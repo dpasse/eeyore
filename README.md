@@ -31,17 +31,53 @@
 ### <a name="markov-chain"></a>Markov Chain:
 
 ```python
-from eeyore_nlp.models import Relationship, RelationshipContainer
+from eeyore_nlp.models import Relationship, RelationshipContainer, RelationshipKey
 from eeyore_nlp.generators import MarkovChain
 
 relationship_container = RelationshipContainer([
-    Relationship('<start>', ['I']),
-    Relationship('I', ['am']),
-    Relationship('am', ['not', 'very', 'tired']),
-    Relationship('not', ['very', 'tired']),
-    Relationship('very', ['tired']),
-    Relationship('tired', ['<end>']),
-    Relationship('<end>', []),
+    Relationship(
+        RelationshipKey('<start>'),
+        [
+            RelationshipKey('I')
+        ]
+    ),
+    Relationship(
+        RelationshipKey('I'),
+        [
+            RelationshipKey('am')
+        ]
+    ),
+    Relationship(
+        RelationshipKey('am'),
+        [
+            RelationshipKey('not'),
+            RelationshipKey('very'),
+            RelationshipKey('tired')
+        ]
+    ),
+    Relationship(
+        RelationshipKey('not'),
+        [
+            RelationshipKey('very'),
+            RelationshipKey('tired')
+        ]
+    ),
+    Relationship(
+        RelationshipKey('very'),
+        [
+            RelationshipKey('tired')
+        ]
+    ),
+    Relationship(
+        RelationshipKey('tired'),
+        [
+            RelationshipKey('<end>')
+        ]
+    ),
+    Relationship(
+        RelationshipKey('<end>'),
+        []
+    ),
 ])
 
 markov_chain = MarkovChain(seed=42)
@@ -49,7 +85,7 @@ generated_relationship_chain = \
     markov_chain.generate(relationship_container)
 
 sentence = [
-    relationship.primary
+    relationship.primary.term
     for relationship
     in generated_relationship_chain
 ]
@@ -341,6 +377,31 @@ relationships = ScopeOverlapExtract('scope1', 'scope2').evaluate(context)
 </br>
 
 2. Chapman, Wendy & Chu, David & Dowling, John. (2007). ConText: An Algorithm for Identifying Contextual Features from Clinical Text. BioNLP 2007: Biological, translational, and clinical language processing. Prague, CZ. 81-88.
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+<br />
+
+3. Rajendra Banjade and Vasile Rus. 2016. Dt-neg: Tutorial dialogues annotated for negation scope and focus in
+context. In Nicoletta Calzolari (Conference Chair), Khalid Choukri, Thierry Declerck, Sara Goggi, Marko
+Grobelnik, Bente Maegaard, Joseph Mariani, Helene Mazo, Asuncion Moreno, Jan Odijk, and Stelios Piperidis,
+editors, Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC
+2016), Paris, France, may. European Language Resources Association (ELRA).
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+<br />
+
+4. https://www.aclweb.org/anthology/W16-50.pdf
+
+<p align="right">
+  <a href='#table-of-contents'>&#8593;</a>
+</p>
+<br />
+
+5. https://arxiv.org/pdf/cmp-lg/9504013.pdf
 
 <p align="right">
   <a href='#table-of-contents'>&#8593;</a>

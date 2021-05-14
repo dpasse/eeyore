@@ -2,17 +2,9 @@ import re
 from .abs import TextPipe
 
 
-class EmptyTextPipe(TextPipe):
-    def __init__(self):
-        super().__init__(1)
-
-    def execute(self, text: str) -> str:
-        return text
-
-
 class ContractionsTextPipe(TextPipe):
-    def __init__(self):
-        super().__init__(1)
+    def __init__(self, order: int = 1):
+        super().__init__(order)
 
     def execute(self, text: str) -> str:
         flags = re.IGNORECASE | re.MULTILINE
@@ -197,4 +189,12 @@ class ContractionsTextPipe(TextPipe):
             flags=flags
         )
 
+        return text
+
+
+class EmptyTextPipe(TextPipe):
+    def __init__(self, order: int = 1):
+        super().__init__(order)
+
+    def execute(self, text: str) -> str:
         return text

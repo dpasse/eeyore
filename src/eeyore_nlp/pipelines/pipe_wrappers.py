@@ -2,6 +2,7 @@ from typing import List, Optional
 from ..models import Context
 from .abs import ContextPipe
 from .context_pipeline import ContextPipeline
+from .text_pipeline import TextPipeline, TextPipe
 
 
 class ContextPipeWrapper(ContextPipe):
@@ -22,3 +23,15 @@ class ContextPipeWrapper(ContextPipe):
             context.remove(attribute)
 
         return context
+
+
+class TextPipeWrapper(TextPipe):
+    def __init__(self,
+                 pipes: List[TextPipe],
+                 order: int):
+        super().__init__(order)
+
+        self.__inner_pipeline = TextPipeline(pipes)
+
+    def execute(self, text: str) -> str:
+        return self.__inner_pipeline.execute(text)

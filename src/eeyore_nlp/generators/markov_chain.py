@@ -1,6 +1,6 @@
 from typing import List, Optional
 import numpy as np
-from ..models import Relationship, RelationshipContainer
+from ..models import Relationship, RelationshipContainer, RelationshipKey
 
 
 class MarkovChain():
@@ -8,8 +8,8 @@ class MarkovChain():
                  start_state: str = '<start>',
                  end_state: str = '<end>',
                  seed: Optional[int] = None):
-        self.__start_state = start_state
-        self.__end_state = end_state
+        self.__start_state = RelationshipKey(start_state)
+        self.__end_state = RelationshipKey(end_state)
 
         if seed is not None:
             np.random.seed(seed)
@@ -47,7 +47,7 @@ class MarkovChain():
         return relationship_collection
 
     @staticmethod
-    def _query(relationship: Relationship) -> str:
+    def _query(relationship: Relationship) -> RelationshipKey:
         choices = relationship.children
         if len(choices) == 1:
             return choices[0]

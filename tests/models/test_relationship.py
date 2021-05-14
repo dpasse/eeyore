@@ -4,15 +4,31 @@ import pytest
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore_nlp.models import Relationship
+from eeyore_nlp.models import Relationship, RelationshipKey
 
 def test_relationship_addition():
-    rel1 = Relationship('P1', ['C1'])
-    rel1 += Relationship('P1', ['C2', 'C3'])
+    rel1 = Relationship(
+        RelationshipKey('P1'),
+        [RelationshipKey('C1')]
+    )
+    rel1 += Relationship(
+        RelationshipKey('P1'),
+        [RelationshipKey('C2'), RelationshipKey('C3')]
+    )
 
-    assert rel1.children == ['C1', 'C2', 'C3']
+    assert rel1.children == [
+        RelationshipKey('C1'),
+        RelationshipKey('C2'),
+        RelationshipKey('C3')
+    ]
 
 def test_not_compatible_relationship_addition():
-    rel1 = Relationship('P1', ['C1'])
+    rel1 = Relationship(
+        RelationshipKey('P1'),
+        [RelationshipKey('C1')]
+    )
     with pytest.raises(ValueError):
-        rel1 += Relationship('P2', ['C2', 'C3'])
+        rel1 += Relationship(
+            RelationshipKey('P2'),
+            [RelationshipKey('C2'), RelationshipKey('C3')]
+        )

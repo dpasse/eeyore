@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, os.path.abspath('src'))
 
 from eeyore_nlp.utils import RelationshipBuilder
+from eeyore_nlp.models import RelationshipKey
 
 def test_relationship_builder():
     tokens = [
@@ -18,8 +19,10 @@ def test_relationship_builder():
     builder = RelationshipBuilder()
     rels = builder.create_neighbor_relationships(tokens)
 
-    assert rels[0].primary == '<start>'
-    assert rels[0].children == ['I']
+    assert rels[0].primary == RelationshipKey('<start>')
+    assert rels[0].children == [RelationshipKey('I')]
 
-    assert rels[-1].primary == '.'
-    assert rels[-1].children == ['<end>']
+    assert rels[-2].primary == RelationshipKey('.')
+    assert rels[-2].children == [RelationshipKey('<end>')]
+
+    assert rels[-1].primary == RelationshipKey('<end>')

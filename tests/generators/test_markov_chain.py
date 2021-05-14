@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, os.path.abspath('src'))
 
 from eeyore_nlp.generators import MarkovChain
-from eeyore_nlp.models import Relationship, RelationshipContainer
+from eeyore_nlp.models import Relationship, RelationshipContainer, RelationshipKey
 
 def test_markov_chain_generation():
     ## Possible outcomes:
@@ -15,25 +15,62 @@ def test_markov_chain_generation():
 
     relationship_container = RelationshipContainer()
     relationship_container.add_many([
-        Relationship('<start>', ['I']),
-        Relationship('I', ['am']),
-        Relationship('am', ['not']),  # compress to ['not', 'very', 'tired']
-        Relationship('am', ['very']),
-        Relationship('am', ['tired']),
-        Relationship('not', ['very']),
-        Relationship('not', ['tired']),
-        Relationship('very', ['tired']),
-        Relationship('tired', ['<end>']),
-        Relationship('<end>', []),
+        Relationship(
+            RelationshipKey('<start>'),
+            [RelationshipKey('I')]
+        ),
+        Relationship(
+            RelationshipKey('I'),
+            [RelationshipKey('am')]
+        ),
+        Relationship(
+            RelationshipKey('am'),
+            [RelationshipKey('not')]
+        ),  # compress to ['not', 'very', 'tired']
+        Relationship(
+            RelationshipKey('am'),
+            [RelationshipKey('very')]
+        ),
+        Relationship(
+            RelationshipKey('am'),
+            [RelationshipKey('tired')]
+        ),
+        Relationship(
+            RelationshipKey('not'),
+            [RelationshipKey('very')]
+        ),
+        Relationship(
+            RelationshipKey('not'),
+            [RelationshipKey('tired')]
+        ),
+        Relationship(
+            RelationshipKey('very'),
+            [RelationshipKey('tired')]
+        ),
+        Relationship(
+            RelationshipKey('tired'),
+            [RelationshipKey('<end>')]
+        ),
+        Relationship(
+            RelationshipKey('<end>'),
+            []
+        ),
     ])
 
     generated_sentence_chain = MarkovChain(seed=56).generate(relationship_container)
     sentence = [
-        relationship.primary
+        relationship.primary.term
         for relationship in generated_sentence_chain
     ]
-    assert relationship_container['am'].children == ['not', 'very', 'tired']
-    assert relationship_container['not'].children == ['very', 'tired']
+    assert relationship_container['am'].children == [
+        RelationshipKey('not'),
+        RelationshipKey('very'),
+        RelationshipKey('tired')
+    ]
+    assert relationship_container[RelationshipKey('not')].children == [
+        RelationshipKey('very'),
+        RelationshipKey('tired')
+    ]
     assert sentence == [
         '<start>',
         'I',
