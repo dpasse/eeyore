@@ -1,5 +1,5 @@
 from typing import List
-from ..models import Relationship, RelationshipKey
+from ..models import Relationship, RelationshipKey, Context
 
 
 class RelationshipBuilder():
@@ -33,6 +33,61 @@ class RelationshipBuilder():
                     primary,
                     [secondary]
                 )
+            )
+
+        relationships.append(
+            Relationship(
+                RelationshipKey(self.__end_token),
+                []
+            )
+        )
+
+        return relationships
+
+    def create_relationships_by_context(
+        self,
+        attributes: List[str],
+        context: Context
+    ) -> List[Relationship]:
+        # make tokens be the last attribute
+        attributes.remove('tokens')
+        attributes.append('tokens')
+
+        tokens = context.get('tokens')
+        attribute_lookup = {
+            attribute: context.get(attribute)
+            for attribute in attributes
+        }
+
+        tokens_start = [RelationshipKey(self.__start_token)]
+        tokens_end = []
+
+        for i in range(len(context)):
+            key = RelationshipKey(
+                tokens[i],
+                [
+                    attribute_lookup[attribute][i]
+                    for attribute in attributes
+                ]
+            )
+
+            tokens_start.append(key)
+            tokens_end.append(key)
+
+        tokens_end.append(
+            RelationshipKey(self.__end_token)
+        )
+
+        generator = (
+            (primary, secondary)
+            for primary, secondary
+            in zip(tokens_start, tokens_end)
+        )
+
+        relationships: List[Relationship] = []
+        for primary, secondary in generator:
+            relationships.append(
+                Relationship(primary, [secondary])
             )
 
         relationships.append(
