@@ -1,6 +1,6 @@
 import re
 from abc import ABC, abstractmethod
-from typing import Any, Dict, Generator, Optional, Tuple
+from typing import Any, Dict, Generator, List, Optional, Tuple
 from nltk.tokenize import sent_tokenize
 from .context_pipeline import ContextPipeline
 from .context_factory import ContextFactory
@@ -56,3 +56,60 @@ class ContextTokenizer(Tokenizer):
             (sentence, {'i': i})
             for i, sentence in enumerate(sent_tokenize(text))
         )
+
+
+class BlockContextTokenizer(ContextTokenizer):
+    def __init__(self,
+                 block_expressions: List[str],
+                 context_factory: ContextFactory = ContextFactory(),
+                 text_preprocessor: Optional[TextPipeline] = None,
+                 context_pipeline: Optional[ContextPipeline] = None):
+        super().__init__(
+            context_factory,
+            text_preprocessor,
+            context_pipeline
+        )
+
+        self.__block_expression = '(' + '|'.join(block_expressions) + ')'
+
+    def _split_text(self, text) -> Generator[Tuple[str, dict], None, None]:
+        block_header_expression = f'{self.__block_expression}(.*)'
+        for block_i, block in enumerate(self._split_blocks(text)):
+            text, header = block, ''
+            matches = re.findall(block_header_expression, text)
+            if len(matches) > 0:
+                match = matches[0]
+                header, text = match[0], match[-1]
+
+            for i, sentence in enumerate(sent_tokenize(text.strip())):
+                yield sentence, {
+                    'header': header.strip(),
+                    'block_i': block_i,
+                    'i': i
+                }
+
+    def _split_blocks(self, text: str) -> List[str]:
+        block_indexes = [
+            match.start(0)
+            for match in re.finditer(
+                self.__block_expression,
+                text,
+                flags=re.MULTILINE
+            )
+        ]
+
+        starting_indexes = [0]
+        starting_indexes.extend(block_indexes)
+
+        ending_indexes = block_indexes.copy()
+        ending_indexes.append(-1)
+
+        return [
+            re.sub(
+                r'\s+',
+                ' ',
+                text[s:i] if i > -1 else text[s:]
+            )
+            for s, i
+            in zip(starting_indexes, ending_indexes)
+        ]
