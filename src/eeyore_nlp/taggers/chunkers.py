@@ -63,7 +63,7 @@ class PhraseChunker(TextChunker, ContextChunker):
                 key = self.__alias.get_alias()
                 alias_cache[key] = (tag.identifer, match)
                 text = re.sub(
-                    r'(\s|\b|^)(' + match + r')(\s|\b|$)',
+                    r'(\s|\b|^|\W)(' + match + r')(\s|\b|$|\W)',
                     r'\g<1>' + key + r'\g<3>',
                     text
                 )

@@ -4,7 +4,8 @@ from .abs import AbsPipe, \
 from .context_pipes import ChunkerPipe, \
                            TokenAttributesPipe, \
                            TokenTaggerPipe, \
-                           EmptyContextPipe
+                           EmptyContextPipe, \
+                           MergerPipe
 from .text_pipes import EmptyTextPipe, \
                         ContractionsTextPipe, \
                         ExpandTextPipe, \
