@@ -7,16 +7,22 @@ class KBTriple():
                  subj: str,
                  obj: str,
                  subj_entity: Optional[str] = None,
-                 obj_entity: Optional[str] = None):
+                 obj_entity: Optional[str] = None,
+                 rel_entity: Optional[str] = None):
         self.__rel = rel
         self.__subj = subj
         self.__obj = obj
         self.__subj_entity = subj_entity
         self.__obj_entity = obj_entity
+        self.__rel_entity = rel_entity
 
     @property
     def rel(self) -> str:
         return self.__rel
+
+    @property
+    def rel_entity(self) -> str:
+        return self.__rel_entity
 
     @property
     def subj(self) -> str:

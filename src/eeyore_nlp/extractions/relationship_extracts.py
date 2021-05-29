@@ -13,10 +13,12 @@ class DependencyRelationshipExtract():
                  spacy: SpacyIntegration,
                  attribute: str,
                  e1: str,
-                 e2: str):
+                 e2: str,
+                 rel: str):
         self.__spacy = spacy
         self.__e1 = iob2.clean_tag(e1)
         self.__e2 = iob2.clean_tag(e2)
+        self.__rel = rel
         self.__tagger = TagExtract(
             attribute,
             valid_tags=[
@@ -53,6 +55,7 @@ class DependencyRelationshipExtract():
             relationships.append(
                 KBTriple(
                     rel=self._format_tokens(doc, items),
+                    rel_entity=self.__rel,
                     subj=self._format_tokens(doc, e1s),
                     subj_entity=self.__e1,
                     obj=self._format_tokens(doc, e2s),
@@ -185,10 +188,12 @@ class OneSidedRelationshipExtract():
                  attribute: str,
                  side_of_relation: str,
                  e1: str,
-                 e2: str):
+                 e2: str,
+                 rel: str):
         self.__spacy = spacy
         self.__e1 = iob2.clean_tag(e1)
         self.__e2 = iob2.clean_tag(e2)
+        self.__rel = rel
 
         self.__valid_tag = self.__e1 \
             if side_of_relation == 'e1' \
@@ -229,6 +234,7 @@ class OneSidedRelationshipExtract():
                 relationships.append(
                     KBTriple(
                         rel=self._format_tokens(doc, relations),
+                        rel_entity=self.__rel,
                         subj=self._format_tokens(doc, indexes),
                         subj_entity=self.__e1,
                         obj=static_value,
@@ -247,6 +253,7 @@ class OneSidedRelationshipExtract():
                 relationships.append(
                     KBTriple(
                         rel=self._format_tokens(doc, relations),
+                        rel_entity=self.__rel,
                         subj=static_value,
                         subj_entity=self.__e1,
                         obj=self._format_tokens(doc, indexes),

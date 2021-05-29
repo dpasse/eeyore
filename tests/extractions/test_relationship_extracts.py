@@ -20,7 +20,8 @@ def test_extractor_1():
         spacy=spacy,
         attribute='entities',
         e1='PER',
-        e2='dX'
+        e2='dX',
+        rel='has_dx'
     )
 
     relationships = extract.evaluate(context)
@@ -44,7 +45,8 @@ def test_extractor_2():
         attribute='entities',
         side_of_relation='e2',
         e1='PER',
-        e2='dX'
+        e2='dX',
+        rel='has_dx'
     )
 
     relationships = extract.evaluate(context, 'Tom')
