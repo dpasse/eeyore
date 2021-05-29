@@ -15,11 +15,7 @@ def create(relationship_container: RelationshipContainer,
             nodes.add(child.term)
             edges.add((parent.term, child.term))
 
-    G = nx.Graph() if not make_undirected else nx.DiGraph()
-    G.add_nodes_from(nodes)
-    G.add_edges_from(edges)
-
-    return G
+    return create_graph(nodes, edges, make_undirected)
 
 
 def shortest_path(G, source: str, target: str) -> List[str]:
@@ -44,6 +40,17 @@ def append_terms_to_graph(G, context: Context) -> nx.Graph:
         context.get('tokens')
     )
 
+    G.add_edges_from(edges)
+
+    return G
+
+
+def create_graph(nodes: List[str],
+                 edges: List[tuple],
+                 make_undirected: bool = True) -> nx.Graph:
+    G = nx.Graph() if make_undirected else nx.DiGraph()
+
+    G.add_nodes_from(nodes)
     G.add_edges_from(edges)
 
     return G

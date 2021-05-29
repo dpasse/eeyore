@@ -30,7 +30,7 @@ class TagExtract():
                 is_tag_connected = iob2.is_tag_connected(attribute, tag)
                 if not is_tag_connected and len(cache) > 0:
                     key = iob2.clean_tag(tag)
-                    extracts[key].append(cache)
+                    extracts[key].append(cache.copy())
                     cache.clear()
 
                 tag = attribute
