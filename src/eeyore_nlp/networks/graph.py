@@ -1,6 +1,6 @@
 from typing import List, Set, Tuple
 import networkx as nx
-from ..models import RelationshipContainer, Context
+from ..models import RelationshipContainer, Context, KBTriple
 
 
 def create(relationship_container: RelationshipContainer,
@@ -52,5 +52,17 @@ def create_graph(nodes: List[str],
 
     G.add_nodes_from(nodes)
     G.add_edges_from(edges)
+
+    return G
+
+
+def create_graph_from_triples(triples: List[KBTriple]) -> nx.Graph:
+    G = nx.DiGraph()
+    for triple in triples:
+        G.add_edge(
+            triple.subj,
+            triple.obj,
+            relation=triple.rel_entity
+        )
 
     return G

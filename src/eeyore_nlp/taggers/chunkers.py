@@ -79,12 +79,14 @@ class PhraseChunker(TextChunker, ContextChunker):
         return None
 
 
-class PosChunker(ContextChunker):
+class TreeChunker(ContextChunker):
     def __init__(self,
                  patterns: str,
                  loop: int = 1,
                  trace: int = 0,
+                 attribute: str = 'pos',
                  apply_iob2: bool = True) -> None:
+        self.__attribute = attribute
         self.__regex_parser = RegexpParser(patterns,
                                            root_label='',
                                            loop=loop,
@@ -92,10 +94,15 @@ class PosChunker(ContextChunker):
         self.__apply_iob2 = apply_iob2
 
     def tag(self, context: Context) -> List[str]:
+        tokens_to_chunk = [
+            'NULL' if tk == '' else tk
+            for tk in context.get(self.__attribute)
+        ]
+
         chunk_struct = list(
             zip(
                 context.get('tokens'),
-                context.get('pos')
+                tokens_to_chunk
             )
         )
 

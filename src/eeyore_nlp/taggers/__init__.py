@@ -4,5 +4,5 @@ from .abs import TokenTagger, \
 from .mappers import TagMapper, \
                      IobMapper
 from .chunkers import PhraseChunker, \
-                      PosChunker
+                      TreeChunker
 from .scopers import Scoper
