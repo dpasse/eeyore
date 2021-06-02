@@ -1,4 +1,4 @@
-from typing import Generator, List, Tuple
+from typing import Generator, List, Optional, Tuple
 import networkx as nx
 from spacy.tokens import Doc
 from ..integrations import SpacyIntegration
@@ -14,7 +14,8 @@ class DependencyRelationshipExtract():
                  attribute: str,
                  e1: str,
                  e2: str,
-                 rel: str):
+                 rel: str,
+                 allowed_window_size: Optional[int] = None):
         self.__spacy = spacy
         self.__e1 = iob2.clean_tag(e1)
         self.__e2 = iob2.clean_tag(e2)
@@ -26,12 +27,12 @@ class DependencyRelationshipExtract():
                 self.__e2
             ]
         )
-
         self.__dep_attributes_to_append = [
             'amod',
             'advmod',
             'neg'
         ]
+        self.__allowed_window_size_between_entities = allowed_window_size
 
     def evaluate(self, context: Context) -> List[KBTriple]:
         relationships = []
@@ -52,63 +53,75 @@ class DependencyRelationshipExtract():
                 relations
             )
 
-            relationships.append(
-                KBTriple(
-                    rel=self._format_tokens(doc, items),
-                    rel_entity=self.__rel,
-                    subj=self._format_tokens(doc, e1s),
-                    subj_entity=self.__e1,
-                    obj=self._format_tokens(doc, e2s),
-                    obj_entity=self.__e2
-                )
+            triple = KBTriple(
+                subj=self._format_tokens(doc, e1s),
+                rel=self._format_tokens(doc, items),
+                obj=self._format_tokens(doc, e2s),
             )
+
+            triple.update_cache({
+                'rel_entity': self.__rel,
+                'subj_entity': self.__e1,
+                'obj_entity': self.__e2,
+                'type': 'dependency relation',
+                'subj_indexes': e1s,
+                'rel_indexes': items,
+                'obj_indexes': e2s
+            })
+
+            relationships.append(triple)
 
         return relationships
 
     def _extract_relationships(self, G: nx.Graph, tags: dict) -> List[tuple]:
-        valid_paths: List[tuple] = []
+        def get_combos(tags):
+            for e1_tags in tags[self.__e1]:
+                for e2_tags in tags[self.__e2]:
+                    yield (e1_tags, e2_tags)
 
-        for e1_tags in tags[self.__e1]:
+        valid_paths: List[tuple] = []
+        for e1_tags, e2_tags in get_combos(tags):
             valid_path: tuple = None
 
             e1_indexes = [index for index, _ in e1_tags]
             for e1_index in e1_indexes:
 
-                for e2_tags in tags[self.__e2]:
-                    e2_indexes = [index for index, _ in e2_tags]
+                e2_indexes = [index for index, _ in e2_tags]
+                for e2_index in e2_indexes:
+                    if self.__allowed_window_size_between_entities is not None:
+                        if abs(e1_index - e2_index) > \
+                                self.__allowed_window_size_between_entities:
+                            continue
 
-                    for e2_index in e2_indexes:
-                        path: List[str] = []
-                        try:
-                            path = graph.shortest_path(
-                                G,
-                                e1_index,
-                                e2_index
-                            )
+                    path: List[str] = []
 
-                            path = list(set(path))
+                    try:
+                        path = graph.shortest_path(
+                            G,
+                            e1_index,
+                            e2_index
+                        )
 
-                            entity_index_space = []
-                            entity_index_space.extend(e1_indexes)
-                            entity_index_space.extend(e2_indexes)
+                        path = list(set(path))
 
-                            valid_path = (
-                                e1_indexes,
-                                e2_indexes,
-                                [
-                                    i
-                                    for i in path
-                                    if i not in entity_index_space
-                                ]
-                            )
+                        entity_index_space = []
+                        entity_index_space.extend(e1_indexes)
+                        entity_index_space.extend(e2_indexes)
 
-                            break
-                        except:
-                            # swallow, as no path exists if except exists
-                            pass
+                        valid_path = (
+                            e1_indexes,
+                            e2_indexes,
+                            [
+                                i
+                                for i in path
+                                if i not in entity_index_space
+                            ]
+                        )
 
-                    if valid_path is not None:
                         break
+                    except:
+                        # swallow, as no path exists if except exists
+                        pass
 
                 if valid_path is not None:
                     break
@@ -121,7 +134,7 @@ class DependencyRelationshipExtract():
     def _get_nodes_and_edges(self,
                              doc: Doc) \
             -> Tuple[List[int], List[Tuple[int, int]]]:
-        nodes: List[str] = []
+        nodes: List[int] = []
         edges: List[Tuple[int, int]] = []
         for token in doc:
             parent_index = token.i
@@ -231,16 +244,22 @@ class OneSidedRelationshipExtract():
                     )
                 )
 
-                relationships.append(
-                    KBTriple(
-                        rel=self._format_tokens(doc, relations),
-                        rel_entity=self.__rel,
-                        subj=self._format_tokens(doc, indexes),
-                        subj_entity=self.__e1,
-                        obj=static_value,
-                        obj_entity=self.__e2
-                    )
+                triple = KBTriple(
+                    subj=self._format_tokens(doc, indexes),
+                    rel=self._format_tokens(doc, relations),
+                    obj=static_value,
                 )
+
+                triple.update_cache({
+                    'rel_entity': self.__rel,
+                    'subj_entity': self.__e1,
+                    'obj_entity': self.__e2,
+                    'type': '1-sided w/ obj static',
+                    'rel_indexes': relations,
+                    'subj_indexes': indexes
+                })
+
+                relationships.append(triple)
         else:
             for tags in tags[self.__e2]:
                 indexes = [i for i, _ in tags]
@@ -250,16 +269,22 @@ class OneSidedRelationshipExtract():
                     )
                 )
 
-                relationships.append(
-                    KBTriple(
-                        rel=self._format_tokens(doc, relations),
-                        rel_entity=self.__rel,
-                        subj=static_value,
-                        subj_entity=self.__e1,
-                        obj=self._format_tokens(doc, indexes),
-                        obj_entity=self.__e2
-                    )
+                triple = KBTriple(
+                    subj=static_value,
+                    rel=self._format_tokens(doc, relations),
+                    obj=self._format_tokens(doc, indexes),
                 )
+
+                triple.update_cache({
+                    'rel_entity': self.__rel,
+                    'subj_entity': self.__e1,
+                    'obj_entity': self.__e2,
+                    'type': '1-sided w/ subj static',
+                    'rel_indexes': relations,
+                    'obj_indexes': indexes
+                })
+
+                relationships.append(triple)
 
         return relationships
 

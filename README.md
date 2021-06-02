@@ -123,7 +123,7 @@ tokens, phrases = chunker.tag('We went to New York.')
 
 ```python
 from eeyore_nlp.models import Context
-from eeyore_nlp.taggers import PosChunker
+from eeyore_nlp.taggers import TreeChunker
 
 context =
     'Learn php from sam',
@@ -131,7 +131,7 @@ context =
 )
 context.add('pos', ['JJ', 'NN', 'IN', 'NN'])
 
-chunker = PosChunker("NP: {<DT>?<JJ>*<NN>}")
+chunker = TreeChunker("NP: {<DT>?<JJ>*<NN>}")
 chunks = chunker.tag(context)
 ## chunks == ['B-NP', 'I-NP', '', 'B-NP']
 ```
