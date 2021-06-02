@@ -10,49 +10,34 @@ from eeyore_nlp.models import Context
 
 def test_extractor_1():
     context = Context(
-        'Tom declined cancer treatment.',
-        ['Tom', 'declined', 'cancer', 'treatment', '.']
+        'Tom and Bob declined cancer treatment.',
+        ['Tom', 'and', 'Bob', 'declined', 'cancer', 'treatment', '.']
     )
-    context.add('entities', ['B-PER', '', 'B-dX', 'I-dX', ''])
+    context.add('entities', ['B-A', '', 'B-A', '', 'B-B', 'B-C', ''])
 
     spacy = SpacyIntegration('en_core_web_lg')
     extract = DependencyRelationshipExtract(
         spacy=spacy,
         attribute='entities',
-        e1='PER',
-        e2='dX',
-        rel='has_dx'
+        relationships=[
+            ('A', 'has_B', 'B'),
+            ('B', 'has_C', 'C'),
+        ]
     )
 
     relationships = extract.evaluate(context)
-    assert len(relationships) == 1
+    assert len(relationships) == 2
 
-    kb_triple = relationships[0]
-    assert kb_triple.rel == 'declined'
-    assert kb_triple.subj == 'Tom'
-    assert kb_triple.obj == 'cancer treatment'
+    kb_triples = relationships[0]
+    assert kb_triples[0].subj == 'Tom'
+    assert kb_triples[0].obj == 'cancer'
 
-def test_extractor_2():
-    context = Context(
-        'Declined cancer treatment.',
-        ['Declined', 'cancer', 'treatment', '.']
-    )
-    context.add('entities', ['', 'B-dX', 'I-dX', ''])
+    assert kb_triples[1].subj == 'cancer'
+    assert kb_triples[1].obj == 'treatment'
 
-    spacy = SpacyIntegration('en_core_web_lg')
-    extract = OneSidedRelationshipExtract(
-        spacy=spacy,
-        attribute='entities',
-        side_of_relation='e2',
-        e1='PER',
-        e2='dX',
-        rel='has_dx'
-    )
+    kb_triples = relationships[1]
+    assert kb_triples[0].subj == 'Bob'
+    assert kb_triples[0].obj == 'cancer'
 
-    relationships = extract.evaluate(context, 'Tom')
-    assert len(relationships) == 1
-
-    kb_triple = relationships[0]
-    assert kb_triple.rel == 'Declined'
-    assert kb_triple.subj == 'Tom'
-    assert kb_triple.obj == 'cancer treatment'
+    assert kb_triples[1].subj == 'cancer'
+    assert kb_triples[1].obj == 'treatment'

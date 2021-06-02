@@ -10,6 +10,10 @@ class TagExtract():
         self.__attribute = attribute
         self.__valid_tags = valid_tags
 
+    @property
+    def valid_tags(self) -> List[str]:
+        return self.__valid_tags
+
     def evaluate(self, context: Context) -> dict:
         data = list(
           zip(
@@ -38,7 +42,7 @@ class TagExtract():
 
         if len(cache) > 0:
             key = iob2.clean_tag(tag)
-            extracts[key].append(cache)
+            extracts[key].append(cache.copy())
 
         return extracts
 

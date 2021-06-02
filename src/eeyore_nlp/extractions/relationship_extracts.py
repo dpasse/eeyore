@@ -12,21 +12,28 @@ class DependencyRelationshipExtract():
     def __init__(self,
                  spacy: SpacyIntegration,
                  attribute: str,
-                 e1: str,
-                 e2: str,
-                 rel: str,
+                 relationships: List[Tuple[str, str, str]],
                  allowed_window_size: Optional[int] = None):
         self.__spacy = spacy
-        self.__e1 = iob2.clean_tag(e1)
-        self.__e2 = iob2.clean_tag(e2)
-        self.__rel = rel
+        self.__relationships = [
+            (
+                iob2.clean_tag(e1),
+                rel,
+                iob2.clean_tag(e2)
+            )
+            for e1, rel, e2 in relationships
+        ]
+
+        valid_tags = set()
+        for e1, _, e2 in self.__relationships:
+            valid_tags.add(e1)
+            valid_tags.add(e2)
+
         self.__tagger = TagExtract(
             attribute,
-            valid_tags=[
-                self.__e1,
-                self.__e2
-            ]
+            valid_tags=list(valid_tags)
         )
+
         self.__dep_attributes_to_append = [
             'amod',
             'advmod',
@@ -34,102 +41,135 @@ class DependencyRelationshipExtract():
         ]
         self.__allowed_window_size_between_entities = allowed_window_size
 
-    def evaluate(self, context: Context) -> List[KBTriple]:
-        relationships = []
+    def evaluate(self, context: Context):
+        def build_relationship_combinations(tags):
+            def get_new_combination(combination, entities, rel='<END>'):
+                new_combination = []
+                for combo in combination:
+                    for entity in entities:
+                        new_combination.append((*combo, entity, rel))
+
+                return new_combination
+
+            combination = []
+            e1, rel, e2 = self.__relationships[0]
+            for entity in tags[e1]:
+                combination.append(
+                    (entity, rel)
+                )
+
+            for i in range(1, len(self.__relationships)):
+                e1, rel, e2 = self.__relationships[i]
+                combination = get_new_combination(combination, tags[e1], rel)
+
+            return get_new_combination(combination, tags[e2])
 
         tags = self.__tagger.evaluate(context)
-        if self._validate_extracted_tags(tags):
-            return relationships
+        if not self._relationship_entities_exist(tags):
+            return []
 
         doc: Doc = self.__spacy.load(context)
         nodes, edges = self._get_nodes_and_edges(doc)
         G = graph.create_graph(nodes, edges, make_undirected=True)
 
-        for e1s, e2s, relations in self._extract_relationships(G, tags):
-            items: List[int] = self._determine_relationship_path(
-                doc,
-                e1s,
-                e2s,
-                relations
-            )
+        extracted_relationships = []
+        for combination in build_relationship_combinations(tags):
 
-            triple = KBTriple(
-                subj=self._format_tokens(doc, e1s),
-                rel=self._format_tokens(doc, items),
-                obj=self._format_tokens(doc, e2s),
-            )
+            i = 0
+            extracted_combination = []
 
-            triple.update_cache({
-                'rel_entity': self.__rel,
-                'subj_entity': self.__e1,
-                'obj_entity': self.__e2,
-                'type': 'dependency relation',
-                'subj_indexes': e1s,
-                'rel_indexes': items,
-                'obj_indexes': e2s
-            })
+            while True:
+                e1 = combination[0]
+                e2 = combination[2]
 
-            relationships.append(triple)
-
-        return relationships
-
-    def _extract_relationships(self, G: nx.Graph, tags: dict) -> List[tuple]:
-        def get_combos(tags):
-            for e1_tags in tags[self.__e1]:
-                for e2_tags in tags[self.__e2]:
-                    yield (e1_tags, e2_tags)
-
-        valid_paths: List[tuple] = []
-        for e1_tags, e2_tags in get_combos(tags):
-            valid_path: tuple = None
-
-            e1_indexes = [index for index, _ in e1_tags]
-            for e1_index in e1_indexes:
-
-                e2_indexes = [index for index, _ in e2_tags]
-                for e2_index in e2_indexes:
-                    if self.__allowed_window_size_between_entities is not None:
-                        if abs(e1_index - e2_index) > \
-                                self.__allowed_window_size_between_entities:
-                            continue
-
-                    path: List[str] = []
-
-                    try:
-                        path = graph.shortest_path(
-                            G,
-                            e1_index,
-                            e2_index
-                        )
-
-                        path = list(set(path))
-
-                        entity_index_space = []
-                        entity_index_space.extend(e1_indexes)
-                        entity_index_space.extend(e2_indexes)
-
-                        valid_path = (
-                            e1_indexes,
-                            e2_indexes,
-                            [
-                                i
-                                for i in path
-                                if i not in entity_index_space
-                            ]
-                        )
-
-                        break
-                    except:
-                        # swallow, as no path exists if except exists
-                        pass
-
-                if valid_path is not None:
+                relationship = self._extract_relationship(G, e1, e2)
+                if relationship is None:
                     break
 
-            if valid_path is not None:
-                valid_paths.append(valid_path)
+                e1s, e2s, relations = relationship
+                items: List[int] = self._determine_relationship_path(
+                    doc,
+                    e1s,
+                    e2s,
+                    relations
+                )
 
-        return valid_paths
+                triple = KBTriple(
+                    subj=self._format_tokens(doc, e1s),
+                    rel=self._format_tokens(doc, items),
+                    obj=self._format_tokens(doc, e2s),
+                )
+
+                e1_entity, rel, e2_entity = self.__relationships[i]
+                triple.update_cache({
+                    'rel_entity': rel,
+                    'subj_entity': e1_entity,
+                    'obj_entity': e2_entity,
+                    'type': 'dependency relation',
+                    'subj_indexes': e1s,
+                    'rel_indexes': items,
+                    'obj_indexes': e2s
+                })
+
+                extracted_combination.append(triple)
+
+                i += 1
+                combination = combination[2:]
+
+                if len(combination) < 3:
+                    break
+
+            if len(extracted_combination) == len(self.__relationships):
+                extracted_relationships.append(
+                    extracted_combination.copy()
+                )
+
+        return extracted_relationships
+
+    def _extract_relationship(self,
+                              G: nx.Graph,
+                              e1_tags,
+                              e2_tags) -> List[tuple]:
+        e1_indexes = [index for index, _ in e1_tags]
+        for e1_index in e1_indexes:
+
+            e2_indexes = [index for index, _ in e2_tags]
+            for e2_index in e2_indexes:
+                if self.__allowed_window_size_between_entities is not None:
+                    if abs(e1_index - e2_index) > \
+                            self.__allowed_window_size_between_entities:
+                        continue
+
+                path: List[str] = []
+
+                try:
+                    path = graph.shortest_path(
+                        G,
+                        e1_index,
+                        e2_index
+                    )
+
+                    path = list(set(path))
+
+                    entity_index_space = []
+                    entity_index_space.extend(e1_indexes)
+                    entity_index_space.extend(e2_indexes)
+
+                    return (
+                        e1_indexes,
+                        e2_indexes,
+                        [
+                            i
+                            for i in path
+                            if i not in entity_index_space
+                        ]
+                    )
+
+                except:
+                    # swallow, as no path exists if except exists
+                    pass
+
+        return None
 
     def _get_nodes_and_edges(self,
                              doc: Doc) \
@@ -151,8 +191,12 @@ class DependencyRelationshipExtract():
 
         return list(sorted(set(nodes))), edges
 
-    def _validate_extracted_tags(self, tags: dict) -> bool:
-        return self.__e1 not in tags or self.__e2 not in tags
+    def _relationship_entities_exist(self, tags: dict) -> bool:
+        for valid_tag in self.__tagger.valid_tags:
+            if valid_tag not in tags:
+                return False
+
+        return True
 
     def _pull_additional_relatives(self,
                                    tokens: list) \
