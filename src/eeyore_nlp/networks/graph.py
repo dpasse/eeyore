@@ -59,10 +59,12 @@ def create_graph(nodes: List[str],
 def create_graph_from_triples(triples: List[KBTriple]) -> nx.Graph:
     G = nx.DiGraph()
     for triple in triples:
+        G.add_node(triple.subj, entity=triple.cache['subj_entity'])
+        G.add_node(triple.obj, entity=triple.cache['obj_entity'])
         G.add_edge(
             triple.subj,
             triple.obj,
-            relation=triple.rel_entity
+            relation=triple.cache['rel_entity']
         )
 
     return G

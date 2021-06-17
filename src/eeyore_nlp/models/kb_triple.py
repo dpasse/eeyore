@@ -1,14 +1,18 @@
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 
 class KBTriple():
     def __init__(self,
                  rel: str,
                  subj: str,
-                 obj: str):
+                 obj: str,
+                 cache: Optional[Dict[str, Any]] = None):
         self.__rel = rel
         self.__subj = subj
         self.__obj = obj
+
+        if cache is not None:
+            self.__dict__.update(cache)
 
     @property
     def rel(self) -> str:

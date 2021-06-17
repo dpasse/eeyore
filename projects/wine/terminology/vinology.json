@@ -1,0 +1,346 @@
+[
+    {
+        "label": "Acidity",
+        "definition": "the liveliness and crispness in wine that activates our salivary glands"
+    },
+    {
+        "label": "Aeration",
+        "definition": "the deliberate addition of oxygen to round out and soften a wine"
+    },
+    {
+        "label": "Aging",
+        "definition": "holding wine in barrels, tanks, and bottles to advance them to a more desirable state"
+    },
+    {
+        "label": "Alcohol",
+        "definition": "ethanol (ethyl alcohol), the product of fermentation of sugars by yeast"
+    },
+    {
+        "label": "Anosmia",
+        "definition": "the loss of smell"
+    },
+    {
+        "label": "Appellation",
+        "definition": "a delineated wine-producing region particular to france"
+    },
+    {
+        "label": "Aroma",
+        "definition": "the smell of wine, especially young wine (different than \"bouquet\")"
+    },
+    {
+        "label": "Astringent",
+        "definition": "tasting term noting the harsh, bitter, and drying sensations in the mouth caused by high levels of tannin"
+    },
+    {
+        "label": "Balance",
+        "definition": "a term for when the elements of wine acids, sugars, tannins, and alcohol come together in a harmonious way"
+    },
+    {
+        "label": "Barrel",
+        "definition": "the oak container used for fermenting and aging wine"
+    },
+    {
+        "label": "Barrique",
+        "definition": "a 225-litre oak barrel used originally for storing and aging wines, originating in bordeaux"
+    },
+    {
+        "label": "Bitter",
+        "definition": "a taste sensation that is sensed on the back of the tongue and caused by tanninsblend a wine made from more than one grape varietal"
+    },
+    {
+        "label": "Body",
+        "definition": "a tactile sensation describing the weight and fullness of wine in the mouth. a wine can be light, medium, or full bodied."
+    },
+    {
+        "label": "Bordeaux",
+        "definition": "the area in southwest france considered one of the greatest wine-producing regions in the world"
+    },
+    {
+        "label": "Botrytis",
+        "definition": "a beneficial mold that pierces the skin of grapes and causes dehydration, resulting in natural grape juice exceptionally high in sugar. botrytis is largely responsible for the world`s finest dessert wines. (see \"noble rot\")"
+    },
+    {
+        "label": "Bouquet",
+        "definition": "a term that refers to the complex aromas in aged wines"
+    },
+    {
+        "label": "Breathing",
+        "definition": "exposing wine to oxygen to improve its flavors (see \"aeration\")"
+    },
+    {
+        "label": "Brettanomyce",
+        "definition": "a wine-spoiling yeast that produces barnyard, mousy, metallic, or bandaid-ish aromas"
+    },
+    {
+        "label": "Brilliant",
+        "definition": "a tasting note for wines that appear sparkling clear"
+    },
+    {
+        "label": "Brut",
+        "definition": "french term denoting dry champagnes or sparkling wines"
+    },
+    {
+        "label": "Bung",
+        "definition": "the plug used to seal a wine barrel"
+    },
+    {
+        "label": "Bung hole",
+        "definition": "the opening in a cask in which wine can be put in or taken out"
+    },
+    {
+        "label": "Chaptalization",
+        "definition": "adding sugar to wine before or during fermentation to increase alcohol levels. chaptalization is illegal in some parts of the world, and highly controlled in others."
+    },
+    {
+        "label": "Citric acid",
+        "definition": "one of the three predominate acids in wine"
+    },
+    {
+        "label": "Claret",
+        "definition": "the name the english use when referring to the red wines of bordeaux"
+    },
+    {
+        "label": "Class growth",
+        "definition": "see cru classe"
+    },
+    {
+        "label": "Closed",
+        "definition": "term describing underdeveloped and young wines whose flavors are not exhibiting well"
+    },
+    {
+        "label": "Complex",
+        "definition": "a wine exhibiting numerous odors, nuances, and flavors"
+    },
+    {
+        "label": "Cork taint",
+        "definition": "undesirable aromas and flavors in wine often associated with wet cardboard or moldy basements"
+    },
+    {
+        "label": "Corked",
+        "definition": "a term that denotes a wine that has suffered cork taint (not wine with cork particles floating about)"
+    },
+    {
+        "label": "Cru classe",
+        "definition": "a top-ranking vineyard designated in the bordeaux classification of 1855"
+    },
+    {
+        "label": "Crush",
+        "definition": "the english term for harvest"
+    },
+    {
+        "label": "Cuvee",
+        "definition": "in champagne, a blended batch of wine"
+    },
+    {
+        "label": "Demi-sec",
+        "definition": "french term meaning \"half-dry\" used to describe a sweet sparkling wine"
+    },
+    {
+        "label": "Dry",
+        "definition": "a taste sensation often attributed to tannins and causing puckering sensations in the mouth; the opposite of sweet"
+    },
+    {
+        "label": "Earthy",
+        "definition": "an odor or flavor reminiscent of damp soil"
+    },
+    {
+        "label": "Enology",
+        "definition": "the science of wine and winemaking (see \"oenology\")"
+    },
+    {
+        "label": "Fermentation",
+        "definition": "the conversion of grape sugars to alcohol by yeast"
+    },
+    {
+        "label": "Fining",
+        "definition": "the addition of egg whites or gelatin (among other things) to clear the wine of unwanted particles"
+    },
+    {
+        "label": "Finish",
+        "definition": "the impression of textures and flavors lingering in the mouth after swallowing wine"
+    },
+    {
+        "label": "Flavors",
+        "definition": "odors perceived in the mouth"
+    },
+    {
+        "label": "Foxy",
+        "definition": "a term that describes the musty odor and flavor of wines made from vitis labrusca, a common north american varietal"
+    },
+    {
+        "label": "Fruity",
+        "definition": "a tasting term for wines that exhibit strong smells and flavors of fresh fruit"
+    },
+    {
+        "label": "Full-bodied",
+        "definition": "a wine high in alcohol and flavors, often described as \"big\""
+    },
+    {
+        "label": "Herbaceous",
+        "definition": "a tasting term denoting odors and flavors of fresh herbs (e.g., basil, oregano, rosemary, etc.)"
+    },
+    {
+        "label": "Hot",
+        "definition": "a description for wine that is high in alcohol"
+    },
+    {
+        "label": "Lees",
+        "definition": "sediment consisting of dead yeast cells, grape pulp, seed, and other grape matter that accumulates during fermentation"
+    },
+    {
+        "label": "Leesy",
+        "definition": "a tasting term for the rich aromas and smells that results from wine resting on its lees"
+    },
+    {
+        "label": "Length",
+        "definition": "the amount of time that flavors persist in the mouth after swallowing wine; a lingering sensation"
+    },
+    {
+        "label": "Malic acid",
+        "definition": "one of the three predominate acids in grapes. tart-tasting malic acid occurs naturally in a number of fruits, including, apples, cherries, plums, and tomatoes."
+    },
+    {
+        "label": "Malolactic fermentation",
+        "definition": "a secondary fermentation in which the tartness of malic acid in wine is changed into a smooth, lactic sensation. wines described as \"buttery\" or \"creamy\" have gone through \"malo\"."
+    },
+    {
+        "label": "Mature",
+        "definition": "ready to drink"
+    },
+    {
+        "label": "Mouth-feel",
+        "definition": "how a wine feels on the palate; it can be rough, smooth, velvety, or furry"
+    },
+    {
+        "label": "Must",
+        "definition": "unfermented grape juice including seeds, skins, and stems"
+    },
+    {
+        "label": "Negociant",
+        "definition": "french word describing a wholesale merchant, blender, or shipper of wine"
+    },
+    {
+        "label": "Noble rot",
+        "definition": "the layman`s term for botrytis"
+    },
+    {
+        "label": "Nose",
+        "definition": "a tasting term describing the aromas and bouquets of a wine"
+    },
+    {
+        "label": "Oak/oaky",
+        "definition": "tasting term denoting smells and flavors of vanilla, baking spices, coconut, mocha or dill caused by barrel-aging"
+    },
+    {
+        "label": "Oenology",
+        "definition": "the science of wine and winemaking (see \"enology\")"
+    },
+    {
+        "label": "Open",
+        "definition": "tasting term signifying a wine that is ready to drink"
+    },
+    {
+        "label": "Oxidation",
+        "definition": "wine exposed to air that has undergone a chemical change"
+    },
+    {
+        "label": "Phenolic compounds",
+        "definition": "natural compounds present in grape skins and seeds"
+    },
+    {
+        "label": "Phylloxera",
+        "definition": "a microscopic insect that kills grape vines by attacking their roots"
+    },
+    {
+        "label": "Plonk",
+        "definition": "british slang for inexpensive wine; also used to describe very low-quality wines"
+    },
+    {
+        "label": "Rough",
+        "definition": "the tactile \"coarse\" sensation one experiences with very astringent wines"
+    },
+    {
+        "label": "Sec",
+        "definition": "french word for \"dry\""
+    },
+    {
+        "label": "Sommelier",
+        "definition": "a wine butler; also used to denote a certified wine professional. for a full overview go here: sommelier courses."
+    },
+    {
+        "label": "Spicy",
+        "definition": "a tasting term used for odors and flavors reminiscent of black pepper, bay leaf, curry powder, baking spices, oregano, rosemary, thyme, saffron or paprika found in certain wines"
+    },
+    {
+        "label": "Structure",
+        "definition": "an ambiguous tasting term that implies harmony of fruit, alcohol, acidity, and tannins"
+    },
+    {
+        "label": "Sweet",
+        "definition": "wines with perceptible sugar contents on the nose and in the mouth"
+    },
+    {
+        "label": "Tannins",
+        "definition": "the phenolic compounds in wines that leave a bitter, dry, and puckery feeling in the mouth"
+    },
+    {
+        "label": "Tartaric acid",
+        "definition": "the principal acid in grapes, tartaric acid promotes flavor and aging in wine"
+    },
+    {
+        "label": "Terroir",
+        "definition": "french for geographical characteristics unique to a given vineyard"
+    },
+    {
+        "label": "Texture",
+        "definition": "a tasting term describing how wine feels on the palate"
+    },
+    {
+        "label": "Typicity",
+        "definition": "a tasting term that describes how well a wine expresses the characteristics inherent to the variety of grape"
+    },
+    {
+        "label": "Ullage",
+        "definition": "the empty space left in bottles and barrels as a wine evaporates"
+    },
+    {
+        "label": "Vegetal",
+        "definition": "tasting term describing characteristics of fresh or cooked vegetables detected on the nose and in the flavors of the wine. bell peppers, grass, and asparagus are common \"vegetal\" descriptors."
+    },
+    {
+        "label": "Vinification",
+        "definition": "the process of making wine"
+    },
+    {
+        "label": "Vinology",
+        "definition": "the scientific study of wines and winemaking. also, the website for the wine school of philadelphia."
+    },
+    {
+        "label": "Vitis vinifera",
+        "definition": "the species of wine that comprises over 99% of the world`s wine"
+    },
+    {
+        "label": "Vintage",
+        "definition": "the year a wine is bottled. also, the yield of wine from a vineyard during a single season."
+    },
+    {
+        "label": "Weight",
+        "definition": "similar to \"body\", the sensation when a wine feels thick or rich on the palate"
+    },
+    {
+        "label": "Wine",
+        "definition": "fermented juice from grapes"
+    },
+    {
+        "label": "Yeast",
+        "definition": "a microorganism endemic to vineyards and produced commercially that converts grape sugars into alcohol"
+    },
+    {
+        "label": "Yield",
+        "definition": "the productivity of a vineyard"
+    },
+    {
+        "label": "Young",
+        "definition": "an immature wine that is usually bottled and sold within a year of its vintage. wines meant to be drunk \"young\" are noted for their fresh and crisp flavors."
+    }
+]

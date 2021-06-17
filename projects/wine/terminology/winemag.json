@@ -1,0 +1,602 @@
+[
+    {
+        "label": "Acidity",
+        "definition": "a naturally occurring component of every wine; the level of perceived sharpness; a key element to a wine's longevity; a leading determinant of balance."
+    },
+    {
+        "label": "Alcohol",
+        "definition": "the end product of fermentation; technically ethyl alcohol resulting from the interaction of natural grape sugars and yeast; generally above 12.5 percent in dry table wines."
+    },
+    {
+        "label": "Alsace",
+        "definition": "a highly regarded wine region in eastern france renowned for dry and sweet wines made from riesling, gewuerztraminer, pinot blanc, pinot gris, and others."
+    },
+    {
+        "label": "Amarone",
+        "definition": "a succulent higher-alcohol red wine hailing from the veneto region in northern italy; made primarily from corvina grapes dried on racks before pressing."
+    },
+    {
+        "label": "AOC",
+        "definition": "appellation diorigine controlee, a french term for a denominated, governed wine region such as margaux or nuits-st.-georges."
+    },
+    {
+        "label": "Aroma",
+        "definition": "a scent thatis a component of the bouquet or nose; i.e. cherry is an aromatic component of a fruity bouquet."
+    },
+    {
+        "label": "AVA",
+        "definition": "american viticultural area; a denominated american wine region approved by the bureau of alcohol, tobacco, and firearms."
+    },
+    {
+        "label": "Bacchus",
+        "definition": "the roman god of wine, known as dionysus in ancient greece; a hybrid white grape from germany."
+    },
+    {
+        "label": "Balance",
+        "definition": "the level of harmony between acidity, tannins, fruit, oak, and other elements in a wine; a perceived quality that is more individual than scientific."
+    },
+    {
+        "label": "Barrel Fermented",
+        "definition": "a process by which wine (usually white) is fermented in oak barrels rather than in stainless steel tanks; a richer, creamier, oakier style of wine."
+    },
+    {
+        "label": "Barrique",
+        "definition": "french for 'barrel,' generally a barrel of 225 liters."
+    },
+    {
+        "label": "Beaujolais",
+        "definition": "a juicy, flavorful red wine made from gamay grapes grown in the region of the same name."
+    },
+    {
+        "label": "Beaujolais Nouveau",
+        "definition": "the first beaujolais wine of the harvest; its annual release date is the third thursday in november."
+    },
+    {
+        "label": "Blanc de Blancs",
+        "definition": "the name for champagne made entirely from chardonnay grapes."
+    },
+    {
+        "label": "Blanc de Noirs",
+        "definition": "the name for champagne made entirely from red grapes, either pinot noir or pinot meunier, or both."
+    },
+    {
+        "label": "Blend",
+        "definition": "the process whereby two or more grape varieties are combined after separate fermentation; common blends include cotes de rhone and red and white bordeaux."
+    },
+    {
+        "label": "Blush",
+        "definition": "a wine made from red grapes but which appears pink or salmon in color because the grape skins were removed from the fermenting juice before more color could be imparted; more commonly referred to as rose."
+    },
+    {
+        "label": "Bodega",
+        "definition": "spanish for winery; literally the 'room where barrels are stored.'"
+    },
+    {
+        "label": "Body",
+        "definition": "the impression of weight on one's palate; light, medium, and full are common body qualifiers."
+    },
+    {
+        "label": "Bordeaux",
+        "definition": "a city on the garonne river in southwest france; a large wine-producing region with more than a dozen subregions; a red wine made mostly from cabernet sauvignon, merlot, and cabernet franc; a white wine made from sauvignon blanc and semillon."
+    },
+    {
+        "label": "Botrytis Cinerea",
+        "definition": "a beneficial mold that causes grapes to shrivel and sugars to concentrate, resulting in sweet, unctuous wines; common botryt's wines include sauternes, tokay, and german beerenauslese."
+    },
+    {
+        "label": "Bouquet",
+        "definition": "the sum of a wine's aromas; how a wine smells as a whole; a key determinant of quality."
+    },
+    {
+        "label": "Breathe",
+        "definition": "the process of letting a wine open up via the introduction of air"
+    },
+    {
+        "label": "Brix",
+        "definition": "a scale used to measure the level of sugar in unfermented grapes. multiplying brix by 0.55 will yield a wine's future alcohol level."
+    },
+    {
+        "label": "Brut",
+        "definition": "a french term used to describe the driest champagnes."
+    },
+    {
+        "label": "Burgundy",
+        "definition": "a prominent french wine region stretching from chablis in the north to lyons in the south; pinot noir is the grape for red burgundy, chardonnay for white."
+    },
+    {
+        "label": "Cabernet Franc",
+        "definition": "a red grape common to bordeaux; characteristics include an herbal, leafy flavor and a soft, fleshy texture."
+    },
+    {
+        "label": "Cabernet Sauvignon",
+        "definition": "a powerful, tannic red grape of noble heritage; the base grape for many red bordeaux and most of the best red wines from california, washington, chile, and south africa; capable of aging for decades."
+    },
+    {
+        "label": "Cap",
+        "definition": "grape solids like pits, skins, and stems that rise to the top of a tank during fermentation; what gives red wines color, tannins and weight."
+    },
+    {
+        "label": "Cava",
+        "definition": "spanish for 'cellar,' but also a spanish sparkling wine made in the traditional champagne style from xarello, macabeo, and parellada grapes."
+    },
+    {
+        "label": "Chablis",
+        "definition": "a town and wine region east of paris known for steely, minerally chardonnay."
+    },
+    {
+        "label": "Champagne",
+        "definition": "a denominated region northeast of paris in which chardonnay, pinot noir, and pinot meunier grapes are made into sparkling wine."
+    },
+    {
+        "label": "Chaptalization",
+        "definition": "the process of adding sugar to fermenting grapes in order to increase alcohol."
+    },
+    {
+        "label": "Chardonnay",
+        "definition": "arguably the best and most widely planted white wine grape in the world."
+    },
+    {
+        "label": "Chateau",
+        "definition": "french for 'castle;' an estate with its own vineyards."
+    },
+    {
+        "label": "Chenin Blanc",
+        "definition": "a white grape common in the loire valley of france."
+    },
+    {
+        "label": "Chianti",
+        "definition": "a scenic, hilly section of tuscany known for fruity red wines made mostly from sangiovese grapes."
+    },
+    {
+        "label": "Claret",
+        "definition": "an english name for red bordeaux."
+    },
+    {
+        "label": "Clos",
+        "definition": "pronounced 'cloh,' this french word once applied only to vineyards surrounded by walls."
+    },
+    {
+        "label": "Color",
+        "definition": "a key determinant of a wine's age and quality; white wines grow darker in color as they age while red wines turn brownish orange."
+    },
+    {
+        "label": "Cooperative",
+        "definition": "a winery owned jointly by multiple grape growers."
+    },
+    {
+        "label": "Corked",
+        "definition": "a wine with musty, mushroomy aromas and flavors resulting from a cork tainted by tca (trichloroanisol)."
+    },
+    {
+        "label": "Crianza",
+        "definition": "a spanish term for a red wine that has been aged in oak barrels for at least one year."
+    },
+    {
+        "label": "Cru",
+        "definition": "a french term for ranking a wineis inherent quality, i.e. cru bourgeois, cru classe, premier cru, and grand cru."
+    },
+    {
+        "label": "Decant",
+        "definition": "the process of transferring wine from a bottle to another holding vessel. the purpose is generally to aerate a young wine or to separate an older wine from any sediment."
+    },
+    {
+        "label": "Denominacion de Origen",
+        "definition": "spanish for 'appellation of origin;' like the french aoc or italian doc."
+    },
+    {
+        "label": "Denominazione di Origine Controllata",
+        "definition": "italian for a controlled wine region; similar to the french aoc or spanish do."
+    },
+    {
+        "label": "Disgorge",
+        "definition": "the process by which final sediments are removed from traditionally made sparkling wines prior to the adding of the dosage."
+    },
+    {
+        "label": "Dosage",
+        "definition": "a sweetened spirit added at the very end to champagne and other traditionally made sparkling wines. it determines whether a wine is brut, extra dry, dry, or semisweet."
+    },
+    {
+        "label": "Douro",
+        "definition": "a river in portugal as well as the wine region famous for producing port wines."
+    },
+    {
+        "label": "Dry",
+        "definition": "a wine containing no more than 0.2 percent unfermented sugar."
+    },
+    {
+        "label": "Earthy",
+        "definition": "a term used to describe aromas and flavors that have a certain soil-like quality."
+    },
+    {
+        "label": "Enology",
+        "definition": "the science of wine production; an enologist is a professional winemaker; an enophile is someone who enjoys wine."
+    },
+    {
+        "label": "Fermentation",
+        "definition": "the process by which sugar is transformed into alcohol; how grape juice interacts with yeast to become wine."
+    },
+    {
+        "label": "Filtration",
+        "definition": "the process by which wine is clarified before bottling."
+    },
+    {
+        "label": "Fining",
+        "definition": "part of the clarification process whereby elements are added to the wine, i.e. egg whites, in order to capture solids prior to filtration."
+    },
+    {
+        "label": "Fortified Wine",
+        "definition": "a wine in which brandy is introduced during fermentation; sugars and sweetness are high due to the suspended fermentation."
+    },
+    {
+        "label": "Fume Blanc",
+        "definition": "a name created by robert mondavi to describe dry sauvignon blanc."
+    },
+    {
+        "label": "Gamay",
+        "definition": "a red grape exceedingly popular in the beaujolais region of france."
+    },
+    {
+        "label": "Gewurztraminer",
+        "definition": "a sweet and spicy white grape popular in eastern france, germany, austria, northern italy, and california."
+    },
+    {
+        "label": "Graft",
+        "definition": "a vineyard technique in which the bud-producing part of a grapevine is attached to an existing root."
+    },
+    {
+        "label": "Gran Reserva",
+        "definition": "a spanish term used for wines that are aged in wood and bottles for at least five years prior to release."
+    },
+    {
+        "label": "Grand Cru",
+        "definition": "french for 'great growth;' the very best vineyards."
+    },
+    {
+        "label": "Green",
+        "definition": "a term used to describe underripe, vegetal flavors in a wine."
+    },
+    {
+        "label": "Grenache",
+        "definition": "a hearty, productive red grape popular in southern france as well as in spain, where it is called garnacha."
+    },
+    {
+        "label": "Gruner Veltliner",
+        "definition": "a white grape popular in austria that makes lean, fruity, racy wines."
+    },
+    {
+        "label": "Haut",
+        "definition": "a french word meaning 'high.' it applies to quality as well as altitude."
+    },
+    {
+        "label": "Hectare",
+        "definition": "a metric measure equal to 10,000 square meters or 2.47 acres."
+    },
+    {
+        "label": "Hectoliter",
+        "definition": "a metric measure equal to 100 liters or 26.4 gallons."
+    },
+    {
+        "label": "Herbaceous",
+        "definition": "an aroma or flavor similar to green; often an indication of underripe grapes or fruit grown in a cool climate."
+    },
+    {
+        "label": "Hollow",
+        "definition": "a term used to describe a wine that doesnit have depth or body."
+    },
+    {
+        "label": "Hybrid",
+        "definition": "the genetic crossing of two or more grape types; common hybrids include mueller-thurgau and bacchus"
+    },
+    {
+        "label": "Ice Wine",
+        "definition": "from the german eiswein, this is a wine made from frozen grapes; germany, austria and canada are leading ice wine producers."
+    },
+    {
+        "label": "Jeroboam",
+        "definition": "an oversized bottle equal to six regular 750 ml bottles."
+    },
+    {
+        "label": "Kabinett",
+        "definition": "a german term for a wine of quality; usually the driest of germanyis best rieslings."
+    },
+    {
+        "label": "Kosher",
+        "definition": "a wine made according to strict jewish rules under rabbinical supervision."
+    },
+    {
+        "label": "Labrusca",
+        "definition": "grape types native to north america such as concord and catawba."
+    },
+    {
+        "label": "Late Harvest",
+        "definition": "a term used to describe dessert wines made from grapes left on the vines for an extra long period, often until botrytis has set in."
+    },
+    {
+        "label": "Lees",
+        "definition": "heavy sediment left in the barrel by fermenting wines; a combination of spent yeast cells and grape solids."
+    },
+    {
+        "label": "Legs",
+        "definition": "a term used to describe how wine sticks to the inside of a wineglass after drinking or swirling."
+    },
+    {
+        "label": "Loire",
+        "definition": "a river in central france as well as a wine region famous for chenin blanc, sauvignon blanc, and cabernet franc."
+    },
+    {
+        "label": "Maceration",
+        "definition": "the process of allowing grape juice and skins to ferment together, thereby imparting color, tannins, and aromas."
+    },
+    {
+        "label": "Madeira",
+        "definition": "a fortified wine that has been made on a portuguese island off the coast of morocco since the fifteenth century."
+    },
+    {
+        "label": "Maderized",
+        "definition": "stemming from the word madeira, this term means oxidization in a hot environment."
+    },
+    {
+        "label": "Magnum",
+        "definition": "a bottle equal to two regular 750 ml bottles."
+    },
+    {
+        "label": "Malbec",
+        "definition": "a hearty red grape of french origin now exceedingly popular in argentina."
+    },
+    {
+        "label": "Malolactic Fermentation",
+        "definition": "a secondary fermentation, often occurring in barrels, whereby harsher malic acid is converted into creamier lactic acid."
+    },
+    {
+        "label": "Medoc",
+        "definition": "a section of bordeaux on the west bank of the gironde estuary known for great red wines; margaux, st.-estephe, and pauillac are three leading aocs in the medoc."
+    },
+    {
+        "label": "Merlot",
+        "definition": "a lauded red grape popular in bordeaux and throughout the world; large amounts of merlot exist in italy, the united states, south america, and elsewhere."
+    },
+    {
+        "label": "Must",
+        "definition": "crushed grapes about to go or going through fermentation."
+    },
+    {
+        "label": "Nebbiolo",
+        "definition": "a red grape popular in the piedmont region of northwest italy; the grape that yields both barolo and barbaresco."
+    },
+    {
+        "label": "Negociant",
+        "definition": "a french term for a person or company that buys wines from others and then labels it under his or her own name; stems from the french word for 'shipper.'"
+    },
+    {
+        "label": "Nose",
+        "definition": "synonymous with bouquet; the sum of a wine's aromas."
+    },
+    {
+        "label": "Oaky",
+        "definition": "a term used to describe woody aromas and flavors; butter, popcorn, and toast notes are found in 'oaky' wines."
+    },
+    {
+        "label": "Organic",
+        "definition": "grapes grown without the aid of chemical-based fertilizers, pesticides, or herbicides."
+    },
+    {
+        "label": "Oxidized",
+        "definition": "a wine that is no longer fresh because it was exposed to too much air."
+    },
+    {
+        "label": "PH",
+        "definition": "an indication of a wine's acidity expressed by how much hydrogen is in it."
+    },
+    {
+        "label": "Phylloxera",
+        "definition": "a voracious vine louse that over time has destroyed vineyards in europe and california."
+    },
+    {
+        "label": "Piedmont",
+        "definition": "an area in northwest italy known for barolo, barbaresco, barbera, dolcetto, and moscato."
+    },
+    {
+        "label": "Pinot Blanc",
+        "definition": "a white grape popular in alsace, germany, and elsewhere."
+    },
+    {
+        "label": "Pinot Gris",
+        "definition": "also called pinot grigio, this is a grayish-purple grape that yields a white wine with a refreshing character."
+    },
+    {
+        "label": "Pinot Noir",
+        "definition": "the prime red grape of burgundy, champagne, and oregon."
+    },
+    {
+        "label": "Pinotage",
+        "definition": "a hybrid between pinot noir and cinsault thatis grown almost exclusively in south africa."
+    },
+    {
+        "label": "Plonk",
+        "definition": "a derogatory name for cheap, poor-tasting wine."
+    },
+    {
+        "label": "Pomace",
+        "definition": "the mass of skins, pits, and stems left over after fermentation; used to make grappa in italy and marc in france."
+    },
+    {
+        "label": "Port",
+        "definition": "a sweet, fortified wine made in the douro valley of portugal and aged in the coastal town of vila nova de gaia; variations include vintage, tawny, late bottled vintage, ruby, white, and others."
+    },
+    {
+        "label": "Premier Cru",
+        "definition": "french for 'first growth;' a high-quality vineyard but one not as good as grand cru."
+    },
+    {
+        "label": "Press",
+        "definition": "the process by which grape juice is extracted prior to fermentation; a machine that extracts juice from grapes."
+    },
+    {
+        "label": "Primeur",
+        "definition": "a french term for wine sold while it is sill in the barrels; known as 'futures' in english-speaking countries."
+    },
+    {
+        "label": "Pruning",
+        "definition": "the annual vineyard chore of trimming back plants from the previous harvest."
+    },
+    {
+        "label": "Racking",
+        "definition": "the process of moving wine from barrel to barrel, while leaving sediment behind."
+    },
+    {
+        "label": "Reserva",
+        "definition": "a spanish term for a red wine that has spent at least three years in barrels and bottles before release."
+    },
+    {
+        "label": "Reserve",
+        "definition": "a largely american term indicating a wine of higher quality; it has no legal meaning."
+    },
+    {
+        "label": "Rhone",
+        "definition": "a river in southwest france surrounded by villages producing wines mostly from syrah; the name of the wine-producing valley in france."
+    },
+    {
+        "label": "Riddling",
+        "definition": "the process of rotating champagne bottles in order to shift sediment toward the cork."
+    },
+    {
+        "label": "Riesling",
+        "definition": "along with chardonnay, one of the top white grapes in the world; most popular in germany, alsace, and austria."
+    },
+    {
+        "label": "Rioja",
+        "definition": "a well-known region in spain known for traditional red wines made from the tempranillo grape."
+    },
+    {
+        "label": "Rose",
+        "definition": "french for \"pink\" and used to describe a category of refreshing wines that are pink in color but are made from red grapes."
+    },
+    {
+        "label": "Sancerre",
+        "definition": "an area in the loire valley known mostly for wines made from sauvignon blanc."
+    },
+    {
+        "label": "Sangiovese",
+        "definition": "a red grape native to tuscany; the base grape for chianti, brunello di montalcino, morellino di scansano, and others."
+    },
+    {
+        "label": "Sauternes",
+        "definition": "a sweet bordeaux white wine made from botrytized semillon and sauvignon blanc."
+    },
+    {
+        "label": "Sauvignon Blanc",
+        "definition": "a white grape planted throughout the world; increasingly the signature wine of new zealand."
+    },
+    {
+        "label": "Sherry",
+        "definition": "a fortified wine from a denominated region in southwest spain; styles include fino, manzanilla, oloroso, and amontillado."
+    },
+    {
+        "label": "Shiraz",
+        "definition": "the australian name for syrah; also used in south africa and sparingly in the united states."
+    },
+    {
+        "label": "Silky",
+        "definition": "a term used to describe a wine with an especially smooth mouthfeel."
+    },
+    {
+        "label": "Solera",
+        "definition": "the spanish system of blending wines of different ages to create a harmonious end product; a stack of barrels holding wines of various ages."
+    },
+    {
+        "label": "Sommelier",
+        "definition": "technically a wine steward, but one potentially with a great degree of wine knowledge as well as a diploma of sorts in wine studies."
+    },
+    {
+        "label": "Spicy",
+        "definition": "a term used to describe certain aromas and flavors that may be sharp, woody, or sweet."
+    },
+    {
+        "label": "Split",
+        "definition": "a quarter-bottle of wine; a single-serving bottle equal to 175 milliliters."
+    },
+    {
+        "label": "Steely",
+        "definition": "a term used to describe an extremely crisp, acidic wine that was not aged in barrels."
+    },
+    {
+        "label": "Stemmy",
+        "definition": "a term used to describe harsh, green characteristics in a wine."
+    },
+    {
+        "label": "Super Tuscan",
+        "definition": "a red wine from tuscany that is not made in accordance with established doc rules; often a blended wine of superior quality containing cabernet sauvignon and/or merlot."
+    },
+    {
+        "label": "Supple",
+        "definition": "a term used to describe smooth, balanced wines."
+    },
+    {
+        "label": "Syrah",
+        "definition": "a red grape planted extensively in the rhone valley of france, australia, and elsewhere; a spicy, full and tannic wine that usually requires aging before it can be enjoyed."
+    },
+    {
+        "label": "Semillon",
+        "definition": "a plump white grape popular in bordeaux and australia; the base for sauternes."
+    },
+    {
+        "label": "Table Wine",
+        "definition": "a term used to describe wines of between 10 and 14 percent alcohol; in europe, table wines are those that are made outside of regulated regions or by unapproved methods."
+    },
+    {
+        "label": "Tannins",
+        "definition": "phenolic compounds that exist in most plants; in grapes, tannins are found primarily in the skins and pits; tannins are astringent and provide structure to a wine; over time tannins die off, making wines less harsh."
+    },
+    {
+        "label": "Tempranillo",
+        "definition": "the most popular red grape in spain; common in rioja and ribera del duero."
+    },
+    {
+        "label": "Terroir",
+        "definition": "a french term for the combination of soil, climate, and all other factors that influence the ultimate character of a wine."
+    },
+    {
+        "label": "Tokay",
+        "definition": "a dessert wine made in hungary from dried furmint grapes."
+    },
+    {
+        "label": "Trocken",
+        "definition": "german for 'dry.'"
+    },
+    {
+        "label": "Varietal",
+        "definition": "a wine made from just one grape type and named after that grape; the opposite of a blend."
+    },
+    {
+        "label": "Veneto",
+        "definition": "a large wine-producing region in northern italy."
+    },
+    {
+        "label": "Vin Santo",
+        "definition": "sweet wine from tuscany made from late-harvest trebbiano and malvasia grapes."
+    },
+    {
+        "label": "Vintage",
+        "definition": "a particular year in the wine business; a specific harvest."
+    },
+    {
+        "label": "Viognier",
+        "definition": "a fragrant, powerful white grape grown in the rhone valley of france and elsewhere."
+    },
+    {
+        "label": "Viticulture",
+        "definition": "the science and business of growing wine grapes."
+    },
+    {
+        "label": "Yeast",
+        "definition": "organisms that issue enzymes that trigger the fermentation process; yeasts can be natural or commercial."
+    },
+    {
+        "label": "Yield",
+        "definition": "the amount of grapes harvested in a particular year."
+    },
+    {
+        "label": "Zinfandel",
+        "definition": "a popular grape in california of disputed origin; scientists say it is related to grapes in croatia and southern italy."
+    }
+]

@@ -3,8 +3,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath('src'))
 
-from eeyore_nlp.extractions import DependencyRelationshipExtract, \
-                                   OneSidedRelationshipExtract
+from eeyore_nlp.extractions import StrictDependencyRelationshipExtract, \
+                                   StaticParentRelationshipExtract
 from eeyore_nlp.integrations import SpacyIntegration
 from eeyore_nlp.models import Context
 
@@ -16,7 +16,7 @@ def test_extractor_1():
     context.add('entities', ['B-A', '', 'B-A', '', 'B-B', 'B-C', ''])
 
     spacy = SpacyIntegration('en_core_web_lg')
-    extract = DependencyRelationshipExtract(
+    extract = StrictDependencyRelationshipExtract(
         spacy=spacy,
         attribute='entities',
         relationships=[
