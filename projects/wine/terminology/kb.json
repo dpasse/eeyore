@@ -1,0 +1,2070 @@
+[
+    {
+        "label": "AOC",
+        "definitions": [
+            "appellation diorigine controlee, a french term for a denominated, governed wine region such as margaux or nuits-st.-georges."
+        ],
+        "alias": [],
+        "concept": "W-1",
+        "category": "-1"
+    },
+    {
+        "label": "AVA",
+        "definitions": [
+            "american viticultural area; a denominated american wine region approved by the bureau of alcohol, tobacco, and firearms."
+        ],
+        "alias": [],
+        "concept": "W-2",
+        "category": "-1"
+    },
+    {
+        "label": "Acidity",
+        "definitions": [
+            "the liveliness and crispness in wine that activates our salivary glands",
+            "a naturally occurring component of every wine; the level of perceived sharpness; a key element to a wine's longevity; a leading determinant of balance.",
+            "a natural part of wine that creates a lively taste and balances out the sweet and bitter components. too much acid results in an overly tart, sharp, or sour wine; too little makes it flat and flabby. acetic acid, citric acid, tartaric, malic acid, and lactic acid are the most common."
+        ],
+        "alias": [
+            "Acid"
+        ],
+        "concept": "W-3",
+        "category": "-1"
+    },
+    {
+        "label": "Aeration",
+        "definitions": [
+            "exposing wine to air so that it can \"breathe\" before drinking it. when oxygen is introduced to wine, it releases aromas and opens up flavors much like swirling wine in a glass does.",
+            "the deliberate addition of oxygen to round out and soften a wine"
+        ],
+        "alias": [],
+        "concept": "W-4",
+        "category": "-1"
+    },
+    {
+        "label": "Aftertaste",
+        "definitions": [
+            "the taste or flavors that linger in the mouth after tasting wine, also known as \"finish\". this is the most significant factor in assessing a wine's character and quality."
+        ],
+        "alias": [],
+        "concept": "W-5",
+        "category": "-1"
+    },
+    {
+        "label": "Aging",
+        "definitions": [
+            "holding wine in barrels, tanks, and bottles to advance them to a more desirable state"
+        ],
+        "alias": [
+            "Age"
+        ],
+        "concept": "W-6",
+        "category": "-1"
+    },
+    {
+        "label": "Alcohol",
+        "definitions": [
+            "ethanol (ethyl alcohol), the product of fermentation of sugars by yeast",
+            "the end product of fermentation; technically ethyl alcohol resulting from the interaction of natural grape sugars and yeast; generally above 12.5 percent in dry table wines."
+        ],
+        "alias": [],
+        "concept": "W-7",
+        "category": "-1"
+    },
+    {
+        "label": "Alcohol By Volume",
+        "definitions": [
+            "a measure of the alcohol levels in an alcoholic beverage, often truncated to abv. the average glass of wine contains about 11-13% alcohol, but bottles can range from 5.5-20% abv."
+        ],
+        "alias": [
+            "ABV"
+        ],
+        "concept": "W-8",
+        "category": "-1"
+    },
+    {
+        "label": "Alsace",
+        "definitions": [
+            "a highly regarded wine region in eastern france renowned for dry and sweet wines made from riesling, gewuerztraminer, pinot blanc, pinot gris, and others."
+        ],
+        "alias": [],
+        "concept": "W-9",
+        "category": "-1"
+    },
+    {
+        "label": "Amarone",
+        "definitions": [
+            "a succulent higher-alcohol red wine hailing from the veneto region in northern italy; made primarily from corvina grapes dried on racks before pressing."
+        ],
+        "alias": [],
+        "concept": "W-10",
+        "category": "-1"
+    },
+    {
+        "label": "Anosmia",
+        "definitions": [
+            "the loss of smell"
+        ],
+        "alias": [],
+        "concept": "W-11",
+        "category": "-1"
+    },
+    {
+        "label": "Appellation",
+        "definitions": [
+            "a legally defined geographical name that identifies where wine grapes were grown. in france, the appellation d'origine controlee (aoc) is the official certification for designated regions. in the united states, appellations are called american viticultural areas (avas) examples include paso robles, sonoma coast, and napa valley.",
+            "a delineated wine-producing region particular to france"
+        ],
+        "alias": [],
+        "concept": "W-12",
+        "category": "-1"
+    },
+    {
+        "label": "Aroma",
+        "definitions": [
+            "the smell of wine, especially young wine (different than \"bouquet\")",
+            "a scent thatis a component of the bouquet or nose; i.e. cherry is an aromatic component of a fruity bouquet."
+        ],
+        "alias": [],
+        "concept": "W-13",
+        "category": "-1"
+    },
+    {
+        "label": "Astringent",
+        "definitions": [
+            "tasting term noting the harsh, bitter, and drying sensations in the mouth caused by high levels of tannin"
+        ],
+        "alias": [],
+        "concept": "W-14",
+        "category": "-1"
+    },
+    {
+        "label": "Bacchus",
+        "definitions": [
+            "the roman god of wine, known as dionysus in ancient greece; a hybrid white grape from germany."
+        ],
+        "alias": [],
+        "concept": "W-15",
+        "category": "-1"
+    },
+    {
+        "label": "Balance",
+        "definitions": [
+            "a term for when the elements of wine acids, sugars, tannins, and alcohol come together in a harmonious way",
+            "the level of harmony between acidity, tannins, fruit, oak, and other elements in a wine; a perceived quality that is more individual than scientific."
+        ],
+        "alias": [],
+        "concept": "W-16",
+        "category": "-1"
+    },
+    {
+        "label": "Barrel Fermented",
+        "definitions": [
+            "a process by which wine (usually white) is fermented in oak barrels rather than in stainless steel tanks; a richer, creamier, oakier style of wine.",
+            "the oak container used for fermenting and aging wine"
+        ],
+        "alias": [
+            "Barrel"
+        ],
+        "concept": "W-17",
+        "category": "-1"
+    },
+    {
+        "label": "Barrique",
+        "definitions": [
+            "a 225-litre oak barrel used originally for storing and aging wines, originating in bordeaux",
+            "french for 'barrel,' generally a barrel of 225 liters."
+        ],
+        "alias": [],
+        "concept": "W-18",
+        "category": "-1"
+    },
+    {
+        "label": "Beaujolais Nouveau",
+        "definitions": [
+            "the first beaujolais wine of the harvest; its annual release date is the third thursday in november.",
+            "a juicy, flavorful red wine made from gamay grapes grown in the region of the same name."
+        ],
+        "alias": [
+            "Beaujolais"
+        ],
+        "concept": "W-19",
+        "category": "-1"
+    },
+    {
+        "label": "Biodynamic Wine",
+        "definitions": [
+            "wine produced according to the guidelines of the biodynamic farming and gardening association, which follows a holistic, ecological, and ethical method that forgoes synthetic chemicals or additives. think of it as \"organic plus\"."
+        ],
+        "alias": [],
+        "concept": "W-20",
+        "category": "-1"
+    },
+    {
+        "label": "Bitter",
+        "definitions": [
+            "a taste sensation that is sensed on the back of the tongue and caused by tanninsblend a wine made from more than one grape varietal"
+        ],
+        "alias": [],
+        "concept": "W-21",
+        "category": "-1"
+    },
+    {
+        "label": "Blanc de Blancs",
+        "definitions": [
+            "the name for champagne made entirely from chardonnay grapes."
+        ],
+        "alias": [],
+        "concept": "W-22",
+        "category": "-1"
+    },
+    {
+        "label": "Blanc de Noirs",
+        "definitions": [
+            "the name for champagne made entirely from red grapes, either pinot noir or pinot meunier, or both."
+        ],
+        "alias": [],
+        "concept": "W-23",
+        "category": "-1"
+    },
+    {
+        "label": "Blend",
+        "definitions": [
+            "the process whereby two or more grape varieties are combined after separate fermentation; common blends include cotes de rhone and red and white bordeaux."
+        ],
+        "alias": [],
+        "concept": "W-24",
+        "category": "-1"
+    },
+    {
+        "label": "Blush",
+        "definitions": [
+            "a wine made from red grapes but which appears pink or salmon in color because the grape skins were removed from the fermenting juice before more color could be imparted; more commonly referred to as rose."
+        ],
+        "alias": [],
+        "concept": "W-25",
+        "category": "-1"
+    },
+    {
+        "label": "Bodega",
+        "definitions": [
+            "spanish for winery; literally the 'room where barrels are stored.'"
+        ],
+        "alias": [],
+        "concept": "W-26",
+        "category": "-1"
+    },
+    {
+        "label": "Body",
+        "definitions": [
+            "the sense of thickness on the palate resulting from a mix of the wine's alcohol content, sugar levels, and dissolved solids. a good analogy for wine body is milk a light-bodied wine is akin to nonfat milk, medium-bodied wine is like whole milk, and full-bodied wine feels similar to creamer.",
+            "a tactile sensation describing the weight and fullness of wine in the mouth. a wine can be light, medium, or full bodied.",
+            "the impression of weight on one's palate; light, medium, and full are common body qualifiers."
+        ],
+        "alias": [],
+        "concept": "W-27",
+        "category": "-1"
+    },
+    {
+        "label": "Bordeaux",
+        "definitions": [
+            "a region in southwest france, as well as any wine produced in this location. both red and white bordeaux wines exist, but the red wine version is the most well-known.",
+            "the area in southwest france considered one of the greatest wine-producing regions in the world",
+            "a city on the garonne river in southwest france; a large wine-producing region with more than a dozen subregions; a red wine made mostly from cabernet sauvignon, merlot, and cabernet franc; a white wine made from sauvignon blanc and semillon."
+        ],
+        "alias": [],
+        "concept": "W-28",
+        "category": "-1"
+    },
+    {
+        "label": "Botrytis Cinerea",
+        "definitions": [
+            "better known by the more descriptive and easier-to-pronounce \"noble rot\" or \"gray mold\", botrytis cinerea is a beneficial fungus that grows on wine grapes and enhances sweetness and flavor complexity.",
+            "a beneficial mold that causes grapes to shrivel and sugars to concentrate, resulting in sweet, unctuous wines; common botryt's wines include sauternes, tokay, and german beerenauslese.",
+            "a beneficial mold that pierces the skin of grapes and causes dehydration, resulting in natural grape juice exceptionally high in sugar. botrytis is largely responsible for the world`s finest dessert wines. (see \"noble rot\")"
+        ],
+        "alias": [
+            "Botrytis"
+        ],
+        "concept": "W-29",
+        "category": "-1"
+    },
+    {
+        "label": "Bouquet",
+        "definitions": [
+            "a term that refers to the complex aromas in aged wines",
+            "the sum of a wine's aromas; how a wine smells as a whole; a key determinant of quality."
+        ],
+        "alias": [],
+        "concept": "W-30",
+        "category": "-1"
+    },
+    {
+        "label": "Breathe",
+        "definitions": [
+            "the process of letting a wine open up via the introduction of air",
+            "exposing wine to oxygen to improve its flavors (see \"aeration\")"
+        ],
+        "alias": [
+            "Breathing"
+        ],
+        "concept": "W-31",
+        "category": "-1"
+    },
+    {
+        "label": "Brettanomyce",
+        "definitions": [
+            "a wine-spoiling yeast that produces barnyard, mousy, metallic, or bandaid-ish aromas"
+        ],
+        "alias": [],
+        "concept": "W-32",
+        "category": "-1"
+    },
+    {
+        "label": "Brilliant",
+        "definitions": [
+            "a tasting note for wines that appear sparkling clear"
+        ],
+        "alias": [],
+        "concept": "W-33",
+        "category": "-1"
+    },
+    {
+        "label": "Brix",
+        "definitions": [
+            "the sugar content of wine grapes that allows winemakers to measure the potential alcohol content of a wine before it`s produced.",
+            "a scale used to measure the level of sugar in unfermented grapes. multiplying brix by 0.55 will yield a wine's future alcohol level."
+        ],
+        "alias": [],
+        "concept": "W-34",
+        "category": "-1"
+    },
+    {
+        "label": "Brut",
+        "definitions": [
+            "the french term for dry, which is the opposite of sweet in wine terms. most often used to describe dry champagne or sparkling wines.",
+            "french term denoting dry champagnes or sparkling wines",
+            "a french term used to describe the driest champagnes."
+        ],
+        "alias": [],
+        "concept": "W-35",
+        "category": "-1"
+    },
+    {
+        "label": "Bung",
+        "definitions": [
+            "the plug used to seal a wine barrel"
+        ],
+        "alias": [],
+        "concept": "W-36",
+        "category": "-1"
+    },
+    {
+        "label": "Bung hole",
+        "definitions": [
+            "the opening in a cask in which wine can be put in or taken out"
+        ],
+        "alias": [],
+        "concept": "W-37",
+        "category": "-1"
+    },
+    {
+        "label": "Burgundy",
+        "definitions": [
+            "a wine region in eastern france, as well as any wines (called burgundies) produced there. the area's most well-known wines are dry reds made from pinot noir grapes and white wines made from chardonnay grapes.",
+            "a prominent french wine region stretching from chablis in the north to lyons in the south; pinot noir is the grape for red burgundy, chardonnay for white."
+        ],
+        "alias": [],
+        "concept": "W-38",
+        "category": "-1"
+    },
+    {
+        "label": "Cabernet Franc",
+        "definitions": [
+            "a red grape common to bordeaux; characteristics include an herbal, leafy flavor and a soft, fleshy texture."
+        ],
+        "alias": [],
+        "concept": "W-39",
+        "category": "-1"
+    },
+    {
+        "label": "Cabernet Sauvignon",
+        "definitions": [
+            "a powerful, tannic red grape of noble heritage; the base grape for many red bordeaux and most of the best red wines from california, washington, chile, and south africa; capable of aging for decades."
+        ],
+        "alias": [],
+        "concept": "W-40",
+        "category": "-1"
+    },
+    {
+        "label": "Cap",
+        "definitions": [
+            "grape solids like pits, skins, and stems that rise to the top of a tank during fermentation; what gives red wines color, tannins and weight."
+        ],
+        "alias": [],
+        "concept": "W-41",
+        "category": "-1"
+    },
+    {
+        "label": "Cava",
+        "definitions": [
+            "spanish sparkling wine produced in the same fashion as champagne. consider it the champagne of spain.",
+            "spanish for 'cellar,' but also a spanish sparkling wine made in the traditional champagne style from xarello, macabeo, and parellada grapes."
+        ],
+        "alias": [],
+        "concept": "W-42",
+        "category": "-1"
+    },
+    {
+        "label": "Chablis",
+        "definitions": [
+            "a town and wine region east of paris known for steely, minerally chardonnay."
+        ],
+        "alias": [],
+        "concept": "W-43",
+        "category": "-1"
+    },
+    {
+        "label": "Champagne",
+        "definitions": [
+            "sparkling wine made in the french geographical region of champagne. only sparkling wines produced in this specific area can be called champagne with the uppercase \"c\", so be sure to check the wine label if you want the real deal.",
+            "a denominated region northeast of paris in which chardonnay, pinot noir, and pinot meunier grapes are made into sparkling wine."
+        ],
+        "alias": [],
+        "concept": "W-44",
+        "category": "-1"
+    },
+    {
+        "label": "Chaptalization",
+        "definitions": [
+            "the process of adding sugar to unfermented grapes in order to increase the alcohol content of the finished product.",
+            "adding sugar to wine before or during fermentation to increase alcohol levels. chaptalization is illegal in some parts of the world, and highly controlled in others.",
+            "the process of adding sugar to fermenting grapes in order to increase alcohol."
+        ],
+        "alias": [],
+        "concept": "W-45",
+        "category": "-1"
+    },
+    {
+        "label": "Chardonnay",
+        "definitions": [
+            "a wine grape used to make champagne and other white wines. also, wine made from this greenish-white grape.",
+            "arguably the best and most widely planted white wine grape in the world."
+        ],
+        "alias": [],
+        "concept": "W-46",
+        "category": "-1"
+    },
+    {
+        "label": "Chateau",
+        "definitions": [
+            "french for 'castle;' an estate with its own vineyards."
+        ],
+        "alias": [],
+        "concept": "W-47",
+        "category": "-1"
+    },
+    {
+        "label": "Chenin Blanc",
+        "definitions": [
+            "a white grape common in the loire valley of france."
+        ],
+        "alias": [],
+        "concept": "W-48",
+        "category": "-1"
+    },
+    {
+        "label": "Chianti",
+        "definitions": [
+            "a scenic, hilly section of tuscany known for fruity red wines made mostly from sangiovese grapes."
+        ],
+        "alias": [],
+        "concept": "W-49",
+        "category": "-1"
+    },
+    {
+        "label": "Citric acid",
+        "definitions": [
+            "one of the three predominate acids in wine"
+        ],
+        "alias": [],
+        "concept": "W-50",
+        "category": "-1"
+    },
+    {
+        "label": "Claret",
+        "definitions": [
+            "the name the english use when referring to the red wines of bordeaux",
+            "an english name for red bordeaux."
+        ],
+        "alias": [],
+        "concept": "W-51",
+        "category": "-1"
+    },
+    {
+        "label": "Class growth",
+        "definitions": [
+            "see cru classe"
+        ],
+        "alias": [],
+        "concept": "W-52",
+        "category": "-1"
+    },
+    {
+        "label": "Clos",
+        "definitions": [
+            "pronounced 'cloh,' this french word once applied only to vineyards surrounded by walls."
+        ],
+        "alias": [],
+        "concept": "W-53",
+        "category": "-1"
+    },
+    {
+        "label": "Closed",
+        "definitions": [
+            "term describing underdeveloped and young wines whose flavors are not exhibiting well"
+        ],
+        "alias": [],
+        "concept": "W-54",
+        "category": "-1"
+    },
+    {
+        "label": "Color",
+        "definitions": [
+            "a key determinant of a wine's age and quality; white wines grow darker in color as they age while red wines turn brownish orange."
+        ],
+        "alias": [],
+        "concept": "W-55",
+        "category": "-1"
+    },
+    {
+        "label": "Complex",
+        "definitions": [
+            "a wine exhibiting numerous odors, nuances, and flavors"
+        ],
+        "alias": [],
+        "concept": "W-56",
+        "category": "-1"
+    },
+    {
+        "label": "Cooperative",
+        "definitions": [
+            "a winery owned jointly by multiple grape growers."
+        ],
+        "alias": [],
+        "concept": "W-57",
+        "category": "-1"
+    },
+    {
+        "label": "Cork taint",
+        "definitions": [
+            "undesirable aromas and flavors in wine often associated with wet cardboard or moldy basements"
+        ],
+        "alias": [],
+        "concept": "W-58",
+        "category": "-1"
+    },
+    {
+        "label": "Corked",
+        "definitions": [
+            "a cork-top wine bottle that has been ruined with cork taint, a.k.a. spoilage that results in a musty smell and flat flavor.",
+            "a term that denotes a wine that has suffered cork taint (not wine with cork particles floating about)",
+            "a wine with musty, mushroomy aromas and flavors resulting from a cork tainted by tca (trichloroanisol)."
+        ],
+        "alias": [],
+        "concept": "W-59",
+        "category": "-1"
+    },
+    {
+        "label": "Crianza",
+        "definitions": [
+            "a spanish term for a red wine that has been aged in oak barrels for at least one year."
+        ],
+        "alias": [],
+        "concept": "W-60",
+        "category": "-1"
+    },
+    {
+        "label": "Cru",
+        "definitions": [
+            "a french term for ranking a wines inherent quality, i.e. cru bourgeois, cru classe, premier cru, and grand cru."
+        ],
+        "alias": [],
+        "concept": "W-61",
+        "category": "-1"
+    },
+    {
+        "label": "Cru classe",
+        "definitions": [
+            "a top-ranking vineyard designated in the bordeaux classification of 1855"
+        ],
+        "alias": [],
+        "concept": "W-62",
+        "category": "-1"
+    },
+    {
+        "label": "Crush",
+        "definitions": [
+            "the english term for harvest"
+        ],
+        "alias": [],
+        "concept": "W-63",
+        "category": "-1"
+    },
+    {
+        "label": "Cuvee",
+        "definitions": [
+            "in champagne, a blended batch of wine"
+        ],
+        "alias": [],
+        "concept": "W-64",
+        "category": "-1"
+    },
+    {
+        "label": "Decant",
+        "definitions": [
+            "the process of transferring wine from a bottle to another holding vessel. the purpose is generally to aerate a young wine or to separate an older wine from any sediment.",
+            "pouring wine from one container into another, usually from a wine bottle to a decanter. doing so allows the wine to aerate and separates it from any sediment."
+        ],
+        "alias": [
+            "Decanting"
+        ],
+        "concept": "W-65",
+        "category": "-1"
+    },
+    {
+        "label": "Demi-sec",
+        "definitions": [
+            "french term meaning \"half-dry\" used to describe a sweet sparkling wine"
+        ],
+        "alias": [
+            "Demi sec"
+        ],
+        "concept": "W-66",
+        "category": "-1"
+    },
+    {
+        "label": "Denominacion de Origen",
+        "definitions": [
+            "spanish for 'appellation of origin;' like the french aoc or italian doc."
+        ],
+        "alias": [],
+        "concept": "W-67",
+        "category": "-1"
+    },
+    {
+        "label": "Denominazione di Origine Controllata",
+        "definitions": [
+            "italian for a controlled wine region; similar to the french aoc or spanish doc."
+        ],
+        "alias": [],
+        "concept": "W-68",
+        "category": "-1"
+    },
+    {
+        "label": "Dessert Wine",
+        "definitions": [
+            "any sweet wines served with dessert, typically in a small wine glass. port, moscato, late-harvest riesling, and ice wine (made from grapes that froze while still on the vine) are examples."
+        ],
+        "alias": [],
+        "concept": "W-69",
+        "category": "-1"
+    },
+    {
+        "label": "Disgorge",
+        "definitions": [
+            "the process by which final sediments are removed from traditionally made sparkling wines prior to the adding of the dosage."
+        ],
+        "alias": [],
+        "concept": "W-70",
+        "category": "-1"
+    },
+    {
+        "label": "Dosage",
+        "definitions": [
+            "a sweetened spirit added at the very end to champagne and other traditionally made sparkling wines. it determines whether a wine is brut, extra dry, dry, or semisweet."
+        ],
+        "alias": [],
+        "concept": "W-71",
+        "category": "-1"
+    },
+    {
+        "label": "Douro",
+        "definitions": [
+            "a river in portugal as well as the wine region famous for producing port wines."
+        ],
+        "alias": [],
+        "concept": "W-72",
+        "category": "-1"
+    },
+    {
+        "label": "Dry",
+        "definitions": [
+            "the opposite of sweet. (also called \"brut\" in french.) if you're looking for sweet wine, avoid dry wine.",
+            "a taste sensation often attributed to tannins and causing puckering sensations in the mouth; the opposite of sweet",
+            "a wine containing no more than 0.2 percent unfermented sugar."
+        ],
+        "alias": [],
+        "concept": "W-73",
+        "category": "-1"
+    },
+    {
+        "label": "Earthy",
+        "definitions": [
+            "an odor or flavor reminiscent of damp soil",
+            "a term used to describe aromas and flavors that have a certain soil-like quality."
+        ],
+        "alias": [],
+        "concept": "W-74",
+        "category": "-1"
+    },
+    {
+        "label": "Enology",
+        "definitions": [
+            "the science of wine and winemaking (see \"oenology\")",
+            "the science of wine production; an enologist is a professional winemaker; an enophile is someone who enjoys wine."
+        ],
+        "alias": [],
+        "concept": "W-75",
+        "category": "-1"
+    },
+    {
+        "label": "Fermentation",
+        "definitions": [
+            "the winemaking process that turns grape juice into alcohol. yeast is sometimes added to the grapes to convert the grape sugars into ethanol and carbon dioxide, giving the wine its alcohol content.",
+            "the conversion of grape sugars to alcohol by yeast",
+            "the process by which sugar is transformed into alcohol; how grape juice interacts with yeast to become wine."
+        ],
+        "alias": [],
+        "concept": "W-76",
+        "category": "-1"
+    },
+    {
+        "label": "Filtration",
+        "definitions": [
+            "the process by which wine is clarified before bottling."
+        ],
+        "alias": [],
+        "concept": "W-77",
+        "category": "-1"
+    },
+    {
+        "label": "Fining",
+        "definitions": [
+            "also called clarifying, this technique in the winemaking process removes any unwanted particles (such as dead yeast cells) before bottling. the most common fining agents include gelatin, egg whites, milk, fish bladders, and bentonite clay.",
+            "the addition of egg whites or gelatin (among other things) to clear the wine of unwanted particles",
+            "part of the clarification process whereby elements are added to the wine, i.e. egg whites, in order to capture solids prior to filtration."
+        ],
+        "alias": [],
+        "concept": "W-78",
+        "category": "-1"
+    },
+    {
+        "label": "Finish",
+        "definitions": [
+            "the impression of textures and flavors lingering in the mouth after swallowing wine"
+        ],
+        "alias": [],
+        "concept": "W-79",
+        "category": "-1"
+    },
+    {
+        "label": "Flavors",
+        "definitions": [
+            "odors perceived in the mouth"
+        ],
+        "alias": [],
+        "concept": "W-80",
+        "category": "-1"
+    },
+    {
+        "label": "Fortified Wine",
+        "definitions": [
+            "a wine in which brandy is introduced during fermentation; sugars and sweetness are high due to the suspended fermentation."
+        ],
+        "alias": [],
+        "concept": "W-81",
+        "category": "-1"
+    },
+    {
+        "label": "Foxy",
+        "definitions": [
+            "a term that describes the musty odor and flavor of wines made from vitis labrusca, a common north american varietal"
+        ],
+        "alias": [],
+        "concept": "W-82",
+        "category": "-1"
+    },
+    {
+        "label": "Fruity",
+        "definitions": [
+            "a tasting term for wines that exhibit strong smells and flavors of fresh fruit"
+        ],
+        "alias": [],
+        "concept": "W-83",
+        "category": "-1"
+    },
+    {
+        "label": "Full-bodied",
+        "definitions": [
+            "a wine high in alcohol and flavors, often described as \"big\""
+        ],
+        "alias": [
+            "Full bodied",
+            "Full-body",
+            "Full body"
+        ],
+        "concept": "W-84",
+        "category": "-1"
+    },
+    {
+        "label": "Fume Blanc",
+        "definitions": [
+            "a name created by robert mondavi to describe dry sauvignon blanc."
+        ],
+        "alias": [],
+        "concept": "W-85",
+        "category": "-1"
+    },
+    {
+        "label": "Gamay",
+        "definitions": [
+            "a red grape exceedingly popular in the beaujolais region of france."
+        ],
+        "alias": [],
+        "concept": "W-86",
+        "category": "-1"
+    },
+    {
+        "label": "Gewurztraminer",
+        "definitions": [
+            "a sweet and spicy white grape popular in eastern france, germany, austria, northern italy, and california."
+        ],
+        "alias": [],
+        "concept": "W-87",
+        "category": "-1"
+    },
+    {
+        "label": "Graft",
+        "definitions": [
+            "a vineyard technique in which the bud-producing part of a grapevine is attached to an existing root."
+        ],
+        "alias": [],
+        "concept": "W-88",
+        "category": "-1"
+    },
+    {
+        "label": "Gran Reserva",
+        "definitions": [
+            "a spanish term used for wines that are aged in wood and bottles for at least five years prior to release."
+        ],
+        "alias": [],
+        "concept": "W-89",
+        "category": "-1"
+    },
+    {
+        "label": "Grand Cru",
+        "definitions": [
+            "french for 'great growth;' the very best vineyards."
+        ],
+        "alias": [],
+        "concept": "W-90",
+        "category": "-1"
+    },
+    {
+        "label": "Green",
+        "definitions": [
+            "a term used to describe underripe, vegetal flavors in a wine."
+        ],
+        "alias": [],
+        "concept": "W-91",
+        "category": "-1"
+    },
+    {
+        "label": "Grenache",
+        "definitions": [
+            "a hearty, productive red grape popular in southern france as well as in spain, where it is called garnacha."
+        ],
+        "alias": [],
+        "concept": "W-92",
+        "category": "-1"
+    },
+    {
+        "label": "Gruner Veltliner",
+        "definitions": [
+            "a white grape popular in austria that makes lean, fruity, racy wines."
+        ],
+        "alias": [],
+        "concept": "W-93",
+        "category": "-1"
+    },
+    {
+        "label": "Haut",
+        "definitions": [
+            "a french word meaning 'high.' it applies to quality as well as altitude."
+        ],
+        "alias": [],
+        "concept": "W-94",
+        "category": "-1"
+    },
+    {
+        "label": "Hectare",
+        "definitions": [
+            "a metric measure equal to 10,000 square meters or 2.47 acres."
+        ],
+        "alias": [],
+        "concept": "W-95",
+        "category": "-1"
+    },
+    {
+        "label": "Hectoliter",
+        "definitions": [
+            "a metric measure equal to 100 liters or 26.4 gallons."
+        ],
+        "alias": [],
+        "concept": "W-96",
+        "category": "-1"
+    },
+    {
+        "label": "Herbaceous",
+        "definitions": [
+            "a tasting term denoting odors and flavors of fresh herbs (e.g., basil, oregano, rosemary, etc.)",
+            "an aroma or flavor similar to green; often an indication of underripe grapes or fruit grown in a cool climate."
+        ],
+        "alias": [],
+        "concept": "W-97",
+        "category": "-1"
+    },
+    {
+        "label": "Hollow",
+        "definitions": [
+            "a term used to describe a wine that does not have depth or body."
+        ],
+        "alias": [],
+        "concept": "W-98",
+        "category": "-1"
+    },
+    {
+        "label": "Hot",
+        "definitions": [
+            "a description for wine that is high in alcohol"
+        ],
+        "alias": [],
+        "concept": "W-99",
+        "category": "-1"
+    },
+    {
+        "label": "Hybrid",
+        "definitions": [
+            "the genetic crossing of two or more grape types; common hybrids include mueller-thurgau and bacchus"
+        ],
+        "alias": [],
+        "concept": "W-100",
+        "category": "-1"
+    },
+    {
+        "label": "Ice Wine",
+        "definitions": [
+            "from the german eiswein, this is a wine made from frozen grapes; germany, austria and canada are leading ice wine producers."
+        ],
+        "alias": [],
+        "concept": "W-101",
+        "category": "-1"
+    },
+    {
+        "label": "Jeroboam",
+        "definitions": [
+            "an oversized bottle equal to six regular 750 ml bottles."
+        ],
+        "alias": [],
+        "concept": "W-102",
+        "category": "-1"
+    },
+    {
+        "label": "Kabinett",
+        "definitions": [
+            "a german term for a wine of quality; usually the driest of germanyis best rieslings."
+        ],
+        "alias": [],
+        "concept": "W-103",
+        "category": "-1"
+    },
+    {
+        "label": "Kosher",
+        "definitions": [
+            "a wine made according to strict jewish rules under rabbinical supervision."
+        ],
+        "alias": [],
+        "concept": "W-104",
+        "category": "-1"
+    },
+    {
+        "label": "Labrusca",
+        "definitions": [
+            "grape types native to north america such as concord and catawba."
+        ],
+        "alias": [],
+        "concept": "W-105",
+        "category": "-1"
+    },
+    {
+        "label": "Late Harvest",
+        "definitions": [
+            "a term used to describe dessert wines made from grapes left on the vines for an extra long period, often until botrytis has set in."
+        ],
+        "alias": [],
+        "concept": "W-106",
+        "category": "-1"
+    },
+    {
+        "label": "Lees",
+        "definitions": [
+            "sediment consisting of dead yeast cells, grape pulp, seed, and other grape matter that accumulates during fermentation",
+            "heavy sediment left in the barrel by fermenting wines; a combination of spent yeast cells and grape solids."
+        ],
+        "alias": [],
+        "concept": "W-107",
+        "category": "-1"
+    },
+    {
+        "label": "Leesy",
+        "definitions": [
+            "a tasting term for the rich aromas and smells that results from wine resting on its lees"
+        ],
+        "alias": [],
+        "concept": "W-108",
+        "category": "-1"
+    },
+    {
+        "label": "Legs",
+        "definitions": [
+            "a term used to describe how wine sticks to the inside of a wineglass after drinking or swirling."
+        ],
+        "alias": [],
+        "concept": "W-109",
+        "category": "-1"
+    },
+    {
+        "label": "Length",
+        "definitions": [
+            "the amount of time that flavors persist in the mouth after swallowing wine; a lingering sensation"
+        ],
+        "alias": [],
+        "concept": "W-110",
+        "category": "-1"
+    },
+    {
+        "label": "Loire",
+        "definitions": [
+            "a river in central france as well as a wine region famous for chenin blanc, sauvignon blanc, and cabernet franc."
+        ],
+        "alias": [],
+        "concept": "W-111",
+        "category": "-1"
+    },
+    {
+        "label": "Maceration",
+        "definitions": [
+            "the process of allowing grape juice and skins to ferment together, thereby imparting color, tannins, and aromas."
+        ],
+        "alias": [],
+        "concept": "W-112",
+        "category": "-1"
+    },
+    {
+        "label": "Madeira",
+        "definitions": [
+            "a fortified wine that has been made on a portuguese island off the coast of morocco since the fifteenth century."
+        ],
+        "alias": [],
+        "concept": "W-113",
+        "category": "-1"
+    },
+    {
+        "label": "Maderized",
+        "definitions": [
+            "stemming from the word madeira, this term means oxidization in a hot environment."
+        ],
+        "alias": [],
+        "concept": "W-114",
+        "category": "-1"
+    },
+    {
+        "label": "Magnum",
+        "definitions": [
+            "a bottle equal to two regular 750 ml bottles."
+        ],
+        "alias": [],
+        "concept": "W-115",
+        "category": "-1"
+    },
+    {
+        "label": "Malbec",
+        "definitions": [
+            "a hearty red grape of french origin now exceedingly popular in argentina."
+        ],
+        "alias": [],
+        "concept": "W-116",
+        "category": "-1"
+    },
+    {
+        "label": "Malic acid",
+        "definitions": [
+            "one of the three predominate acids in grapes. tart-tasting malic acid occurs naturally in a number of fruits, including, apples, cherries, plums, and tomatoes."
+        ],
+        "alias": [],
+        "concept": "W-117",
+        "category": "-1"
+    },
+    {
+        "label": "Malolactic Fermentation",
+        "definitions": [
+            "a secondary fermentation, often occurring in barrels, whereby harsher malic acid is converted into creamier lactic acid.",
+            "a secondary fermentation in which the tartness of malic acid in wine is changed into a smooth, lactic sensation. wines described as \"buttery\" or \"creamy\" have gone through \"malo\"."
+        ],
+        "alias": [],
+        "concept": "W-118",
+        "category": "-1"
+    },
+    {
+        "label": "Mature",
+        "definitions": [
+            "ready to drink"
+        ],
+        "alias": [],
+        "concept": "W-119",
+        "category": "-1"
+    },
+    {
+        "label": "Medoc",
+        "definitions": [
+            "a section of bordeaux on the west bank of the gironde estuary known for great red wines; margaux, st.-estephe, and pauillac are three leading aocs in the medoc."
+        ],
+        "alias": [],
+        "concept": "W-120",
+        "category": "-1"
+    },
+    {
+        "label": "Merlot",
+        "definitions": [
+            "a black grape variety originally from the bordeaux region of france. also used to describe a dry, mild, and low-tannin red wine made from this grape.",
+            "a lauded red grape popular in bordeaux and throughout the world; large amounts of merlot exist in italy, the united states, south america, and elsewhere."
+        ],
+        "alias": [],
+        "concept": "W-121",
+        "category": "-1"
+    },
+    {
+        "label": "Mouthfeel",
+        "definitions": [
+            "the physical sensations in the mouth that wine (or any food or drink) creates. smooth, velvety, sharp, or rough are some examples.",
+            "how a wine feels on the palate; it can be rough, smooth, velvety, or furry"
+        ],
+        "alias": [
+            "Mouth-feel",
+            "Mouth feel"
+        ],
+        "concept": "W-122",
+        "category": "-1"
+    },
+    {
+        "label": "Must",
+        "definitions": [
+            "derived from the latin word meaning \"young wine\", must is the unfermented grape juice that contains the fruit's skins, seeds, and stems.",
+            "unfermented grape juice including seeds, skins, and stems",
+            "crushed grapes about to go or going through fermentation."
+        ],
+        "alias": [],
+        "concept": "W-123",
+        "category": "-1"
+    },
+    {
+        "label": "Natural Wine",
+        "definitions": [
+            "although the term is not regulated by the fda, natural wine means no artificial or synthetic ingredients have been added to it."
+        ],
+        "alias": [],
+        "concept": "W-124",
+        "category": "-1"
+    },
+    {
+        "label": "Nebbiolo",
+        "definitions": [
+            "a red grape popular in the piedmont region of northwest italy; the grape that yields both barolo and barbaresco."
+        ],
+        "alias": [],
+        "concept": "W-125",
+        "category": "-1"
+    },
+    {
+        "label": "Negociant",
+        "definitions": [
+            "the french word for a wine merchant or wholesaler who buys grapes, grape juice, or wine in various stages from others and sells the final product under his or her name.",
+            "french word describing a wholesale merchant, blender, or shipper of wine",
+            "a french term for a person or company that buys wines from others and then labels it under his or her own name; stems from the french word for 'shipper.'"
+        ],
+        "alias": [],
+        "concept": "W-126",
+        "category": "-1"
+    },
+    {
+        "label": "New World Wine",
+        "definitions": [
+            "in the broadest sense, this is any wine from non-traditional european winegrowing regions, such as africa, australia, chile, and argentina. it also refers to a modern approach to winemaking that utilizes various technologies and manipulations."
+        ],
+        "alias": [],
+        "concept": "W-127",
+        "category": "-1"
+    },
+    {
+        "label": "Noble rot",
+        "definitions": [
+            "the layman`s term for botrytis"
+        ],
+        "alias": [],
+        "concept": "W-128",
+        "category": "-1"
+    },
+    {
+        "label": "Nose",
+        "definitions": [
+            "another word for aroma, this term describes the smell of wine in a glass.",
+            "a tasting term describing the aromas and bouquets of a wine",
+            "synonymous with bouquet; the sum of a wine's aromas."
+        ],
+        "alias": [],
+        "concept": "W-129",
+        "category": "-1"
+    },
+    {
+        "label": "Oaky",
+        "definitions": [
+            "a term used to describe woody aromas and flavors; butter, popcorn, and toast notes are found in 'oaky' wines.",
+            "tasting term denoting smells and flavors of vanilla, baking spices, coconut, mocha or dill caused by barrel-aging"
+        ],
+        "alias": [
+            "Oak/oaky",
+            "Oak"
+        ],
+        "concept": "W-130",
+        "category": "-1"
+    },
+    {
+        "label": "Oenology",
+        "definitions": [
+            "the study and science of wine and winemaking.",
+            "the science of wine and winemaking (see \"enology\")"
+        ],
+        "alias": [],
+        "concept": "W-131",
+        "category": "-1"
+    },
+    {
+        "label": "Oenophile",
+        "definitions": [
+            "a wine lover, plain and simple. also called a vinophile if you want to keep it casual."
+        ],
+        "alias": [],
+        "concept": "W-132",
+        "category": "-1"
+    },
+    {
+        "label": "Old World Wine",
+        "definitions": [
+            "an umbrella term for traditional winegrowing regions in europe, such as france, italy, and spain. it also implies tradition, history, and minimal intervention when it comes to winemaking."
+        ],
+        "alias": [],
+        "concept": "W-133",
+        "category": "-1"
+    },
+    {
+        "label": "Open",
+        "definitions": [
+            "tasting term signifying a wine that is ready to drink"
+        ],
+        "alias": [],
+        "concept": "W-134",
+        "category": "-1"
+    },
+    {
+        "label": "Organic",
+        "definitions": [
+            "grapes grown without the aid of chemical-based fertilizers, pesticides, or herbicides.",
+            "wine made with organic grapes and without the use of pesticides, herbicides, or synthetic ingredients. organic wine production must follow organic farming practices, and the wine label will indicate this."
+        ],
+        "alias": [
+            "Organic Wine"
+        ],
+        "concept": "W-135",
+        "category": "-1"
+    },
+    {
+        "label": "Oxidation",
+        "definitions": [
+            "wine exposed to air that has undergone a chemical change"
+        ],
+        "alias": [],
+        "concept": "W-136",
+        "category": "-1"
+    },
+    {
+        "label": "Oxidized",
+        "definitions": [
+            "a wine that is no longer fresh because it was exposed to too much air."
+        ],
+        "alias": [],
+        "concept": "W-137",
+        "category": "-1"
+    },
+    {
+        "label": "PH",
+        "definitions": [
+            "an indication of a wine's acidity expressed by how much hydrogen is in it."
+        ],
+        "alias": [],
+        "concept": "W-138",
+        "category": "-1"
+    },
+    {
+        "label": "Phenolic compounds",
+        "definitions": [
+            "natural compounds present in grape skins and seeds"
+        ],
+        "alias": [],
+        "concept": "W-139",
+        "category": "-1"
+    },
+    {
+        "label": "Phylloxera",
+        "definitions": [
+            "a microscopic insect that kills grape vines by attacking their roots",
+            "a voracious vine louse that over time has destroyed vineyards in europe and california."
+        ],
+        "alias": [],
+        "concept": "W-140",
+        "category": "-1"
+    },
+    {
+        "label": "Piedmont",
+        "definitions": [
+            "an area in northwest italy known for barolo, barbaresco, barbera, dolcetto, and moscato."
+        ],
+        "alias": [],
+        "concept": "W-141",
+        "category": "-1"
+    },
+    {
+        "label": "Pinot",
+        "definitions": [
+            "literally translated as \"pine\" in french, pinot is any black or white grape variety used to make pinot noir and pinot grigio, respectively. also refers to any wine made from these grapes."
+        ],
+        "alias": [],
+        "concept": "W-142",
+        "category": "-1"
+    },
+    {
+        "label": "Pinot Blanc",
+        "definitions": [
+            "a white grape popular in alsace, germany, and elsewhere."
+        ],
+        "alias": [],
+        "concept": "W-143",
+        "category": "-1"
+    },
+    {
+        "label": "Pinot Gris",
+        "definitions": [
+            "also called pinot grigio, this is a grayish-purple grape that yields a white wine with a refreshing character."
+        ],
+        "alias": [],
+        "concept": "W-144",
+        "category": "-1"
+    },
+    {
+        "label": "Pinot Noir",
+        "definitions": [
+            "the prime red grape of burgundy, champagne, and oregon."
+        ],
+        "alias": [],
+        "concept": "W-145",
+        "category": "-1"
+    },
+    {
+        "label": "Pinotage",
+        "definitions": [
+            "a hybrid between pinot noir and cinsault thatis grown almost exclusively in south africa."
+        ],
+        "alias": [],
+        "concept": "W-146",
+        "category": "-1"
+    },
+    {
+        "label": "Plonk",
+        "definitions": [
+            "british slang for inexpensive wine; also used to describe very low-quality wines",
+            "a derogatory name for cheap, poor-tasting wine."
+        ],
+        "alias": [],
+        "concept": "W-147",
+        "category": "-1"
+    },
+    {
+        "label": "Pomace",
+        "definitions": [
+            "the mass of skins, pits, and stems left over after fermentation; used to make grappa in italy and marc in france."
+        ],
+        "alias": [],
+        "concept": "W-148",
+        "category": "-1"
+    },
+    {
+        "label": "Port",
+        "definitions": [
+            "a sweet, fortified wine made in the douro valley of portugal and aged in the coastal town of vila nova de gaia; variations include vintage, tawny, late bottled vintage, ruby, white, and others."
+        ],
+        "alias": [],
+        "concept": "W-149",
+        "category": "-1"
+    },
+    {
+        "label": "Premier Cru",
+        "definitions": [
+            "french for 'first growth;' a high-quality vineyard but one not as good as grand cru."
+        ],
+        "alias": [],
+        "concept": "W-150",
+        "category": "-1"
+    },
+    {
+        "label": "Press",
+        "definitions": [
+            "the process by which grape juice is extracted prior to fermentation; a machine that extracts juice from grapes."
+        ],
+        "alias": [],
+        "concept": "W-151",
+        "category": "-1"
+    },
+    {
+        "label": "Primeur",
+        "definitions": [
+            "a french term for wine sold while it is sill in the barrels; known as 'futures' in english-speaking countries."
+        ],
+        "alias": [],
+        "concept": "W-152",
+        "category": "-1"
+    },
+    {
+        "label": "Pruning",
+        "definitions": [
+            "the annual vineyard chore of trimming back plants from the previous harvest."
+        ],
+        "alias": [],
+        "concept": "W-153",
+        "category": "-1"
+    },
+    {
+        "label": "Racking",
+        "definitions": [
+            "the act of transferring wine (or technically, grape juice) from one vessel to another to ensure that all sediment including grape skins and seeds is removed.",
+            "the process of moving wine from barrel to barrel, while leaving sediment behind."
+        ],
+        "alias": [],
+        "concept": "W-154",
+        "category": "-1"
+    },
+    {
+        "label": "Red Wine",
+        "definitions": [
+            "a type of wine produced from dark-colored grapes. hues may range from a deep purple (young wines) to brick red (mature wines) and brown (older wines)."
+        ],
+        "alias": [],
+        "concept": "W-155",
+        "category": "-1"
+    },
+    {
+        "label": "Reserva",
+        "definitions": [
+            "a spanish term for a red wine that has spent at least three years in barrels and bottles before release."
+        ],
+        "alias": [],
+        "concept": "W-156",
+        "category": "-1"
+    },
+    {
+        "label": "Reserve",
+        "definitions": [
+            "a largely american term indicating a wine of higher quality; it has no legal meaning."
+        ],
+        "alias": [],
+        "concept": "W-157",
+        "category": "-1"
+    },
+    {
+        "label": "Residual Sugar",
+        "definitions": [
+            "the amount of grape sugar left in wine after the fermenting process is complete and alcohol is created."
+        ],
+        "alias": [],
+        "concept": "W-158",
+        "category": "-1"
+    },
+    {
+        "label": "Rhone",
+        "definitions": [
+            "a river in southwest france surrounded by villages producing wines mostly from syrah; the name of the wine-producing valley in france."
+        ],
+        "alias": [],
+        "concept": "W-159",
+        "category": "-1"
+    },
+    {
+        "label": "Riddling",
+        "definitions": [
+            "the process of rotating champagne bottles in order to shift sediment toward the cork."
+        ],
+        "alias": [],
+        "concept": "W-160",
+        "category": "-1"
+    },
+    {
+        "label": "Riesling",
+        "definitions": [
+            "along with chardonnay, one of the top white grapes in the world; most popular in germany, alsace, and austria."
+        ],
+        "alias": [],
+        "concept": "W-161",
+        "category": "-1"
+    },
+    {
+        "label": "Rioja",
+        "definitions": [
+            "a well-known region in spain known for traditional red wines made from the tempranillo grape."
+        ],
+        "alias": [],
+        "concept": "W-162",
+        "category": "-1"
+    },
+    {
+        "label": "Rose",
+        "definitions": [
+            "also known as blush wine, rose is a genre of wine like reds and whites that can be made from any red grape and cultivated in any wine region. the time it ferments with grape skins is shorter than with red wine, which creates its signature pink hue.",
+            "french for \"pink\" and used to describe a category of refreshing wines that are pink in color but are made from red grapes."
+        ],
+        "alias": [
+            "Rose Wine"
+        ],
+        "concept": "W-163",
+        "category": "-1"
+    },
+    {
+        "label": "Rough",
+        "definitions": [
+            "the tactile \"coarse\" sensation one experiences with very astringent wines"
+        ],
+        "alias": [],
+        "concept": "W-164",
+        "category": "-1"
+    },
+    {
+        "label": "Sancerre",
+        "definitions": [
+            "an area in the loire valley known mostly for wines made from sauvignon blanc."
+        ],
+        "alias": [],
+        "concept": "W-165",
+        "category": "-1"
+    },
+    {
+        "label": "Sangiovese",
+        "definitions": [
+            "a red grape native to tuscany; the base grape for chianti, brunello di montalcino, morellino di scansano, and others."
+        ],
+        "alias": [],
+        "concept": "W-166",
+        "category": "-1"
+    },
+    {
+        "label": "Sauternes",
+        "definitions": [
+            "a sweet bordeaux white wine made from botrytized semillon and sauvignon blanc."
+        ],
+        "alias": [],
+        "concept": "W-167",
+        "category": "-1"
+    },
+    {
+        "label": "Sauvignon Blanc",
+        "definitions": [
+            "a white grape planted throughout the world; increasingly the signature wine of new zealand."
+        ],
+        "alias": [],
+        "concept": "W-168",
+        "category": "-1"
+    },
+    {
+        "label": "Sec",
+        "definitions": [
+            "french word for \"dry\""
+        ],
+        "alias": [],
+        "concept": "W-169",
+        "category": "-1"
+    },
+    {
+        "label": "Semillon",
+        "definitions": [
+            "a plump white grape popular in bordeaux and australia; the base for sauternes."
+        ],
+        "alias": [],
+        "concept": "W-170",
+        "category": "-1"
+    },
+    {
+        "label": "Sherry",
+        "definitions": [
+            "a fortified wine from a denominated region in southwest spain; styles include fino, manzanilla, oloroso, and amontillado."
+        ],
+        "alias": [],
+        "concept": "W-171",
+        "category": "-1"
+    },
+    {
+        "label": "Shiraz",
+        "definitions": [
+            "the australian name for syrah; also used in south africa and sparingly in the united states."
+        ],
+        "alias": [],
+        "concept": "W-172",
+        "category": "-1"
+    },
+    {
+        "label": "Silky",
+        "definitions": [
+            "a term used to describe a wine with an especially smooth mouthfeel."
+        ],
+        "alias": [],
+        "concept": "W-173",
+        "category": "-1"
+    },
+    {
+        "label": "Solera",
+        "definitions": [
+            "the spanish system of blending wines of different ages to create a harmonious end product; a stack of barrels holding wines of various ages."
+        ],
+        "alias": [],
+        "concept": "W-174",
+        "category": "-1"
+    },
+    {
+        "label": "Sommelier",
+        "definitions": [
+            "a wine expert who suggests, selects, and serves wine at restaurants. the most dedicated sommeliers take courses and exams t o get certified, which establishes their skills in tasting and evaluation, wine knowledge, and service.",
+            "a wine butler; also used to denote a certified wine professional. for a full overview go here: sommelier courses.",
+            "technically a wine steward, but one potentially with a great degree of wine knowledge as well as a diploma of sorts in wine studies."
+        ],
+        "alias": [],
+        "concept": "W-175",
+        "category": "-1"
+    },
+    {
+        "label": "Sparkling Wine",
+        "definitions": [
+            "any wine with enough carbon dioxide to make it fizzy and bubbly. a term often used interchangeably with champagne (lowercase \"c\"), although such usage contributes to the continuing confusion about these wine terms."
+        ],
+        "alias": [],
+        "concept": "W-176",
+        "category": "-1"
+    },
+    {
+        "label": "Spicy",
+        "definitions": [
+            "a tasting term used for odors and flavors reminiscent of black pepper, bay leaf, curry powder, baking spices, oregano, rosemary, thyme, saffron or paprika found in certain wines",
+            "a term used to describe certain aromas and flavors that may be sharp, woody, or sweet."
+        ],
+        "alias": [],
+        "concept": "W-177",
+        "category": "-1"
+    },
+    {
+        "label": "Split",
+        "definitions": [
+            "a quarter-bottle of wine; a single-serving bottle equal to 175 milliliters."
+        ],
+        "alias": [],
+        "concept": "W-178",
+        "category": "-1"
+    },
+    {
+        "label": "Steely",
+        "definitions": [
+            "a term used to describe an extremely crisp, acidic wine that was not aged in barrels."
+        ],
+        "alias": [],
+        "concept": "W-179",
+        "category": "-1"
+    },
+    {
+        "label": "Stemmy",
+        "definitions": [
+            "a term used to describe harsh, green characteristics in a wine."
+        ],
+        "alias": [],
+        "concept": "W-180",
+        "category": "-1"
+    },
+    {
+        "label": "Structure",
+        "definitions": [
+            "an ambiguous tasting term that implies harmony of fruit, alcohol, acidity, and tannins"
+        ],
+        "alias": [],
+        "concept": "W-181",
+        "category": "-1"
+    },
+    {
+        "label": "Sulfites",
+        "definitions": [
+            "naturally occurring compounds found in wine (as well as the human body and some foods). sulfites can also be artificially created to prevent the growth of yeast and bacteria in wine, which could ultimately ruin its taste, texture, and color."
+        ],
+        "alias": [],
+        "concept": "W-182",
+        "category": "-1"
+    },
+    {
+        "label": "Super Tuscan",
+        "definitions": [
+            "a red wine from tuscany that is not made in accordance with established doc rules; often a blended wine of superior quality containing cabernet sauvignon and/or merlot."
+        ],
+        "alias": [],
+        "concept": "W-183",
+        "category": "-1"
+    },
+    {
+        "label": "Supple",
+        "definitions": [
+            "a term used to describe smooth, balanced wines."
+        ],
+        "alias": [],
+        "concept": "W-184",
+        "category": "-1"
+    },
+    {
+        "label": "Sweet",
+        "definitions": [
+            "wines with perceptible sugar contents on the nose and in the mouth"
+        ],
+        "alias": [],
+        "concept": "W-185",
+        "category": "-1"
+    },
+    {
+        "label": "Syrah",
+        "definitions": [
+            "a red grape planted extensively in the rhone valley of france, australia, and elsewhere; a spicy, full and tannic wine that usually requires aging before it can be enjoyed."
+        ],
+        "alias": [],
+        "concept": "W-186",
+        "category": "-1"
+    },
+    {
+        "label": "Table Wine",
+        "definitions": [
+            "an everyday wine that's affordable and of decent quality. it also refers to a wine that's not fortified or sparkling.",
+            "a term used to describe wines of between 10 and 14 percent alcohol; in europe, table wines are those that are made outside of regulated regions or by unapproved methods."
+        ],
+        "alias": [],
+        "concept": "W-187",
+        "category": "-1"
+    },
+    {
+        "label": "Tannins",
+        "definitions": [
+            "natural compounds found in wine that create an astringent, drying, and bitter flavor on the tongue. typically, red wines are more tannic than white wines. high-tannin reds include cabernet sauvignon, nebbiolo, and cabernet franc.",
+            "the phenolic compounds in wines that leave a bitter, dry, and puckery feeling in the mouth",
+            "phenolic compounds that exist in most plants; in grapes, tannins are found primarily in the skins and pits; tannins are astringent and provide structure to a wine; over time tannins die off, making wines less harsh."
+        ],
+        "alias": [],
+        "concept": "W-188",
+        "category": "-1"
+    },
+    {
+        "label": "Tartaric acid",
+        "definitions": [
+            "the principal acid in grapes, tartaric acid promotes flavor and aging in wine"
+        ],
+        "alias": [],
+        "concept": "W-189",
+        "category": "-1"
+    },
+    {
+        "label": "Tempranillo",
+        "definitions": [
+            "the most popular red grape in spain; common in rioja and ribera del duero."
+        ],
+        "alias": [],
+        "concept": "W-190",
+        "category": "-1"
+    },
+    {
+        "label": "Terroir",
+        "definitions": [
+            "from the french word \"terre\", meaning \"earth\", terroir describes the entire natural environment where a particular wine is produced, including the soil, climate, and topography.",
+            "french for geographical characteristics unique to a given vineyard",
+            "a french term for the combination of soil, climate, and all other factors that influence the ultimate character of a wine."
+        ],
+        "alias": [],
+        "concept": "W-191",
+        "category": "-1"
+    },
+    {
+        "label": "Texture",
+        "definitions": [
+            "a tasting term describing how wine feels on the palate"
+        ],
+        "alias": [],
+        "concept": "W-192",
+        "category": "-1"
+    },
+    {
+        "label": "Tokay",
+        "definitions": [
+            "a dessert wine made in hungary from dried furmint grapes."
+        ],
+        "alias": [],
+        "concept": "W-193",
+        "category": "-1"
+    },
+    {
+        "label": "Trocken",
+        "definitions": [
+            "german for 'dry.'"
+        ],
+        "alias": [],
+        "concept": "W-194",
+        "category": "-1"
+    },
+    {
+        "label": "Typicity",
+        "definitions": [
+            "a tasting term that describes how well a wine expresses the characteristics inherent to the variety of grape"
+        ],
+        "alias": [],
+        "concept": "W-195",
+        "category": "-1"
+    },
+    {
+        "label": "Ullage",
+        "definitions": [
+            "the empty space left in bottles and barrels as a wine evaporates"
+        ],
+        "alias": [],
+        "concept": "W-196",
+        "category": "-1"
+    },
+    {
+        "label": "Usual Wines",
+        "definitions": [
+            "delicious, clean wine packaged in convenient single-serve bottles made the old-world way in small batches from sustainably-farmed grapes with no sugar, no chemical additives, and minimal intervention."
+        ],
+        "alias": [],
+        "concept": "W-197",
+        "category": "-1"
+    },
+    {
+        "label": "Varietal",
+        "definitions": [
+            "another word for grape variety; made from or belonging to a single variety of grape. examples include bordeaux, cabernet sauvignon, chardonnay, grenache, merlot, and zinfandel.",
+            "a wine made from just one grape type and named after that grape; the opposite of a blend."
+        ],
+        "alias": [],
+        "concept": "W-198",
+        "category": "-1"
+    },
+    {
+        "label": "Vegetal",
+        "definitions": [
+            "tasting term describing characteristics of fresh or cooked vegetables detected on the nose and in the flavors of the wine. bell peppers, grass, and asparagus are common \"vegetal\" descriptors."
+        ],
+        "alias": [],
+        "concept": "W-199",
+        "category": "-1"
+    },
+    {
+        "label": "Veneto",
+        "definitions": [
+            "a large wine-producing region in northern italy."
+        ],
+        "alias": [],
+        "concept": "W-200",
+        "category": "-1"
+    },
+    {
+        "label": "Vin Santo",
+        "definitions": [
+            "sweet wine from tuscany made from late-harvest trebbiano and malvasia grapes."
+        ],
+        "alias": [],
+        "concept": "W-201",
+        "category": "-1"
+    },
+    {
+        "label": "Viniculture",
+        "definitions": [
+            "the practice of cultivating grapes for winemaking."
+        ],
+        "alias": [],
+        "concept": "W-202",
+        "category": "-1"
+    },
+    {
+        "label": "Vinification",
+        "definitions": [
+            "the process of making wine"
+        ],
+        "alias": [],
+        "concept": "W-203",
+        "category": "-1"
+    },
+    {
+        "label": "Vinology",
+        "definitions": [
+            "the scientific study of wines and winemaking. also, the website for the wine school of philadelphia."
+        ],
+        "alias": [],
+        "concept": "W-204",
+        "category": "-1"
+    },
+    {
+        "label": "Vintage",
+        "definitions": [
+            "the year a wine is bottled. also, the yield of wine from a vineyard during a single season.",
+            "a particular year in the wine business; a specific harvest."
+        ],
+        "alias": [],
+        "concept": "W-205",
+        "category": "-1"
+    },
+    {
+        "label": "Viognier",
+        "definitions": [
+            "a fragrant, powerful white grape grown in the rhone valley of france and elsewhere."
+        ],
+        "alias": [],
+        "concept": "W-206",
+        "category": "-1"
+    },
+    {
+        "label": "Viticulture",
+        "definitions": [
+            "the practice of growing grapevines, be it for wine or grape juice.",
+            "the science and business of growing wine grapes."
+        ],
+        "alias": [],
+        "concept": "W-207",
+        "category": "-1"
+    },
+    {
+        "label": "Vitis vinifera",
+        "definitions": [
+            "the species of wine that comprises over 99% of the world`s wine"
+        ],
+        "alias": [],
+        "concept": "W-208",
+        "category": "-1"
+    },
+    {
+        "label": "Weight",
+        "definitions": [
+            "similar to \"body\", the sensation when a wine feels thick or rich on the palate"
+        ],
+        "alias": [],
+        "concept": "W-209",
+        "category": "-1"
+    },
+    {
+        "label": "White Wine",
+        "definitions": [
+            "a type of wine produced from grapes that are fermented without grape skin contact. wine colors may range from pale yellow to yellowish-green to deep gold."
+        ],
+        "alias": [],
+        "concept": "W-210",
+        "category": "-1"
+    },
+    {
+        "label": "Wine",
+        "definitions": [
+            "fermented juice from grapes"
+        ],
+        "alias": [],
+        "concept": "W-211",
+        "category": "-1"
+    },
+    {
+        "label": "Wine Legs",
+        "definitions": [
+            "also known as wine tears, these streaks form on the sides of a wine glass after swirling. although believed to indicate wine quality, that's just a myth. get the facts here."
+        ],
+        "alias": [],
+        "concept": "W-212",
+        "category": "-1"
+    },
+    {
+        "label": "Wine Pairing",
+        "definitions": [
+            "the art of combining food with wine to create the best possible eating and drinking experience."
+        ],
+        "alias": [
+            "Pairing"
+        ],
+        "concept": "W-213",
+        "category": "-1"
+    },
+    {
+        "label": "Yeast",
+        "definitions": [
+            "sugar-eating fungus that turns grape juice into wine during fermentation.",
+            "a microorganism endemic to vineyards and produced commercially that converts grape sugars into alcohol",
+            "organisms that issue enzymes that trigger the fermentation process; yeasts can be natural or commercial."
+        ],
+        "alias": [],
+        "concept": "W-214",
+        "category": "-1"
+    },
+    {
+        "label": "Yield",
+        "definitions": [
+            "the productivity of a vineyard",
+            "the amount of grapes harvested in a particular year."
+        ],
+        "alias": [],
+        "concept": "W-215",
+        "category": "-1"
+    },
+    {
+        "label": "Young",
+        "definitions": [
+            "an immature wine that is usually bottled and sold within a year of its vintage. wines meant to be drunk \"young\" are noted for their fresh and crisp flavors."
+        ],
+        "alias": [],
+        "concept": "W-216",
+        "category": "-1"
+    },
+    {
+        "label": "Zinfandel",
+        "definitions": [
+            "a popular black-skinned wine grape variety often grown in california.",
+            "a popular grape in california of disputed origin; scientists say it is related to grapes in croatia and southern italy."
+        ],
+        "alias": [],
+        "concept": "W-217",
+        "category": "-1"
+    },
+    {
+        "label": "Zymology",
+        "definitions": [
+            "the science of fermentation in wine."
+        ],
+        "alias": [],
+        "concept": "W-218",
+        "category": "-1"
+    }
+]
