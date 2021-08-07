@@ -1,0 +1,226 @@
+[
+    {
+        "label": "Acidity",
+        "definition": "sharp, crisp flavor that contributes to wine freshness"
+    },
+    {
+        "label": "Aftertaste",
+        "definition": "the taste or flavors that linger in the mouth after wine is tasted, spit or swallowed"
+    },
+    {
+        "label": "Age/Aging",
+        "definition": "to let get older in controlled conditions to improve flavor. all wine is aged from a few weeks to a few decades."
+    },
+    {
+        "label": "Approachable",
+        "definition": "easy, drinkable wine"
+    },
+    {
+        "label": "Aromatic",
+        "definition": "a wine's scent; a floral scent or spiciness"
+    },
+    {
+        "label": "Attractive",
+        "definition": "a lighter style, fresh and easy to drink"
+    },
+    {
+        "label": "Balance",
+        "definition": "the ability to producing wine blended without one grape or component upstaging another"
+    },
+    {
+        "label": "Beefy",
+        "definition": "a term used to describe red wines, such as cabernet sauvignon"
+    },
+    {
+        "label": "Big",
+        "definition": "a wine loaded with tannins and concentrated fruits"
+    },
+    {
+        "label": "Bouquet",
+        "definition": "the scent or \"nose\" of the wine"
+    },
+    {
+        "label": "Buttery",
+        "definition": "the aroma of a glass of wine"
+    },
+    {
+        "label": "Chewy",
+        "definition": "wine with plenty of tannins and fruits"
+    },
+    {
+        "label": "Clean",
+        "definition": "simple and direct, without chemical or bacterial fruit"
+    },
+    {
+        "label": "Complex",
+        "definition": "intense wine with undertones of a variety of flavors"
+    },
+    {
+        "label": "Crisp",
+        "definition": "generous acidity found in clean and fresh wines, like chardonnay"
+    },
+    {
+        "label": "Deep",
+        "definition": "describes wines with a full flavor"
+    },
+    {
+        "label": "Developed",
+        "definition": "refers to the maturity of a wine"
+    },
+    {
+        "label": "Dry",
+        "definition": "no trace or taste of sweetness or residual sugar"
+    },
+    {
+        "label": "Dusty",
+        "definition": "used to describe hot country red winesdef: earthy the smell of robust minerals"
+    },
+    {
+        "label": "Fat",
+        "definition": "a weight and mildly clumsy wine"
+    },
+    {
+        "label": "Finish",
+        "definition": "the taste that a wine leaves on the tongue"
+    },
+    {
+        "label": "Flinty",
+        "definition": "describes the fragrance or taste of some white wines, especially white bordeaux"
+    },
+    {
+        "label": "Freshness",
+        "definition": "a nice acidity with traces of fruit or floral"
+    },
+    {
+        "label": "Fruity",
+        "definition": "the aroma or flavor of grapes and other fruits like black currant, apple, plum or strawberry"
+    },
+    {
+        "label": "Fullness",
+        "definition": "the body, weight or feel of a wine"
+    },
+    {
+        "label": "Grapy",
+        "definition": "a rare flavor of grape"
+    },
+    {
+        "label": "Green",
+        "definition": "a light wine with an unripe, tart taste"
+    },
+    {
+        "label": "Hard",
+        "definition": "red wines with extra tannins, commonly found in young reds"
+    },
+    {
+        "label": "Heady",
+        "definition": "used to describe a wine high in alcohol"
+    },
+    {
+        "label": "Herbaceous",
+        "definition": "the taste and smell of herbs in wine"
+    },
+    {
+        "label": "Honeyed",
+        "definition": "describes ripe wines, which usually have a sweet aroma or taste of honey"
+    },
+    {
+        "label": "Jammy",
+        "definition": "cooked, sweetish red wines"
+    },
+    {
+        "label": "Late Harvest",
+        "definition": "wine made from grapes that were allowed to hang on the vine until their sugar content was very high, producing a sweet wine"
+    },
+    {
+        "label": "Length",
+        "definition": "the flavor that lingers in the mouth after swallowing"
+    },
+    {
+        "label": "Mouthfeel",
+        "definition": "how a wine feels in your mouth and against the tongue"
+    },
+    {
+        "label": "Neutral",
+        "definition": "describes a wine without any outstanding characteristics, but without any particularly bad ones either"
+    },
+    {
+        "label": "Nutty",
+        "definition": "a delicate of hazelnut or nutmeg flavordef: oaky hints of mild sweet vanilla from fermentation in oak barrels"
+    },
+    {
+        "label": "Oxidized",
+        "definition": "wine overexposed to air"
+    },
+    {
+        "label": "Plumy",
+        "definition": "the fruity flavor found in big reds"
+    },
+    {
+        "label": "Prickly",
+        "definition": "a wine with a residual effect"
+    },
+    {
+        "label": "Racy",
+        "definition": "a vivid, but light wine with acidity"
+    },
+    {
+        "label": "Round",
+        "definition": "describes a wine with a good balance of fruit and tannins, with good body"
+    },
+    {
+        "label": "Short",
+        "definition": "describes a wine that does not remain on the palate after swallowing (see \"finish\")"
+    },
+    {
+        "label": "Silky",
+        "definition": "a well-rounded, smooth tasting residue after swallowing"
+    },
+    {
+        "label": "Smoky",
+        "definition": "an undertone of smokiness, specifically when matured in moderately charred oak barrels"
+    },
+    {
+        "label": "Soft",
+        "definition": "mellow, well-balanced wine with mature tannins and low acidity"
+    },
+    {
+        "label": "Spicy",
+        "definition": "hints of peppermint, cinnamon in red wines and fruity with a zest in white wines"
+    },
+    {
+        "label": "Steely",
+        "definition": "a crispy, dry metallic flavor"
+    },
+    {
+        "label": "Supple",
+        "definition": "matured tannins with soft textures"
+    },
+    {
+        "label": "Sweet",
+        "definition": "describes the richness or ripeness in a quality wine"
+    },
+    {
+        "label": "Tannins",
+        "definition": "adds dryness and astringency"
+    },
+    {
+        "label": "Tart",
+        "definition": "an unripe, green wine"
+    },
+    {
+        "label": "Toasty",
+        "definition": "the taste and smell of oak-fermented barrels"
+    },
+    {
+        "label": "Tough",
+        "definition": "implies excessive tannins"
+    },
+    {
+        "label": "Vanilla",
+        "definition": "the scent of new oak"
+    },
+    {
+        "label": "Velvety",
+        "definition": "smooth wine where the grape blend is undetectable"
+    }
+]

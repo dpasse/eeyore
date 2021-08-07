@@ -1,0 +1,74 @@
+[
+    {
+        "label": "Acidity",
+        "definition": "acid is an important component in wines - particularly whites. it gives the wine freshness and zing. the more acidic a wine, the more refreshing, crisp and mouth-watering it will feel as you drink it."
+    },
+    {
+        "label": "Angular",
+        "definition": "wine folly's description of an angular wine is perfect: \"it's like putting a triangle in your mouth - it hits you in specific places with high impact and not elsewhere\". angular wines usually have very high acidity. the opposite of 'soft'."
+    },
+    {
+        "label": "Aroma",
+        "definition": "sometimes called the 'bouquet'. this is essentially the smell of a wine, and is frequently used to describe older wines. common aromas associated with wines include fruit, herbs, flowers, earth, grass, tobacco, mocha and chocolate."
+    },
+    {
+        "label": "Backbone",
+        "definition": "a wine with a 'backbone' is full-bodied, well-structured and balanced."
+    },
+    {
+        "label": "Balance",
+        "definition": "the term 'balance' is usually very favourable as it suggests that the wine's three main components - fruit, alcohol and acid - are working in harmony with one another. in red wines, tannin is also considered a core component."
+    },
+    {
+        "label": "Body",
+        "definition": "this signifies the weight of the wine on your palate: the way it feels in your mouth, its heft and viscosity. some experts suggest thinking of body the same way you would the difference between whole, semi-skimmed and skimmed milk. full bodied wines fill your palate with texture and intensity, medium bodies wines (a term reserved for reds) are a good middle ground, and light bodied wines tend to be refreshing and tingly."
+    },
+    {
+        "label": "Complex",
+        "definition": "the term 'complex' is used to describe a diverse wine that appears to change flavour from the moment you taste it to the moment you swallow it. it's a bit of a cheat to call a wine 'complex' without identifying why, though!"
+    },
+    {
+        "label": "Earthy",
+        "definition": "this term can be used in two ways: favourably, to describe a pleasant, clean quality that adds complexity to aromas and flavours; and more unfavourably, to describe a 'barnyard' character that smells dirty and unpleasant."
+    },
+    {
+        "label": "Elegant",
+        "definition": "the opposite of big, bold and fruity wines. the term 'elegant' is used to describe understated wines with higher acidity and more 'restrained' characteristics. they often taste 'tight' when first released but tend to have good aging potential."
+    },
+    {
+        "label": "Finish",
+        "definition": "the 'finish' of a wine is the aftertaste it leaves once you've drunk it, and can have a big impact on the overall tasting experience. a wine may have a smooth finish, a smoky finish, a spicy finish, and so on. if a wine leaves a lingering aftertaste it's said to have a 'long finish'."
+    },
+    {
+        "label": "Flavour Intensity",
+        "definition": "the 'flavour intensity' is how strong or weak a wine's flavours are. this is an important one when it comes to pairing wine with food, as well as determining your own personal wine preferences."
+    },
+    {
+        "label": "Legs",
+        "definition": "the 'legs' of a wine are the streaks that trickle down the inside of a glass when the wine is swirled. they're caused by alcohol, so the more prominent they are, the higher the alcohol content of the wine."
+    },
+    {
+        "label": "Lively",
+        "definition": "wines that are fresh, fruity, bright and vivacious are said to be 'lively'."
+    },
+    {
+        "label": "Minerally",
+        "definition": "this is the flavour profile used to describe wines that are non-fruit, non-herb and non-spice based. imagine the smell of forged iron, or the salty aroma of oysters, or the smell of wet cement - they have a distinct tang."
+    },
+    {
+        "label": "Oaky",
+        "definition": "oak has the second-biggest influence on the flavour of a wine (after the grape), and comes from the oak barrels that the wine is aged in. in white wine, it adds butter and vanilla flavours; in red wine it adds smoky, toasty flavours. wines without these flavours are called 'unoaked' - unoaked white wines tend to be zesty with lemon flavours, while unoaked reds are usually more tart."
+    },
+    {
+        "label": "Rich",
+        "definition": "wines with full, pleasant flavours that are sweet and 'rounded' in nature are described as rich. in dry wines, richness may come from high alcohol, by complex flavours or by an oaky vanilla character. decidedly sweet wines are also described as rich when the sweetness is backed up by fruity, ripe flavours."
+    },
+    {
+        "label": "Tannic",
+        "definition": "tannins are an important component of red wine. alone, they can taste bitter, but will yield different results depending on how they're blended with other elements of the wine. you might describe a wine as 'astringent' (lots of tannins leading to a harsh, puckery feel in the mouth), 'firm' (a moderate amount of tannins which leaves the mouth feeling dry) or 'soft' (fewer tannins that result in a smooth, velvety feel)."
+    },
+    {
+        "label": "Zesty",
+        "definition": "'zesty' is typically used to describe livelier wines with crisper qualities, noticeable acidity and citrus notes, such as sauvignon blanc and pinot grigio."
+    }
+]

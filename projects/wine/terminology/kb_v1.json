@@ -20,16 +20,32 @@
     {
         "label": "Acid",
         "definitions": [
-            "a natural part of wine that creates a lively taste and balances out the sweet and bitter components. too much acid results in an overly tart, sharp, or sour wine; too little makes it flat and flabby. acetic acid, citric acid, tartaric, malic acid, and lactic acid are the most common.",
+            "a natural part of wine that creates a lively taste and balances out the sweet and bitter components. too much acid results in an overly tart, sharp, or sour wine; too little makes it flat and flabby. acetic acid, citric acid, tartaric, malic acid, and lactic acid are the most common."
+        ],
+        "alias": [],
+        "concept": "W-3",
+        "category": "-1"
+    },
+    {
+        "label": "Acidity",
+        "definitions": [
             "the liveliness and crispness in wine that activates our salivary glands",
             "a naturally occurring component of every wine; the level of perceived sharpness; a key element to a wine's longevity; a leading determinant of balance.",
             "sharp, crisp flavor that contributes to wine freshness",
             "acid is an important component in wines - particularly whites. it gives the wine freshness and zing. the more acidic a wine, the more refreshing, crisp and mouth-watering it will feel as you drink it."
         ],
-        "alias": [
-            "Acidity"
-        ],
+        "alias": [],
         "concept": "W-4",
+        "category": "-1"
+    },
+    {
+        "label": "Aeration",
+        "definitions": [
+            "exposing wine to air so that it can \"breathe\" before drinking it. when oxygen is introduced to wine, it releases aromas and opens up flavors much like swirling wine in a glass does.",
+            "the deliberate addition of oxygen to round out and soften a wine"
+        ],
+        "alias": [],
+        "concept": "W-5",
         "category": "-1"
     },
     {
@@ -43,15 +59,20 @@
         "category": "-1"
     },
     {
-        "label": "Aging",
+        "label": "Age/Aging",
         "definitions": [
-            "holding wine in barrels, tanks, and bottles to advance them to a more desirable state",
             "to let get older in controlled conditions to improve flavor. all wine is aged from a few weeks to a few decades."
         ],
-        "alias": [
-            "Age/Aging",
-            "Age"
+        "alias": [],
+        "concept": "W-7",
+        "category": "-1"
+    },
+    {
+        "label": "Aging",
+        "definitions": [
+            "holding wine in barrels, tanks, and bottles to advance them to a more desirable state"
         ],
+        "alias": [],
         "concept": "W-8",
         "category": "-1"
     },
@@ -133,14 +154,20 @@
         "label": "Aroma",
         "definitions": [
             "the smell of wine, especially young wine (different than \"bouquet\")",
-            "a wine`s scent; a floral scent or spiciness",
             "a scent thatis a component of the bouquet or nose; i.e. cherry is an aromatic component of a fruity bouquet.",
             "sometimes called the 'bouquet'. this is essentially the smell of a wine, and is frequently used to describe older wines. common aromas associated with wines include fruit, herbs, flowers, earth, grass, tobacco, mocha and chocolate."
         ],
-        "alias": [
-            "Aromatic"
-        ],
+        "alias": [],
         "concept": "W-17",
+        "category": "-1"
+    },
+    {
+        "label": "Aromatic",
+        "definitions": [
+            "a wine's scent; a floral scent or spiciness"
+        ],
+        "alias": [],
+        "concept": "W-18",
         "category": "-1"
     },
     {
@@ -344,7 +371,7 @@
     {
         "label": "Botrytis",
         "definitions": [
-            "a beneficial mold that pierces the skin of grapes and causes dehydration, resulting in natural grape juice exceptionally high in sugar. botrytis is largely responsible for the world`s finest dessert wines. (see \"noble rot\")"
+            "a beneficial mold that pierces the skin of grapes and causes dehydration, resulting in natural grape juice exceptionally high in sugar. botrytis is largely responsible for the world's finest dessert wines. (see \"noble rot\")"
         ],
         "alias": [],
         "concept": "W-40",
@@ -372,17 +399,20 @@
         "category": "-1"
     },
     {
+        "label": "Breathe",
+        "definitions": [
+            "the process of letting a wine open up via the introduction of air"
+        ],
+        "alias": [],
+        "concept": "W-43",
+        "category": "-1"
+    },
+    {
         "label": "Breathing",
         "definitions": [
-            "exposing wine to oxygen to improve its flavors (see \"aeration\")",
-            "the process of letting a wine open up via the introduction of air",
-            "exposing wine to air so that it can \"breathe\" before drinking it. when oxygen is introduced to wine, it releases aromas and opens up flavors much like swirling wine in a glass does.",
-            "the deliberate addition of oxygen to round out and soften a wine"
+            "exposing wine to oxygen to improve its flavors (see \"aeration\")"
         ],
-        "alias": [
-            "Breathe",
-            "Aeration"
-        ],
+        "alias": [],
         "concept": "W-44",
         "category": "-1"
     },
@@ -407,7 +437,7 @@
     {
         "label": "Brix",
         "definitions": [
-            "the sugar content of wine grapes that allows winemakers to measure the potential alcohol content of a wine before it`s produced.",
+            "the sugar content of wine grapes that allows winemakers to measure the potential alcohol content of a wine before it's produced.",
             "a scale used to measure the level of sugar in unfermented grapes. multiplying brix by 0.55 will yield a wine's future alcohol level."
         ],
         "alias": [],
@@ -734,14 +764,20 @@
         "category": "-1"
     },
     {
+        "label": "Decant",
+        "definitions": [
+            "the process of transferring wine from a bottle to another holding vessel. the purpose is generally to aerate a young wine or to separate an older wine from any sediment."
+        ],
+        "alias": [],
+        "concept": "W-82",
+        "category": "-1"
+    },
+    {
         "label": "Decanting",
         "definitions": [
-            "the process of transferring wine from a bottle to another holding vessel. the purpose is generally to aerate a young wine or to separate an older wine from any sediment.",
             "pouring wine from one container into another, usually from a wine bottle to a decanter. doing so allows the wine to aerate and separates it from any sediment."
         ],
-        "alias": [
-            "Decant"
-        ],
+        "alias": [],
         "concept": "W-83",
         "category": "-1"
     },
@@ -1495,7 +1531,7 @@
     {
         "label": "Noble rot",
         "definitions": [
-            "the layman`s term for botrytis"
+            "the layman's term for botrytis"
         ],
         "alias": [],
         "concept": "W-164",
@@ -1522,16 +1558,21 @@
         "category": "-1"
     },
     {
+        "label": "Oak/oaky",
+        "definitions": [
+            "tasting term denoting smells and flavors of vanilla, baking spices, coconut, mocha or dill caused by barrel-aging"
+        ],
+        "alias": [],
+        "concept": "W-167",
+        "category": "-1"
+    },
+    {
         "label": "Oaky",
         "definitions": [
-            "tasting term denoting smells and flavors of vanilla, baking spices, coconut, mocha or dill caused by barrel-aging",
             "a term used to describe woody aromas and flavors; butter, popcorn, and toast notes are found in 'oaky' wines.",
             "oak has the second-biggest influence on the flavour of a wine (after the grape), and comes from the oak barrels that the wine is aged in. in white wine, it adds butter and vanilla flavours; in red wine it adds smoky, toasty flavours. wines without these flavours are called 'unoaked' - unoaked white wines tend to be zesty with lemon flavours, while unoaked reds are usually more tart."
         ],
-        "alias": [
-            "Oak/oaky",
-            "Oak"
-        ],
+        "alias": [],
         "concept": "W-168",
         "category": "-1"
     },
@@ -1575,25 +1616,37 @@
     {
         "label": "Organic",
         "definitions": [
-            "grapes grown without the aid of chemical-based fertilizers, pesticides, or herbicides.",
+            "grapes grown without the aid of chemical-based fertilizers, pesticides, or herbicides."
+        ],
+        "alias": [],
+        "concept": "W-173",
+        "category": "-1"
+    },
+    {
+        "label": "Organic Wine",
+        "definitions": [
             "wine made with organic grapes and without the use of pesticides, herbicides, or synthetic ingredients. organic wine production must follow organic farming practices, and the wine label will indicate this."
         ],
-        "alias": [
-            "Organic Wine"
-        ],
+        "alias": [],
         "concept": "W-174",
+        "category": "-1"
+    },
+    {
+        "label": "Oxidation",
+        "definitions": [
+            "wine exposed to air that has undergone a chemical change"
+        ],
+        "alias": [],
+        "concept": "W-175",
         "category": "-1"
     },
     {
         "label": "Oxidized",
         "definitions": [
             "a wine that is no longer fresh because it was exposed to too much air.",
-            "wine overexposed to air",
-            "wine exposed to air that has undergone a chemical change"
+            "wine overexposed to air"
         ],
-        "alias": [
-            "Oxidation"
-        ],
+        "alias": [],
         "concept": "W-176",
         "category": "-1"
     },
@@ -1864,13 +1917,19 @@
     {
         "label": "Rose",
         "definitions": [
-            "french for \"pink\" and used to describe a category of refreshing wines that are pink in color but are made from red grapes.",
+            "french for \"pink\" and used to describe a category of refreshing wines that are pink in color but are made from red grapes."
+        ],
+        "alias": [],
+        "concept": "W-206",
+        "category": "-1"
+    },
+    {
+        "label": "Rose Wine",
+        "definitions": [
             "also known as blush wine, rose is a genre of wine like reds and whites that can be made from any red grape and cultivated in any wine region. the time it ferments with grape skins is shorter than with red wine, which creates its signature pink hue."
         ],
-        "alias": [
-            "Rose Wine"
-        ],
-        "concept": "W-206",
+        "alias": [],
+        "concept": "W-207",
         "category": "-1"
     },
     {
@@ -2379,7 +2438,7 @@
     {
         "label": "Vitis vinifera",
         "definitions": [
-            "the species of wine that comprises over 99% of the world`s wine"
+            "the species of wine that comprises over 99% of the world's wine"
         ],
         "alias": [],
         "concept": "W-262",
